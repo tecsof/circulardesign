@@ -1,0 +1,338 @@
+<div id="editor">
+    <div id="strategies" class="formcontainer">
+        <h4>+ Strategies</h4>
+        <span class="sheets"></span>
+        <span class="form"></span>
+        <span><a href="#save" data-endpoint="strategies" class="smallbutton">SAVE</a></span>
+    </div>
+    <div id="casestudies" class="formcontainer">
+        <h4>+ Case studies</h4>
+        <span class="form"></span>
+        <span><a href="#save" data-endpoint="casestudies" class="smallbutton">SAVE</a></span>
+    </div>
+</div>
+<!-- Styles -->
+<style>
+   
+   .formcontainer {
+        overflow: hidden;
+        height: 70px;
+    }
+    .formcontainer.open {
+        height: auto;
+    }
+
+    .formcontainer h4:hover{
+        text-decoration: underline;
+    }
+    .formcontainer h4{
+        cursor:pointer;
+    }
+
+   .form label, .sheets label {
+        display: block;
+        float: left;
+        width: 20%;
+        height: 100%;
+        text-align: right;
+        padding-right:10px;
+    }
+    .form textarea, .form input {
+        display: block;
+        float: left;
+        width: 80%;
+        height: 100%;
+        padding: 0px;
+        min-height: auto;
+        border:1px solid grey;
+        background: white;
+    }
+    .sheets select, .form select{
+        width: 80%;
+        height: 100%;
+        float: left;
+        min-height:35px;
+        padding:5px 0px;
+    }
+    .form > div{
+        margin-bottom:10px;    float: left;
+        width: 100%;
+    }
+    .form .textlines  {height: 30px;}
+    .form .inputlines {height: auto; min-height: 50px;}
+    a.smallbutton {
+        padding: 5px 20px;
+        background: black;
+        color: white;
+        float: right;
+        margin: 10px 10px;
+    }
+    #x2hint {
+    width: 80%;
+    margin-left: 20%;
+    max-height: 115px;
+    overflow-y: auto;
+    font-size: small;
+}#x2hint li {
+    cursor: pointer;
+}
+
+.form .textlines.responsive {
+    height: auto;
+}
+
+.textlines.responsive span.blocco {
+    float: left;
+}
+
+span.blocco span.linea {
+    width: 100%;
+    float: left;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+span.linea input {
+    width: auto;
+    margin-right: 10px;
+    padding: 0px;
+    display: inline-block;
+}
+</style>
+
+<script>
+
+    var casestudies={
+        endpoint:"https://sheetdb.io/api/v1/x2gcpmbdwud9u"
+    };
+    var strategies={
+        endpoint:"https://sheetdb.io/api/v1/x9j328uv1qu2z"
+    };
+
+
+    jQuery(".formcontainer h4").click(function(){
+        jQuery(this).parent().toggleClass("open");
+    });
+
+    var prefill={};
+    var prefill_m={};
+
+    function renderKeys(data, container){
+        var h="";
+        prefill["TYPE"]=["business","resource","logistics","sale","use","service","reverse","recovery"];
+        prefill["X1"]=["Df Maintenance","Df Reuse","Df Refurbishment","Df Remanufacturing","Df Recycle"];
+        prefill["FILTER-FOCUS"]=["SYSTEM","PRODUCT","COMPONENTS","MATERIALS"];
+        prefill["FILTER-CYCLE"]=["TECHNICAL","BIOLOGICAL"];
+        prefill["FILTER-DESIGN-FOR-X1"]=["MAINTAIN","REUSE","REFURBISH","REMANUFACTURE","RECYCLE"];
+        prefill["FILTER-BUSINESS-MODEL"]=["PRODUCT ORIENTED","USE ORIENTED","RESULT ORIENTED"];
+        prefill["FILTER-MATERIAL-FLOW"]=["LINEAR","LINEAR EXTENSION","CIRCULAR","CIRCULAR EXTENSION"];
+        prefill_m["LOOP"]=["LOOP 1","LOOP N","LAST LOOP"];
+        prefill_m["APPLIES_TO"]=["Materials","Components","Products","Systems"];
+        for(var i=0;i<data.keys.length;i++)
+        {
+            if((data.keys[i]!=("ID") && data.keys[i].indexOf("LINK")>=0) || data.keys[i].indexOf("LINK")>=0 || data.keys[i].indexOf("URL")>=0)
+            {
+                h+="<div class='textlines'><label>" + data.keys[i] + "</label><input name='" + data.keys[i] + "' class='field'/></div>";
+            }
+            else if(data.keys[i]==("ID"))
+            {
+                h+="<div class='textlines'><label>" + data.keys[i] + "</label><input placeholder='Leave blank for new record or type ID to edit' name='" + data.keys[i] + "' class='field'/></div>";}
+            else{
+                if(prefill[data.keys[i]]){
+                    var options=prefill[data.keys[i]].map(x => "<option value='" + x + "'>" + x + "</option>").join(" ")
+                    h+="<div class='textlines'><label>" + data.keys[i] + "</label><select name='" + data.keys[i] + "' class='field'>" + options + "</select></div>";
+                } else if(prefill_m[data.keys[i]]){
+                    var options=prefill_m[data.keys[i]].map(x => "<span class='linea'><input type='checkbox' name='" + data.keys[i] + "' value='" + x + "' class='field'/>" + x + "</span>").join(" ")
+                    h+="<div class='textlines responsive'><label>" + data.keys[i] + "</label><span class='blocco'>" + options + "</span></div>";                    
+                }
+                else{
+                    h+="<div class='inputlines'><label>" + data.keys[i] + "</label><textarea name='" + data.keys[i] + "' class='field'></textarea></div>";
+                }
+            }
+            
+        }
+        jQuery(container + " .form").html(h);
+
+        jQuery(container + " .form textarea[name=X2]").click(function(){
+            jQuery("#x2hint").remove()
+            var x2=strategies.x2stats[jQuery("#strategy_sheet").val().toLowerCase()].split(",").map((x)=>{if(x.length>0) return "<li data-val='" + x + "'>" + x + "</li>"}).join("")
+            jQuery(container + " .form textarea[name=X2]").after("<ul id='x2hint'>" + x2 + "</ul>")
+            jQuery("#x2hint li").click(function(){
+                jQuery(".form textarea[name=X2]").val(jQuery(this).attr("data-val"))
+            })
+        })
+
+        jQuery(container + " .form textarea[name=X3]").change(function(){
+            var ds=jQuery(container + " .form textarea[name=X3]").val().replace("DF ","").replace("Df ","").replace("df ","").replace("Dfx ","").replace("DfX ","").trim()
+            var dsx1=jQuery(container + " .form select[name=X1]").val().replace("DF ","").replace("Df ","").replace("df ","").replace("Dfx ","").replace("DfX ","").trim()
+            jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val("searching saturation for '"+dsx1+" "+ds+"'")
+
+            jQuery.getJSON("https://4dcnwxyjqb.execute-api.us-west-2.amazonaws.com/api-proxy?q=" + encodeURI('"'+dsx1+'" ') + encodeURI('"'+ds+'"') , function (data) {
+                    try{
+                        var ss=data.search_information.total_results || 0;
+                        var lss=ss==0? "none" : ss<100 ? "low" : ss<2000 ? "mid" : "high";
+                        jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val(lss)
+                    }
+                    catch(e){
+                        jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val("")
+                    }
+                   
+                    
+            });
+        })
+
+
+        jQuery(container + " .form input[name=ID]").change(function(){
+
+            if(jQuery(this).val()){
+
+                var endpoint=jQuery(this).closest(".formcontainer").attr("id");
+                var url= endpoint=="strategies" ? strategies.endpoint + "/search?sheet=" + jQuery("#strategies .sheets select").val() + "&" : casestudies.endpoint + "/search?"
+
+                jQuery.getJSON(url + "ID=" + jQuery(this).val() , function (data) {
+                    if(data.length==0){alert("Record not found")}
+                    for(var f in data[0]){
+                        
+                        if(prefill_m[f]){
+                            var o=data[0][f].split(",");
+                            jQuery("#" + endpoint + " *[name='" + f +"']").attr("checked",false);
+                            for(var i=0;i<o.length;i++){
+                                for(var j=0;j<prefill_m[f].length;j++){
+                                    if(o[i].trim().toLowerCase()==prefill_m[f][j].trim().toLowerCase()){
+                                        jQuery("#" + endpoint + " *[name='" + f +"'][value='" + prefill_m[f][j] +"']").attr("checked",true);
+                                    }
+                                }
+                            }
+                        }
+                        else{
+                            jQuery("#" + endpoint + " *[name='" + f +"']").val(data[0][f]);
+                        }
+                    }
+                });
+
+            }
+
+        });
+    }
+
+    function renderSheets(){
+        
+        var h="<select id='strategy_sheet'></select>";
+        for(var i=0;i<strategies.sheets.length;i++)
+        {
+            if(strategies.sheets[i]!="software_do_not_delete")
+                h=jQuery(h).append("<option>" + strategies.sheets[i] + "</option>");
+        }
+        jQuery("#strategies .sheets").html("<div class='inputlines'><label>SHEET</label>" + jQuery(h).prop('outerHTML') +"</div>");
+    }
+
+    jQuery("#editor .smallbutton").click(function(){
+
+        var endpoint=jQuery(this).attr("data-endpoint");
+        var formdata={};
+        jQuery("#" + endpoint + " .form .field").each(function(){
+            var f=jQuery(this).attr("name");
+            if(prefill_m[f]){
+                var d=[];
+                jQuery("#" + endpoint + " .field[name='" + f + "']:checked").each(function(){
+                    d.push(this.value);
+                });
+                formdata[f]=d.join(",");
+            }else{
+                formdata[f]=jQuery(this).val();
+            }
+        });
+
+        var type="POST";
+        var route="";
+        if(formdata.ID){
+            type="PUT";
+            route="/ID/" + formdata.ID
+        }
+        else{
+            formdata.ID=endpoint=="strategies" ? strategies.next_id : casestudies.next_id
+        }
+        
+        jQuery.ajax({
+            type: type,
+            url: endpoint=="strategies" ? strategies.endpoint + route + "?sheet=" + jQuery("#strategies .sheets select").val() : casestudies.endpoint + route,
+            data: {data: new Array(formdata), mode:"USER_ENTERED"},
+            success: function(r){
+                
+                alert("Record saved correctly");
+
+                jQuery("#" + endpoint + " .form *[name=ID]").val(formdata.ID);
+
+                window.setTimeout(function(){
+                    jQuery.getJSON(strategies.endpoint + "?sheet=software_do_not_delete", function (data) {
+                        strategies.next_id=parseInt(data[0].max)+1;
+                        strategies.x2stats={
+                            "maintenance":data[0].stats_maintenance_x2,
+                            "reuse":data[0].stats_reuse_x2,
+                            "refurbishment":data[0].stats_refurbishment_x2,
+                            "remanufacturing":data[0].stats_remanufacturing_x2,
+                            "recycle":data[0].stats_recycle_x2,
+                        }
+                    });
+
+                    jQuery.getJSON(casestudies.endpoint + "?sheet=software_do_not_delete", function (data) {
+                        casestudies.next_id=parseInt(data[0].max)+1;
+                    });
+                },1000);
+            },
+            dataType: "json"
+            });
+    });
+
+    function initEditor() {
+        
+
+        jQuery.getJSON(strategies.endpoint + "?sheet=software_do_not_delete", function (data) {
+            strategies.next_id=parseInt(data[0].max)+1;
+            strategies.x2stats={
+                            "maintenance":data[0].stats_maintenance_x2,
+                            "reuse":data[0].stats_reuse_x2,
+                            "refurbishment":data[0].stats_refurbishment_x2,
+                            "remanufacturing":data[0].stats_remanufacturing_x2,
+                            "recycle":data[0].stats_recycle_x2,
+                        }
+        });
+
+        jQuery.getJSON(casestudies.endpoint + "?sheet=software_do_not_delete", function (data) {
+            casestudies.next_id=parseInt(data[0].max)+1;
+        });
+
+        if(sessionStorage.getItem("editorCases")){
+            casestudies=JSON.parse(sessionStorage.getItem("editorCases"));
+            strategies=JSON.parse(sessionStorage.getItem("editorStrategies"));
+
+            renderKeys(casestudies,"#casestudies");
+            renderKeys(strategies,"#strategies");
+            renderSheets();
+            return;
+        }
+
+        jQuery.getJSON(casestudies.endpoint + "/keys", function (data) {
+            casestudies.keys=data;
+
+            sessionStorage.setItem("editorCases",JSON.stringify(casestudies));
+            renderKeys(casestudies,"#casestudies");
+        });
+        jQuery.getJSON(strategies.endpoint + "/keys", function (data) {
+            strategies.keys=data;
+
+            sessionStorage.setItem("editorStrategies",JSON.stringify(strategies));
+            renderKeys(strategies,"#strategies");
+        });
+        jQuery.getJSON(strategies.endpoint + "/sheets", function (data) {
+            strategies.sheets=data.sheets;
+
+            sessionStorage.setItem("editorStrategies",JSON.stringify(strategies));
+            renderSheets();
+        });
+    }
+
+    initEditor();
+
+</script>

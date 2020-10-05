@@ -1,0 +1,77 @@
+<div id="print"></div>
+
+<style>
+    body{background:white !important;}
+    header#masthead{position:relative !important; top:0px !important;}
+    header{background:transparent !important;}
+</style>
+<script>
+    function formatlines(t){
+        return t.replace(/\n/g, '<br/>');
+    }
+
+    function formatimage(i){
+        if(i==null || i==""){ return "";}
+        return "<p><img src=" + i + "');\" style='width:auto;max-width:100%;'/></p>";
+    }
+
+    function formathow(t){
+        if(t==null || t==""){ return "";}
+        return "<p><h4>What can it do?</h4>" + formatlines(t) + "</p>";
+    }
+    function formatcases(t, l, i){
+        l=formatcaselinks(l);
+        i=formatimage(i);
+        if((t==null || t=="") && l=="" && i=="") { return "";}
+        return "<p><h4>Case studies</h4>" + i + formatlines(t) + "<br/>" + l + "</p>";
+    }
+    function formatcaselinks(t){
+        if(t==null || t==""){ return "";}
+        try {
+            var l = t.split("\n");
+            var r = [];
+            for (var i = 0; i < l.length; i++) r.push("<a href='" + l[i].split(";")[0] + "'>" + l[i].split(";")[1] + "</a> <small>(external link)</small>");
+            return formatlines(r.join("<br>"));
+        }catch(e){return "";}
+    }
+    function formatreferences(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h4>References</h4>" + formatlines(t)+ "</p>";
+    }
+    function formatQA(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h4>What questions to ask?</h4>" + formatlines(t)+ "</p>";
+    }
+    function formatchar(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h4>When is it used?</h4>" + formatlines(t)+ "</p>";
+    }
+    function formatuse(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h4>How is it used?</h4>" + formatlines(t)+ "</p>";
+    }
+    function printLine(d) {
+        if (d != null) {
+            jQuery("#print").append("<h3>" + d.X3 + "</h3>" +
+                "<p>" + d.WHY + "</p>" +
+                formathow(d.HOW) +
+                formatuse(d["USE"]) +
+                formatchar(d["CHARACTERISTICS"]) +
+                formatQA(d["QUESTIONS TO ANSWER"]) +
+                formatcases(d["CASE STUDY"], d["LINKS"], d["IMAGE_URL"]) +
+                formatreferences(d["REFERENCES"])+
+                "<hr style='width:100%'>"
+            );
+        }
+        window.print();
+    }
+
+    var localDb = window.localStorage;
+    project=JSON.parse(localDb.getItem("projectObj") || "{}");
+    if(project!=null && project.activeSession!=null){
+        jQuery("#print").append("<h2>" + project.activeSession.name + "</h2>");
+        jQuery("#print").append("<p>(Circularity Index " + project.activeSession.cindex + ")</p>");
+        for(var i=0;i<project.activeSession.items.length;i++)
+            printLine(project.activeSession.items[i]);
+    }
+</script>

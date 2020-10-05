@@ -1,0 +1,532 @@
+<div id="searchcontainer">
+
+    <span class="searchbox">
+        <h2>Search case studies</h2>
+        <input id="searchby" placeholder="Search by case name"><br>
+        <a onclick="searchDb()" href="#" class="minibutton">SEARCH</a> | <a onclick="reset()" href="#" class="minibutton">RESET</a>
+        <hr>
+    </span>
+    <ul id="filters">
+        <li data-attr="">Loading</li>
+    </ul>
+    <div id="searchdiv"></div>
+    <div id="popup"></div>
+    <div id="item"></div>
+    <div id="comparison"></div>
+</div>
+<!-- Styles -->
+<style>
+   
+
+   input#searchby {
+        width: 50%;
+        padding: 10px;
+    }
+    span.searchbox {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    header#masthead{position:relative !important; top:0px !important;}
+    header{background:transparent !important;}
+    header.page-header{display:none !important;}
+    #searchdiv {
+        width: 80%;
+        height: auto;
+        position: relative;
+        float: left;
+        -webkit-transition: width .6s ease;
+        text-align: center;
+    }
+    #searchdiv .item {
+        width: 30%;
+        height: 200px;
+        cursor:pointer;
+        text-align: center;
+        position: relative;
+        margin-left: 1%;
+        display: inline-block;
+    }
+    #searchdiv .item:hover h3{
+        text-decoration: underline;
+        background: transparent;
+        transition: background-color 1s;
+    }
+    #searchdiv .item .heroimg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+        opacity: 0.7;
+    }
+    #searchdiv .item h3 {
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        line-height: 200px;
+        height: 200px;
+        z-index: 2;
+        padding: 0px;
+        margin: 0px;
+        background: #f1ef2f70;
+        color: #000000;
+        font-size: 18px;
+        font-family: Didact Gothic, Helvetica, Arial, sans-serif;
+        /* font-weight: bold; */
+    }
+    h1 {
+        margin-top: 100px !important;
+    }
+
+    ul#filters {
+        position: relative;
+        left: 0px;
+        list-style: none;
+        float: left;
+        z-index: 0;
+        background: #f1ee2ead;
+        width: 20%;
+    }
+    ul#filters li{
+        font-size: 17px;
+        color:black;
+        cursor:pointer;
+    }
+    ul#filters li.subfilter{
+        font-size: 12px;
+        padding-left:10px;
+    }
+    ul#filters li.subfilter:hover{
+        text-decoration: underline;
+    }
+    ul#filters li.active{
+        font-weight: bold;
+    }
+
+    ul#filters span.searchbox hr{
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    ul#filters span.searchbox a{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    ul#filters span.searchbox input{
+        padding: 5px;
+        background: #e8e750;
+        border: 1px solid black;
+    }
+
+    g tspan{fill:black !important;}
+
+
+    div#popup{
+        position:fixed;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        right:0px;
+        background:rgba(0,0,0,0.3);
+        cursor: pointer;
+        z-index: 9;
+        display: none;
+    }
+    div#item .small_image {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center center;
+    }
+    div#item h2{
+        position: absolute;
+        top: 300px;
+        background: white;
+        padding: 0px 20px;
+    }
+    div#item, div#comparison{
+        position: absolute;
+        display:none;
+        z-index: 10;
+        top: 100px;
+        left: 50%;
+        width: 80%;
+        margin-left: -40%;
+        background: white;
+        padding: 2%;
+        box-shadow: #8a8830 0px 30px 50px;
+        border: 1px solid #f1ee2e;
+    }
+    div#item .body{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+    #item a.close{
+                font-weight: bold;
+                position: absolute;
+                right: 21px;
+                top: 21px;
+                font-size: 12px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                background: #ffffff;
+                font-family: sans-serif;
+        }
+
+
+    #item span.attribute {
+        border: 1px solid black;
+        font-size: 10px;
+        padding: 2px 10px;
+        margin: 0px 10px 0px 0px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        #searchdiv{width:100% !important;}
+        #panel a.close{left:50%;margin-left:-10px;
+            margin-top: 20px;}
+        .container.container-medium{padding:0px;}
+        ul#filters {
+            position: relative;
+            top: 0px;
+            margin: 0px;
+            width: 100%;
+            text-align: center;
+            height: auto;
+        }
+    }
+
+
+</style>
+
+<script>
+
+
+    var types={};
+    types={
+        "business":{color:"#E6883C",label:"Business & Network"},
+        "resource":{color:"#AF7DEB",label:"Resources use & production"},
+        "logistics":{color:"#C94D8B",label:"Forward logistic"},
+        "sale":{color:"#5386D3",label:"Sale"},
+        "use":{color:"#7BE3CD",label:"Use & operation"},
+        "service":{color:"#64D069",label:"Service & maintenance"},
+        "reverse":{color:"#C8D454",label:"Reverse logistic"},
+        "recovery":{color:"#a65e2e",label:"Recovery"},
+        "default":{color:"#000",label:""},
+        "highlight":{color:"#f7f6b9",label:""},
+        "off":{color:"#cccccc",label:""},
+    };
+
+
+    var graph_config={
+        min_fontsize:7,
+        max_fontsize:10,
+        title_size:20,
+        line_break:12
+    };
+
+    if(screen.width<1200){
+        graph_config={
+            min_fontsize:5,
+            max_fontsize:6,
+            title_size:20,
+            line_break:9
+        };
+    }
+
+    function wrapup(t){
+        if(t.length==0) return null;
+        if(t.length>graph_config.line_break){
+            var br = new RegExp('(.{' + graph_config.line_break + '}[^ ]* )','g')
+            var broken = t.replace(br, "$1\n");
+            t=broken;
+        }
+        return t;
+    }
+
+    function reset(){
+        search={};
+        jQuery("#searchby").val("");
+        jQuery("#filters li.subfilter").removeClass("active");
+        sessionStorage.setItem("search",null);
+        searchDb();
+    }
+
+    function searchDb(){
+        if(jQuery("#searchby").val().trim().length>=0) {
+            initSR();
+        }
+    }
+
+    var search={};
+    if(sessionStorage && sessionStorage.getItem("search"))
+        search=JSON.parse(sessionStorage.getItem("search"));
+
+    if(search && search.os){
+        jQuery("#searchby").val(search.os)
+    }
+
+    function mapfilters(){
+        if(search && search.filters){
+            for(var f in search.filters){
+                jQuery("#filters li.subfilter[data-value='"  + search.filters[f] +  "']").addClass("active");
+            }
+        }
+    }
+
+    function renderFilters(f){
+        var ul="";
+        for (var i in f) {
+            ul+="<li> " + i.replace("FILTER-","").replace(/-/g,' ') + "</li>";
+            for (var j=0; j< f[i].length;j++) {
+                ul+="<li class='subfilter' data-filter='"  + i +  "' data-value='"  + f[i][j] +  "'> " + f[i][j] + "</li>";
+            }
+        }
+        jQuery("#filters").html(ul);
+
+        jQuery("#filters li.subfilter").click(function(){
+            
+            if(!search.filters)
+                search.filters={};
+
+            if(!jQuery(this).hasClass("active")){
+                jQuery("#filters li.subfilter[data-filter='"  + jQuery(this).attr("data-filter") +  "']").removeClass("active");
+                jQuery(this).addClass("active");
+
+                search.filters[jQuery(this).attr("data-filter")]=jQuery(this).attr("data-value");
+            }else{
+                jQuery("#filters li.subfilter[data-filter='"  + jQuery(this).attr("data-filter") +  "']").removeClass("active");
+                
+                search.filters[jQuery(this).attr("data-filter")]=null;
+            }
+            
+
+            if(sessionStorage)
+                sessionStorage.setItem("search",JSON.stringify(search));
+
+            initSR();
+        });
+
+        mapfilters();
+    }
+
+    function initFilters(d){
+
+        if(sessionStorage && !d && sessionStorage.getItem("filters")){
+            if(sessionStorage.getItem("filters")){
+                renderFilters(JSON.parse(sessionStorage.getItem("filters")));
+                return;
+            }
+        }
+
+        if(d){
+            var f={};
+            
+            for (var i=0;i<d.length; i++) {
+                for(e in d[i]){
+                    if(e.indexOf("FILTER-")===0 && !f[e]){
+                        var filtername=e;
+                        f[filtername]=[...new Set(d.map(item => item[filtername]))];
+                    }
+                }
+            }
+
+            if(sessionStorage)
+                sessionStorage.setItem("filters",JSON.stringify(f));
+            renderFilters(f);
+        }
+    }
+
+    function renderResults(d){
+        var sr="";
+        for (var i=0;i<d.length; i++) {
+            sr+="<div class='item' data-item='" + d[i]["ID"] + "'><span class='heroimg' style='background-image:url(" + d[i]["HERO IMAGE"] + ")'></span><h3>" + d[i].TITLE + "</h3></div>";
+        }
+
+        jQuery("#searchdiv").html(sr);
+
+
+        jQuery("#searchdiv .item").click(function(){
+            renderItem(findCS(jQuery(this).attr("data-item")));
+        });
+    }
+
+
+    function renderItem(item){
+
+        if(item){
+            var h="<a href='#' class='close'>X</a>";
+            h+="<div>" + formatimage(item["HERO IMAGE"])  + "</div>";
+            h+="<h2>" + item["TITLE"] + "</h2>";
+            h+="<div>" + formatvideo(item["VIDEO LINK"])  + "</div>";
+            h+="<div class='body'>" + tags(item)  + "</div>";
+            h+="<div class='body'>" + item["CASE STUDY"]  + "</div>";
+            
+            h+="<div class='body'>" + formatcaselinks(item["LINKS"])  + "</div>";
+            h+="<div class='body'>" + relationships(item["X3"])  + "</div>";
+
+            if(item["TABLE1"]!=null && item["TABLE1"]!="") h+="<div class='body' style='text-align:center;'><img src='" + item["TABLE1"] + "' style='max-width:100%;'/></div>";
+            if(item["TABLE2"]!=null && item["TABLE2"]!="") h+="<div class='body' style='text-align:center;'><img src='" + item["TABLE2"] + "' style='max-width:100%;'/></div>";
+            if((item["TABLE2"]!=null && item["TABLE2"]!="")) h+="<div class='body' style='text-align:left;'><img src='https://storage.googleapis.com/circulardesign-it-media/Screenshot%202020-02-23%20at%2016.57.28.png' style='width:250px'/></div>";
+
+            jQuery("#item").html(h);
+
+            jQuery("#item a.extlink").attr("target","_blank");
+
+            jQuery("#item, #popup").show();
+
+            jQuery('html, body').animate({scrollTop:200},500);
+
+            jQuery("article.page").css("min-height",(jQuery("div#item").height() + 400) + "px");
+
+            jQuery("#item a.close, #popup").click(function(){
+                jQuery("#item").html("");
+                jQuery("#item, #popup").hide();
+
+                jQuery("article.page").css("min-height","auto");
+            });
+        }
+    }
+
+    function giveMeFilters(filters){
+        var l="";
+        for(var f in filters){
+            if(filters[f])
+                l+="&"+f+"=" + filters[f];
+        }
+        return l;
+    }
+
+    var masterData = [];
+    function initSR() {
+
+        initFilters();
+
+        search.os=jQuery("#searchby").val().trim();
+
+        masterData=[];
+        var query="https://sheetdb.io/api/v1/x2gcpmbdwud9u?sheet=Case%20studies";
+        var title= ((search.os!="") ? "&TITLE=*" + search.os + "*" : "");
+        var sf=((search.filters) ? giveMeFilters(search.filters) : "");
+
+        if(title || sf){
+            query="https://sheetdb.io/api/v1/x2gcpmbdwud9u/search?sheet=Case%20studies" + title + sf; 
+        }
+            
+        
+        sessionStorage.setItem("search",JSON.stringify(search));
+
+        jQuery("#popup").show();
+        jQuery.getJSON(query, function (data) {
+
+            masterData=data;
+            initFilters(masterData);
+            renderResults(masterData);
+            jQuery("#popup").hide();
+
+            if(deeplink){
+                renderItem(findCS(deeplink));
+                deeplink=null;
+            }
+
+        });
+    }
+
+    var deeplink=null;
+    if(document.location.hash !=null && document.location.hash !="" && document.location.hash.substr(0,4)=="#dl:"){
+            deeplink=decodeURI(document.location.hash.substring(4));
+        }
+
+
+    initSR();
+
+    function formatlines(t){
+        return t.replace(/\n/g, '<br/>');
+    }
+
+    function formatimage(i){
+        if(i==null || i==""){ return "";}
+        return "<div style=\"background-image:url('" + i + "');\" class='small_image'/>";
+    }
+
+    function formatvideo(i){
+        if(i==null || i==""){ return "";}
+        return "<iframe width='100%' height='400' src='" + i.replace("watch?v=","embed/") + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+    }
+
+    function formathow(t){
+        if(t==null || t==""){ return "";}
+        return "<p><h3>What can it do?</h3>" + formatlines(t) + "</p>";
+    }
+    function formatcases(t, l, i){
+        l=formatcaselinks(l);
+        i=formatimage(i);
+        if((t==null || t=="") && l=="" && i=="") { return "";}
+        return "<p><h3>Case studies</h3>" + i + formatlines(t) + "<br/>" + l + "</p>";
+    }
+    function formatcaselinks(t){
+        if(t==null || t==""){ return "";}
+        try {
+            var l = t.split("\n");
+            var r = [];
+            for (var i = 0; i < l.length; i++) r.push("<a href='" + l[i].split(";")[0] + "' class='extlink'>" + (l[i].split(";")[1] || l[i].split(";")[0]) + "</a> <small>(external link)</small>");
+            return formatlines(r.join("<br>"));
+        }catch(e){return "";}
+    }
+    function formatreferences(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h3>References</h3>" + formatlines(t)+ "</p>";
+    }
+    function tags(item){
+        if((item==null || item=="")) { return "";}
+        var h="";
+
+        for(var t in item){
+            if(t.indexOf("FILTER-")>=0 || t.indexOf("TAG-")>=0){
+                if(item[t])
+                    h+="<span class='attribute " + t + "'>" + item[t]+ "</span>";
+            }
+        }
+        
+        return h;
+    }
+    function formatchar(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h3>When is it used?</h3>" + formatlines(t)+ "</p>";
+    }
+    function formatuse(t){
+        if((t==null || t=="")) { return "";}
+        return "<p><h3>How is it used?</h3>" + formatlines(t)+ "</p>";
+    }
+
+    function relationships(t){
+        if((t==null || t=="")) { return "";}
+        try {
+            var l = t.replace(/\n/g, ",").split(",");
+            var r = [];
+            for (var i = 0; i < l.length; i++) {
+                r.push("<a href='/design-for-x/#dl:" + l[i] + "' class='extlink'>" + l[i] + "</a> ");
+            }
+            return "DfX relationship: " + formatlines(r.join(" | ") + "");
+        }catch(e){return "";}
+    }
+
+    function findCS(cr){
+        cr=cr.replace("\n","").toLocaleLowerCase().trim();
+        for(var i=0;i<masterData.length;i++)
+            if(masterData[i]!=null && masterData[i].ID!=null && masterData[i].ID.toLocaleLowerCase()==cr) return masterData[i];
+
+        return null;
+    }
+
+
+
+</script>

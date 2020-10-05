@@ -1,0 +1,78 @@
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<style>
+ul#glossary_menu {
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    width: 20%;
+    margin-top: 150px;
+}
+ul#glossary_menu .group {
+    font-size: 14px;
+    font-weight: bold;
+}
+ul#glossary_menu .item {
+    font-size: 12px;
+    padding-left: 10px;
+}
+.entry-content {
+    float: left;
+    width: 80%;
+}
+@media screen and (max-width: 1200px) {
+.entry-content {
+    width: 100%;
+}
+#glossary_menu {
+    display: none;
+}
+}
+</style>
+
+<script>
+jQuery(document).ready(function(){
+var i = 0;
+var items = [];
+var l="";
+jQuery(".entry-content strong").each(function(){
+    i++;
+    jQuery(this).attr("data-index","item-" + i);
+    items.push(jQuery(this).text());
+});
+
+var menu="";
+for (var i=0;i<items.length;i++){
+    if(items[i].toLowerCase().substr(0,1)!=l){
+        l=items[i].toLowerCase().substr(0,1);
+        menu+="<li class='group' data-letter='" + l + "'>" + l.toUpperCase() + "</li>";
+    }
+
+    menu+="<li class='item' data-index='item-" + (i+1) + "' data-letter='" + l + "'>" + items[i] + "</li>";
+}
+
+menu="<ul id='glossary_menu'>" + menu + "</ul>";
+
+jQuery(".entry-content").before(menu);
+
+jQuery("#glossary_menu li.item").hide();
+jQuery("#glossary_menu li[data-letter='" + jQuery("#glossary_menu li.group:first").attr("data-letter") + "']").show();
+
+jQuery("#glossary_menu li.group").click(function(){
+    jQuery("#glossary_menu li.item").hide();
+    jQuery("#glossary_menu li[data-letter='" + jQuery(this).attr("data-letter") + "']").show();
+});
+
+jQuery("#glossary_menu li.item").click(function(){
+    jQuery([document.documentElement, document.body]).animate({
+        scrollTop: jQuery(".entry-content strong[data-index='" + jQuery(this).attr("data-index") + "']").offset().top - 150
+    }, 500);
+});
+
+
+
+jQuery(window).scroll(function() {
+    var scrollTopVal = jQuery(this).scrollTop();
+    jQuery("#glossary_menu").css({'margin-top' : (150+scrollTopVal) + 'px'});
+});
+});
+</script>
