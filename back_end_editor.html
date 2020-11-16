@@ -99,9 +99,25 @@ span.linea input {
     padding: 0px;
     display: inline-block;
 }
+a.clearme {
+    background: black;
+    color: white;
+    padding: 2px 10px;
+    cursor: pointer;
+    float: right;
+    margin: 6px 0px;
+}
 </style>
 
 <script>
+
+    var crosscheck=false;
+
+    function getHashValue(key) {
+        var matches = location.hash.match(new RegExp(key+'=([^&]*)'));
+        return matches ? matches[1] : null;
+    }
+
 
     var casestudies={
         endpoint:"https://sheetdb.io/api/v1/x2gcpmbdwud9u"
@@ -118,8 +134,34 @@ span.linea input {
     var prefill={};
     var prefill_m={};
 
+    function checkSheetX1Match(p){
+
+        if(crosscheck) return;
+
+        crosscheck=true;
+
+        if(jQuery(" .form .field[name=X1]").val().split(" ")[1].toLocaleUpperCase().trim() != jQuery("#strategy_sheet").val().toLocaleUpperCase().trim()){
+            if(p=="sheet"){
+                jQuery(".form .field[name=X1] option").each(function(){
+                    if(jQuery(this).attr("value").split(" ")[1].toLocaleUpperCase().trim() == jQuery("#strategy_sheet").val().toLocaleUpperCase().trim()){
+                        jQuery(".form .field[name=X1] option[value='" + jQuery(this).val() + "']").prop('selected', true);
+                    }
+                });
+            }
+            else{
+                jQuery("#strategy_sheet option").each(function(){
+                    if(jQuery(".form .field[name=X1] option:selected")[0].value.split(" ")[1].toLocaleUpperCase().trim()==jQuery(this).attr("value").toLocaleUpperCase().trim()){
+                        jQuery("#strategy_sheet option[value='" + jQuery(this).val() + "']").prop('selected', true);
+                    }
+                });
+            }
+        }
+        setTimeout(function(){crosscheck=false},100);
+    }
+
     function renderKeys(data, container){
-        var h="";
+        var field_dictionary={};
+        var h="<div class='textlines'><a class='clearme'>CLEAR FORM / ADD NEW</a></div>";
         prefill["TYPE"]=["business","resource","logistics","sale","use","service","reverse","recovery"];
         prefill["X1"]=["Df Maintenance","Df Reuse","Df Refurbishment","Df Remanufacturing","Df Recycle"];
         prefill["FILTER-FOCUS"]=["SYSTEM","PRODUCT","COMPONENTS","MATERIALS"];
@@ -129,53 +171,96 @@ span.linea input {
         prefill["FILTER-MATERIAL-FLOW"]=["LINEAR","LINEAR EXTENSION","CIRCULAR","CIRCULAR EXTENSION"];
         prefill_m["LOOP"]=["LOOP 1","LOOP N","LAST LOOP"];
         prefill_m["APPLIES_TO"]=["Materials","Components","Products","Systems"];
+
+        field_dictionary["HERO IMAGE"]="<a href='https://console.cloud.google.com/storage/browser/circulardesign-it-media;tab=objects?project=circulardesignit' target='_blank'><img src='https://storage.googleapis.com/circulardesign-it-media/box%2Bdocument%2Boutline%2Bshare%2Btop%2Bupload%2Bicon-1320195323221671611.png' style='height: 15px;float: right;margin: 4px;'/></a> <img title='Upload image on Google cloud and copy the link here' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["TABLE1"]="<a href='https://console.cloud.google.com/storage/browser/circulardesign-it-media;tab=objects?project=circulardesignit' target='_blank'><img src='https://storage.googleapis.com/circulardesign-it-media/box%2Bdocument%2Boutline%2Bshare%2Btop%2Bupload%2Bicon-1320195323221671611.png' style='height: 15px;float: right;margin: 4px;'/></a> <img title='Upload image on Google cloud and copy the link here' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["TABLE2"]="<a href='https://console.cloud.google.com/storage/browser/circulardesign-it-media;tab=objects?project=circulardesignit' target='_blank'><img src='https://storage.googleapis.com/circulardesign-it-media/box%2Bdocument%2Boutline%2Bshare%2Btop%2Bupload%2Bicon-1320195323221671611.png' style='height: 15px;float: right;margin: 4px;'/></a> <img title='Upload image on Google cloud and copy the link here' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["VIDEO LINK"]="<img title='Add youtube link' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["X2"]="<img title='Select X1 first and then select from the list below, if the desired X2 is not available just input a new one' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["SCIENTIFIC SATURATION"]="<img title='This field is populated automatically once X2 and X3 are defined' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["PRODUCT-TAGS"]="<img title='Add multiple tags by separating them with ,' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["DFX_RELATIONSHIP"]="<img title='Add X3 relations by inserting names of other X3 strategies, you can add more by splitting them with ,' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["CASE_STUDY_ID"]="<img title='Add the ID of a Case Study here, they will be connected on the tool and displayed together' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+        field_dictionary["LINKS"]="<img title='You can add multiple links by splitting them with ;' src='https://storage.googleapis.com/circulardesign-it-media/img_519962.png' style='height: 15px;float: right;margin: 4px;cursor:help;'/>";
+
+
         for(var i=0;i<data.keys.length;i++)
         {
-            if((data.keys[i]!=("ID") && data.keys[i].indexOf("LINK")>=0) || data.keys[i].indexOf("LINK")>=0 || data.keys[i].indexOf("URL")>=0)
+            if(!prefill[data.keys[i]] && !prefill_m[data.keys[i]] && data.keys[i].substring(0,7).toLowerCase()!="hidden_" && data.keys[i]!=("ID") && (data.keys[i]==("HERO IMAGE") || data.keys[i]==("TABLE1")  || data.keys[i]==("X3") || data.keys[i]==("CASE_STUDY_ID") || data.keys[i]==("CIRCULARITY_INDEX") || data.keys[i]==("SCIENTIFIC SATURATION") || data.keys[i]==("TABLE2") || data.keys[i].indexOf("LINK")>=0 || data.keys[i].indexOf("URL")>=0))
             {
-                h+="<div class='textlines'><label>" + data.keys[i] + "</label><input name='" + data.keys[i] + "' class='field'/></div>";
+                h+="<div class='textlines'><label>" + data.keys[i] + " " + (field_dictionary[data.keys[i]] ?? "") + "</label><input name='" + data.keys[i] + "' class='field'/></div>";
+            }
+            else if(data.keys[i].substring(0,7).toLowerCase()=="hidden_")
+            {
+                switch(data.keys[i].toLowerCase()){
+                    case "hidden_user":h+="<input name='" + data.keys[i] + "' value='" + globalUserData.email + "' type='hidden' class='field'/>"; break;
+                    case "hidden_last_update":h+="<input name='" + data.keys[i] + "' value='" + new Date().toString() + "' type='hidden' class='field'/>";break;
+                }
             }
             else if(data.keys[i]==("ID"))
             {
-                h+="<div class='textlines'><label>" + data.keys[i] + "</label><input placeholder='Leave blank for new record or type ID to edit' name='" + data.keys[i] + "' class='field'/></div>";}
+                h+="<div class='textlines'><label>" + data.keys[i] + " " + (field_dictionary[data.keys[i]] ?? "") + "</label><input placeholder='Leave blank for new record or type ID to edit' name='" + data.keys[i] + "' class='field'/></div>";}
             else{
                 if(prefill[data.keys[i]]){
                     var options=prefill[data.keys[i]].map(x => "<option value='" + x + "'>" + x + "</option>").join(" ")
-                    h+="<div class='textlines'><label>" + data.keys[i] + "</label><select name='" + data.keys[i] + "' class='field'>" + options + "</select></div>";
+                    h+="<div class='textlines'><label>" + data.keys[i] + " " + (field_dictionary[data.keys[i]] ?? "") + "</label><select name='" + data.keys[i] + "' class='field'>" + options + "</select></div>";
                 } else if(prefill_m[data.keys[i]]){
                     var options=prefill_m[data.keys[i]].map(x => "<span class='linea'><input type='checkbox' name='" + data.keys[i] + "' value='" + x + "' class='field'/>" + x + "</span>").join(" ")
-                    h+="<div class='textlines responsive'><label>" + data.keys[i] + "</label><span class='blocco'>" + options + "</span></div>";                    
+                    h+="<div class='textlines responsive'><label>" + data.keys[i] + " " + (field_dictionary[data.keys[i]] ?? "") + "</label><span class='blocco'>" + options + "</span></div>";                    
                 }
                 else{
-                    h+="<div class='inputlines'><label>" + data.keys[i] + "</label><textarea name='" + data.keys[i] + "' class='field'></textarea></div>";
+                    h+="<div class='inputlines'><label>" + data.keys[i] + " " + (field_dictionary[data.keys[i]] ?? "") + "</label><textarea name='" + data.keys[i] + "' class='field'></textarea></div>";
                 }
             }
             
         }
         jQuery(container + " .form").html(h);
 
-        jQuery(container + " .form textarea[name=X2]").click(function(){
+        jQuery(container + " .form .clearme").click(function(){
+            jQuery(container + " .form input.field").each(function(){
+                switch(this.type){
+                    case "text":jQuery(this).val("");break;
+                    case "checkbox":jQuery(this).attr("checked",false);break;
+                }
+            });
+            jQuery(container + " .form select.field").each(function(){
+                jQuery(this).prop("selectedIndex", 0);
+            });
+            jQuery(container + " .form textarea.field").val("");
+            jQuery("#x2hint").remove()
+        })
+
+        jQuery(container + " .form .field[name=X1]").change(function(){
+            jQuery("#x2hint").remove();
+            checkSheetX1Match("x1");
+        });
+
+        jQuery(document).on('change','#strategy_sheet',function(){
+            jQuery("#x2hint").remove();
+            checkSheetX1Match("sheet");
+        });
+        jQuery(container + " .form .field[name=X2]").click(function(){
             jQuery("#x2hint").remove()
             var x2=strategies.x2stats[jQuery("#strategy_sheet").val().toLowerCase()].split(",").map((x)=>{if(x.length>0) return "<li data-val='" + x + "'>" + x + "</li>"}).join("")
-            jQuery(container + " .form textarea[name=X2]").after("<ul id='x2hint'>" + x2 + "</ul>")
+            jQuery(container + " .form .field[name=X2]").after("<ul id='x2hint'>" + x2 + "</ul>")
             jQuery("#x2hint li").click(function(){
-                jQuery(".form textarea[name=X2]").val(jQuery(this).attr("data-val"))
+                jQuery(".form .field[name=X2]").val(jQuery(this).attr("data-val"))
             })
         })
 
-        jQuery(container + " .form textarea[name=X3]").change(function(){
-            var ds=jQuery(container + " .form textarea[name=X3]").val().replace("DF ","").replace("Df ","").replace("df ","").replace("Dfx ","").replace("DfX ","").trim()
+        jQuery(container + " .form .field[name=X3]").change(function(){
+            var ds=jQuery(container + " .form .field[name=X3]").val().replace("DF ","").replace("Df ","").replace("df ","").replace("Dfx ","").replace("DfX ","").trim()
             var dsx1=jQuery(container + " .form select[name=X1]").val().replace("DF ","").replace("Df ","").replace("df ","").replace("Dfx ","").replace("DfX ","").trim()
-            jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val("searching saturation for '"+dsx1+" "+ds+"'")
+            jQuery(container + " .form .field[name='SCIENTIFIC SATURATION']").val("searching saturation for '"+dsx1+" "+ds+"'")
 
             jQuery.getJSON("https://4dcnwxyjqb.execute-api.us-west-2.amazonaws.com/api-proxy?q=" + encodeURI('"'+dsx1+'" ') + encodeURI('"'+ds+'"') , function (data) {
                     try{
                         var ss=data.search_information.total_results || 0;
                         var lss=ss==0? "none" : ss<100 ? "low" : ss<2000 ? "mid" : "high";
-                        jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val(lss)
+                        jQuery(container + " .form .field[name='SCIENTIFIC SATURATION']").val(lss)
                     }
                     catch(e){
-                        jQuery(container + " .form textarea[name='SCIENTIFIC SATURATION']").val("")
+                        jQuery(container + " .form .field[name='SCIENTIFIC SATURATION']").val("")
                     }
                    
                     
@@ -193,7 +278,7 @@ span.linea input {
                 jQuery.getJSON(url + "ID=" + jQuery(this).val() , function (data) {
                     if(data.length==0){alert("Record not found")}
                     for(var f in data[0]){
-                        
+                        if(f.substring(0,7).toLowerCase()!="hidden_"){
                         if(prefill_m[f]){
                             var o=data[0][f].split(",");
                             jQuery("#" + endpoint + " *[name='" + f +"']").attr("checked",false);
@@ -209,6 +294,7 @@ span.linea input {
                             jQuery("#" + endpoint + " *[name='" + f +"']").val(data[0][f]);
                         }
                     }
+                    }
                 });
 
             }
@@ -218,11 +304,11 @@ span.linea input {
 
     function renderSheets(){
         
-        var h="<select id='strategy_sheet'></select>";
+        var h="<select id='strategy_sheet' name='strategy_sheet'></select>";
         for(var i=0;i<strategies.sheets.length;i++)
         {
             if(strategies.sheets[i]!="software_do_not_delete")
-                h=jQuery(h).append("<option>" + strategies.sheets[i] + "</option>");
+                h=jQuery(h).append("<option value='" + strategies.sheets[i].toLocaleUpperCase() + "'>" + strategies.sheets[i] + "</option>");
         }
         jQuery("#strategies .sheets").html("<div class='inputlines'><label>SHEET</label>" + jQuery(h).prop('outerHTML') +"</div>");
     }
@@ -285,6 +371,26 @@ span.linea input {
             });
     });
 
+    function preFill(){
+        var edit = getHashValue('edit');
+        if(edit=="true"){
+            var sheet = getHashValue('sheet');
+            var id = getHashValue('id');
+            var editor = getHashValue('editor');
+            if(editor=="strategies"){
+                jQuery("#strategies").addClass("open");
+                jQuery("#strategy_sheet").val(sheet.toLocaleUpperCase());
+                jQuery("#strategies input.field[name='ID']").val(id);
+                jQuery("#strategies .form input[name=ID]").trigger("change");
+            }
+            else{
+                jQuery("#casestudies").addClass("open");
+                jQuery("#casestudies input.field[name='ID']").val(id);
+                jQuery("#casestudies .form input[name=ID]").trigger("change");
+            }
+        }
+    }
+
     function initEditor() {
         
 
@@ -310,6 +416,7 @@ span.linea input {
             renderKeys(casestudies,"#casestudies");
             renderKeys(strategies,"#strategies");
             renderSheets();
+            preFill();
             return;
         }
 
@@ -318,19 +425,26 @@ span.linea input {
 
             sessionStorage.setItem("editorCases",JSON.stringify(casestudies));
             renderKeys(casestudies,"#casestudies");
+            preFill();
         });
         jQuery.getJSON(strategies.endpoint + "/keys", function (data) {
             strategies.keys=data;
 
             sessionStorage.setItem("editorStrategies",JSON.stringify(strategies));
             renderKeys(strategies,"#strategies");
+            preFill();
         });
         jQuery.getJSON(strategies.endpoint + "/sheets", function (data) {
             strategies.sheets=data.sheets;
 
             sessionStorage.setItem("editorStrategies",JSON.stringify(strategies));
             renderSheets();
+            preFill();
         });
+
+
+        preFill();
+
     }
 
     initEditor();

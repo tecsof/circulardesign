@@ -282,6 +282,18 @@
         margin: 0px;
         padding: 0px;
     }
+
+    a.editicon {
+        font-size: 12px;
+        text-decoration: none !important;
+        /* border: 1px solid black; */
+        padding: 1px 10px;
+        background: black;
+        color: white;
+        float: right;
+        margin-right: 20px;
+        margin-top: 18px;
+    }
 </style>
 
 <!-- Resources -->
@@ -447,13 +459,22 @@
     function searchwhere(X3){
 
         var q=[];
-        var s="https://sheetdb.io/api/v1/x9j328uv1qu2z/search?sheet=%SHEET%&X3=*" + X3 + "*&casesensitive=false";
+        var s="https://sheetdb.io/api/v1/x9j328uv1qu2z/search?sheet=%SHEET%&X3=*%SEARCH%*&casesensitive=false";
+
+        if(X3.indexOf(";")>0){
+            q.push({
+                url:s.replace("%SHEET%",X3.split(";")[1]).replace("%SEARCH%",X3.split(";")[0]),
+                sheet: X3.split(";")[1]
+                });
+            
+        }else{
             jQuery("#chartcontainer #selector li").each(function(){
                 q.push({
-                    url:s.replace("%SHEET%",jQuery(this).attr("data-attr")),
+                    url:s.replace("%SHEET%",jQuery(this).attr("data-attr")).replace("%SEARCH%",X3),
                     sheet: jQuery(this).attr("data-attr")
                     });
             });
+        }
         
         for(var i=0;i<q.length;i++) {
             var found="";
@@ -492,6 +513,7 @@
         deeplink=decodeURI(document.location.hash.substring(4));
 
         dbsheet=searchwhere(deeplink);
+        if(deeplink.indexOf(";")>0) deeplink=deeplink.split(";")[0];
         if(dbsheet){
             jQuery("#chartcontainer #selector li[data-field='strategy']").removeClass("active");
             jQuery("#chartcontainer #selector li[data-attr=" + dbsheet + "][data-field='strategy']").addClass("active");
@@ -695,11 +717,11 @@
                 window.setTimeout(function(){
                     jQuery("#chartdiv").removeClass("hidden");
                     jQuery("#graph_messages").remove();
-                },1000);
+                },100);
             }
             needCheckReadiness=false;
         }
-    },500);
+    },100);
 
     var needCheckReadiness=false;
 
@@ -828,6 +850,11 @@
     function formatuse(t){
         if((t==null || t=="")) { return "";}
         return "<li><h3>How is it used?</h3>" + formatlines(t)+ "</li>";
+    }
+
+    function showedit(id){
+        if(!jQuery('body').hasClass('logged-in') || (id==null || id=="")) { return "";}
+        return "<a class='editicon' href='/tool-editor#edit=true&editor=strategies&id=" + id + "&sheet=" + document.location.hash.substring(1).toLocaleUpperCase() + "' target='_blank'>EDIT</a>";
     }
 
     function relationships(t){
@@ -998,7 +1025,7 @@
 
             adaptData(d);
 
-            jQuery("#panel").html("<a href='#' class='close'>x</a><div class='content'><h2>" + d.X3 + "</h2>" +
+            jQuery("#panel").html("<a href='#' class='close'>x</a><div class='content'><h2>" + d.X3 + showedit(d.ID) + "</h2>" +
                 "<li>" + formatlines(d.WHY) + "</li>" +
                 formathow(d.HOW) +
                 formatuse(d["USE"])+

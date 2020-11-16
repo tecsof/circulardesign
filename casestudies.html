@@ -47,6 +47,10 @@
         position: relative;
         margin-left: 1%;
         display: inline-block;
+        filter: grayscale(1);
+    }
+    #searchdiv .item:hover {
+        filter: grayscale(0);
     }
     #searchdiv .item:hover h3{
         text-decoration: underline;
@@ -78,6 +82,14 @@
         font-size: 18px;
         font-family: Didact Gothic, Helvetica, Arial, sans-serif;
         /* font-weight: bold; */
+    }
+    #searchdiv .item h3 b{
+        background:black;
+        color:white;
+        padding:2px 10px;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 14px;
     }
     h1 {
         margin-top: 100px !important;
@@ -181,13 +193,35 @@
                 font-family: sans-serif;
         }
 
+    #item .strategies h4 {
+        margin: 5px 0px;
+        font-size: 16px;
+    }  
+    #item .strategies a {
+        text-decoration: underline;
+        font-size: 12px;
+    }  
 
     #item span.attribute {
         border: 1px solid black;
         font-size: 10px;
         padding: 2px 10px;
         margin: 0px 10px 0px 0px;
+        cursor: pointer;
     }
+    #item span.attribute:hover {
+        background:black;
+        color:white;
+    }
+
+    a.editicon {
+    position: absolute;
+    background: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 10px;
+    color: white;
+}
 
     @media screen and (max-width: 1200px) {
         #searchdiv{width:100% !important;}
@@ -348,7 +382,7 @@
     function renderResults(d){
         var sr="";
         for (var i=0;i<d.length; i++) {
-            sr+="<div class='item' data-item='" + d[i]["ID"] + "'><span class='heroimg' style='background-image:url(" + d[i]["HERO IMAGE"] + ")'></span><h3>" + d[i].TITLE + "</h3></div>";
+            sr+="<div class='item' data-item='" + d[i]["ID"] + "'><span class='heroimg' style='background-image:url(" + d[i]["HERO IMAGE"] + ")'></span><h3><b>" + d[i].TITLE + "</b></h3></div>";
         }
 
         jQuery("#searchdiv").html(sr);
@@ -360,10 +394,38 @@
     }
 
 
+    function renderStrategies(id){
+
+        var sheets="Reuse,Maintenance,Refurbishment,Remanufacturing,Recycle".split(",");
+        var query="https://sheetdb.io/api/v1/x9j328uv1qu2z/search?sheet=%SHEET%&CASE_STUDY_ID=" + id;
+
+        for(var i=0;i<sheets.length;i++){
+            (function(s){
+                jQuery.getJSON(query.replace("%SHEET%",s), function (data) {
+                    var h="";
+
+                    if(data.length>0){
+                        h+="<h4>"+ s + " strategies: </h4>";
+                        for(var i=0;i<data.length;i++){
+                            h+="<div><a href='/design-for-x/#dl:" + data[i]["X1"] + ";" + s + "'>" + data[i]["X1"] + "</a> &gt; <a href='/design-for-x/#dl:" + data[i]["X2"] + ";" + s + "'>" + data[i]["X2"] + "</a> &gt; <a href='/design-for-x/#dl:" + data[i]["X3"] + ";" + s + "'>" + data[i]["X3"] + "</a></div>";
+                        }
+                    }
+
+                    jQuery("#item .strategies").append(h);
+                });
+            })(sheets[i]);
+        }
+
+        return "";
+    }
+
+
     function renderItem(item){
 
         if(item){
             var h="<a href='#' class='close'>X</a>";
+            h+=showedit(item.ID);
+            window.location.hash = '#dl:' + item.ID;
             h+="<div>" + formatimage(item["HERO IMAGE"])  + "</div>";
             h+="<h2>" + item["TITLE"] + "</h2>";
             h+="<div>" + formatvideo(item["VIDEO LINK"])  + "</div>";
@@ -372,6 +434,7 @@
             
             h+="<div class='body'>" + formatcaselinks(item["LINKS"])  + "</div>";
             h+="<div class='body'>" + relationships(item["X3"])  + "</div>";
+            h+="<div class='strategies'>" + renderStrategies(item.ID)  + "</div>";
 
             if(item["TABLE1"]!=null && item["TABLE1"]!="") h+="<div class='body' style='text-align:center;'><img src='" + item["TABLE1"] + "' style='max-width:100%;'/></div>";
             if(item["TABLE2"]!=null && item["TABLE2"]!="") h+="<div class='body' style='text-align:center;'><img src='" + item["TABLE2"] + "' style='max-width:100%;'/></div>";
@@ -393,7 +456,27 @@
 
                 jQuery("article.page").css("min-height","auto");
             });
+
+            jQuery("#item span.attribute").click(function(){
+                jQuery("#item").html("");
+                jQuery("#item, #popup").hide();
+
+                jQuery("article.page").css("min-height","auto");
+                
+
+                search={};
+                jQuery("#searchby").val("");
+                sessionStorage.setItem("search",null);
+                searchDb();
+                jQuery("#filters li.subfilter").removeClass("active");
+                jQuery("#filters li.subfilter[data-value='" + jQuery(this).text() + "']").trigger("click");
+            });
         }
+    }
+
+    function showedit(id){
+        if(!jQuery('body').hasClass('logged-in') || (id==null || id=="")) { return "";}
+        return "<a class='editicon' href='/tool-editor#edit=true&editor=casestudies&id=" + id + "' target='_blank'>EDIT</a>";
     }
 
     function giveMeFilters(filters){
