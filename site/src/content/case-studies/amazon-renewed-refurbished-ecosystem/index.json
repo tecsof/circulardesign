@@ -1,7 +1,7 @@
 {
   "id": 188,
   "title": "AMAZON RENEWED REFURBISHED ECOSYSTEM",
-  "videoLink": "",
+  "heroImage": "/images/case-studies/amazon-renewed-refurbished-ecosystem/heroImage.png",
   "links": "https://www.amazon.com/Certified-Refurbished/b?ie=UTF8&node=12653393011",
   "x3": "Sales",
   "filterFocus": [
@@ -18,6 +18,5 @@
   ],
   "filterMaterialFlow": [
     "CIRCULAR"
-  ],
-  "heroImage": "amazon-renewed-refurbished-ecosystem.jpg"
+  ]
 }
