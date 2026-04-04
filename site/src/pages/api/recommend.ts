@@ -80,7 +80,6 @@ Each strategy belongs to one of 8 lifecycle phases (in supply chain order):
 8. Recovery (recovery) — end-of-life processing, material recovery, recycling
 
 Strategies also belong to Loops (product lifecycle iterations):
-- LOOP 0: Pre-use / first lifecycle design decisions
 - LOOP 1: First use cycle (maintenance, repair, reuse within original lifecycle)
 - LOOP N: Multiple subsequent cycles (refurbishment, remanufacturing — extending life across users)
 - LAST LOOP: Final end-of-life (recycling, material recovery — when product can no longer be maintained/reused)

@@ -91,7 +91,6 @@ export default config({
         loop: fields.multiselect({
           label: 'Loop',
           options: [
-            { label: 'Loop 0', value: 'LOOP 0' },
             { label: 'Loop 1', value: 'LOOP 1' },
             { label: 'Loop N', value: 'LOOP N' },
             { label: 'Last Loop', value: 'LAST LOOP' },

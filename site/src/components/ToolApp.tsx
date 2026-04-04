@@ -67,7 +67,7 @@ const PHASE_KEYS = Object.keys(PHASE_COLORS);
 
 const X1_ORDER = ['Maintenance', 'Reuse', 'Refurbishment', 'Remanufacturing', 'Recycle'];
 const X1_OPTIONS = X1_ORDER;
-const LOOP_OPTIONS = ['LOOP 0', 'LOOP 1', 'LOOP N', 'LAST LOOP'];
+const LOOP_OPTIONS = ['LOOP 1', 'LOOP N', 'LAST LOOP'];
 const APPLIES_TO_OPTIONS = ['Products', 'Components', 'Materials', 'Processes', 'Systems'];
 
 const SUGGESTED_PROMPTS = ['repairable laptop', 'refill packaging', 'modular furniture'];
