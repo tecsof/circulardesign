@@ -1,7 +1,16 @@
 import { config, collection, fields, singleton } from '@keystatic/core';
 
+const isLocal = process.env.NODE_ENV === 'development' || !process.env.NETLIFY;
+
 export default config({
-  storage: { kind: 'local' },
+  storage: isLocal
+    ? { kind: 'local' }
+    : {
+        kind: 'github',
+        repo: 'tecsof/circulardesign',
+        branchPrefix: 'keystatic/',
+        pathPrefix: 'site',
+      },
   ui: {
     brand: { name: 'Circular Design' },
   },
