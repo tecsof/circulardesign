@@ -22,7 +22,7 @@ const caseStudies = caseDirs
       return {
         slug: dir.name,
         title: data.title || dir.name,
-        heroImage: data.heroImage || '',
+        heroImage: data.heroImage ? `/images/case-studies/${data.heroImage}` : '',
         filterFocus: data.filterFocus || [],
         filterCycle: data.filterCycle || [],
         filterX1: data.filterX1 || [],
