@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufactured Distribution",
+  "x3": "Df OEM Remanufactured Branding",
+  "type": "logistics",
+  "references": "Hazen, B. T., Mollenkopf, D. A., & Wang, Y. (2017). Remanufacturing for the circular economy: an examination of consumer switching behavior. Business Strategy and the Environment, 26(4), 451-464.\nLacy, P., Rutqvist, J., & BuddPress, B. (2015). Waste to wealth: the circular economy advantage. Accenture.\nTukker, A. (2015). Product services for a resource-efficient and circular economy\u2013a review. Journal of Cleaner Production, 97, 76-91.",
+  "caseStudyId": "177",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Collaborative Maintenance",
+  "x3": "Df Do-It-Together",
+  "type": "service",
+  "references": "Jaeger-Erben, M., R\u00fcckert-John, J., & Sch\u00e4fer, M. (2015). Sustainable consumption through social innovation: A typology of innovations for sustainable consumption practices. Journal of Cleaner Production, 108, 784\u2013798.\n\nJohn Hagel III, J. S. B. and L. D. (2010, February 18). From Do It Yourself to Do It Together. Harvard Business Review. https://hbr.org/2010/02/from-do-it-yourself-to-do-it-t\n  \n",
+  "caseStudyId": "113",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

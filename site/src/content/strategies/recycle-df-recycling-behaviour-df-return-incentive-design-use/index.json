@@ -1,0 +1,20 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recycling Behaviour",
+  "x3": "Df Return Incentive Design",
+  "type": "use",
+  "references": "Geissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.\nLacy, P., Rutqvist, J., & BuddPress, B. (2015). Waste to wealth: the circular economy advantage. Accenture.\nTukker, A. (2015). Product services for a resource-efficient and circular economy\u2013a review. Journal of Cleaner Production, 97, 76-91.",
+  "caseStudyId": "184",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

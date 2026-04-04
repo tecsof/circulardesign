@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Society",
+  "x3": "Df Socio-economic Security",
+  "type": "resource",
+  "references": "Whiteley, N. (1994). Design for Society (Revised ed.). Reaktion Books.\n\nLepawsky, J. (2018). Reassembling Rubbish: Worlding Electronic Waste. MIT Press.",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recycling Behaviour",
+  "x3": "Df Contamination Prevention Guidance",
+  "type": "use",
+  "references": "Rogers, D. S., & Tibben-Lembke, R. S. (2001). An examination of reverse logistics practices. Journal of Business Logistics, 22(2), 129-148.\nAllwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "183",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

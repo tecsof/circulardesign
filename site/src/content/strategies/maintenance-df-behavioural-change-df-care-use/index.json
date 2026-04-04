@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Care",
+  "type": "use",
+  "references": "Chapman, J. (2015). Meaningful stuff: toward more sustainable product design. MIT Press.\nNiinim\u00e4ki, K., & Hassi, L. (2011). Emerging design strategies in sustainable fashion. Fashion Practice, 3(2), 175-189.\nJaeger-Erben, M., B\u00f6schen, S., & Hofmann, F. (2021). Product lifespans as a contested sustainability issue: stakeholder perspectives on right to repair. Journal of Cleaner Production, 312, 127618.",
+  "caseStudyId": "159",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Products",
+    "Materials"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

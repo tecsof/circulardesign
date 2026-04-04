@@ -1,0 +1,20 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recyclable Product Logistics",
+  "x3": "Df Collection-Compatible Design",
+  "type": "logistics",
+  "references": "Rogers, D. S., & Tibben-Lembke, R. S. (2001). An examination of reverse logistics practices. Journal of Business Logistics, 22(2), 129-148.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.",
+  "caseStudyId": "183",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

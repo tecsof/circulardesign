@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Design for Packaging Reuse",
+  "x3": "Design for Packaging Reuse",
+  "type": "use",
+  "references": "Verghese, K., Lewis, H., & Fitzpatrick, L. (2007). Packaging in the environment. Springer.\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.\nBraungart, M., McDonough, W., & Bollinger, A. (2007). Cradle-to-cradle design: Creating healthy emissions. Nature Materials, 6(9), 671-672.",
+  "caseStudyId": "139",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

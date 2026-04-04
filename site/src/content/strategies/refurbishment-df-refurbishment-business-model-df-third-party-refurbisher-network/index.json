@@ -1,0 +1,22 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishment Business Model",
+  "x3": "Df Third-Party Refurbisher Network",
+  "type": "business",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy\u2013a review. Journal of Cleaner Production, 97, 76-91.\nSundin, E., Lindahl, M., & Ijomah, W. (2009). Product design for successful remanufacturing. In Handbook of Research in Sustainable Manufacturing. IGI Global.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.",
+  "caseStudyId": "169",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolApp from '../../components/ToolApp';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const strategyModules = import.meta.glob('../../content/strategies/*/index.json', { eager: true });
+const caseStudyModules = import.meta.glob('../../content/case-studies/*/index.json', { eager: true });
+
+// Build case study ID → slug map
+const caseStudyIdToSlug: Record<string, string> = {};
+for (const [filePath, mod] of Object.entries(caseStudyModules)) {
+  const slug = filePath.split('/').at(-2)!;
+  const data = (mod as any).default ?? mod;
+  if (data.id) caseStudyIdToSlug[String(data.id)] = slug;
+}
+
+const strategies = Object.entries(strategyModules).map(([filePath, mod]) => {
+  const slug = filePath.split('/').at(-2)!;
+  const data = (mod as any).default ?? mod;
+
+  // Read markdoc content files
+  const dir = path.resolve('./src/content/strategies', slug);
+  const readFile = (name: string) => {
+    try {
+      const content = fs.readFileSync(path.join(dir, name), 'utf-8').trim();
+      return content || '';
+    } catch {
+      return '';
+    }
+  };
+
+  // Resolve case study ID to slug
+  const caseStudySlug = data.caseStudyId ? (caseStudyIdToSlug[String(data.caseStudyId)] || '') : '';
+
+  return {
+    slug,
+    ...data,
+    caseStudySlug,
+    why: readFile('why.mdoc'),
+    how: readFile('how.mdoc'),
+    use: readFile('use.mdoc'),
+    characteristics: readFile('characteristics.mdoc'),
+    questionsToAnswer: readFile('questionsToAnswer.mdoc'),
+  };
+});
+---
+
+<Layout title="Tool">
+  <ToolApp client:load strategies={strategies} />
+</Layout>

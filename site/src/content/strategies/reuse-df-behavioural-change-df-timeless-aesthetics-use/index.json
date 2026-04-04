@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Timeless Aesthetics",
+  "type": "use",
+  "references": "Chapman, J. (2015). Emotionally durable design: Objects, experiences and empathy (2nd ed.). Routledge.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: Exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nStahel, W. R. (2010). The performance economy. Palgrave Macmillan.",
+  "caseStudyId": "5",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": ""
+}

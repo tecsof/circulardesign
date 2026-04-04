@@ -1,0 +1,20 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Semi-Destructive Disassembly",
+  "x3": "Df Untying",
+  "type": "recovery",
+  "references": "Vongbunyong, S., & Chen, W. H. (2016). Disassembly Automation: Automated Systems with Cognitive Abilities. Springer International Publishing.",
+  "caseStudyId": "73",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

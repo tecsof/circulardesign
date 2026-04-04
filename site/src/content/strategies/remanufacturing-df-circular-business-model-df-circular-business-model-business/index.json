@@ -1,0 +1,22 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Circular Business Model",
+  "x3": "Df Circular Business Model",
+  "type": "business",
+  "references": "Linder, M., & Williander, M. (2017). Circular business model innovation: Inherent uncertainties. Business Strategy and the Environment, 26(2), 182\u2013196.\n\nBocken, N. M. P., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308\u2013320.\n\nGuldmann, E. (2014). Best practice examples of circular business models. World, 20.",
+  "caseStudyId": "1",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "Df Product Leasing,Df Product Sharing,Df Collaborative Consumption,Df Local Material Extraction,Df Failure",
+  "authorId": "1"
+}

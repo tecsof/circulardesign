@@ -1,0 +1,22 @@
+{
+  "id": 140,
+  "title": "PRUSA 3D PRINTERS",
+  "videoLink": "",
+  "links": "https://www.prusa3d.com",
+  "x3": "Independent upgradability & component exchange",
+  "filterFocus": [
+    "COMPONENTS"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "MAINTENANCE"
+  ],
+  "filterBusinessModel": [
+    "PRODUCT ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

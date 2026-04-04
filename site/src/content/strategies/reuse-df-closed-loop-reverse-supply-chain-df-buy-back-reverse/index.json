@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Buy-back",
+  "type": "reverse",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy. Journal of Cleaner Production, 97, 76-91. https://doi.org/10.1016/j.jclepro.2013.11.049\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.",
+  "caseStudyId": "6",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

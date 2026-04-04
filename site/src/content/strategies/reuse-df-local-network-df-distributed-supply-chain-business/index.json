@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Local Network",
+  "x3": "Df Distributed Supply Chain",
+  "type": "business",
+  "references": "Ellen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe. Retrieved from https://ellenmacarthurfoundation.org/\nKohtala, C. (2015). Addressing sustainability in distributed manufacturing. Journal of Cleaner Production, 135, 17-27.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The circular economy\u2013a new sustainability paradigm? Journal of Cleaner Production, 143, 757-768. https://doi.org/10.1016/j.jclepro.2016.12.048",
+  "caseStudyId": "104",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "cars,packaging,service",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

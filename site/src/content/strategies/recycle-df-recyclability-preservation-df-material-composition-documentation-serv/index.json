@@ -1,0 +1,21 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recyclability Preservation",
+  "x3": "Df Material Composition Documentation",
+  "type": "service",
+  "references": "Sundin, E., Lindahl, M., & Ijomah, W. (2009). Product design for successful remanufacturing. In Handbook of Research in Sustainable Manufacturing. IGI Global.\nAllwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "176",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,18 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Modular Components",
+  "x3": "Df Interchangeability",
+  "type": "service",
+  "references": "Ito, Y. (2008). Modular design for machine tools. McGraw-Hill Education.\nFu, F., Chen, S., & Sun, L. (2021). Revenue and cannibalization: The effect of interchangeable design confronted remanufacturing processing. Processes, 9(3), 497.",
+  "caseStudyId": "105",
+  "loop": [
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Design for Modularity;",
+  "authorId": ""
+}

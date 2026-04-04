@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Non-Destructive Disassembly",
+  "x3": "Df Automated Disassembly",
+  "type": "recovery",
+  "references": "Vongbunyong, S., & Chen, W. H. (2016). Disassembly Automation: Automated Systems with Cognitive Abilities (Softcover reprint of the original 1st ed. 2015 edition). Springer.",
+  "caseStudyId": "109",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

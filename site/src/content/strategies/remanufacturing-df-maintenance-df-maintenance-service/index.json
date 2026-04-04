@@ -1,0 +1,19 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Maintenance",
+  "x3": "Df Maintenance",
+  "type": "service",
+  "references": "Nasr, N., Russell, J., Bringezu, S., Hellweg, S., Hilton, B., Kreiss, C., & von Gries, N. (2018). Re-defining Value \u2014 The Manufacturing Revolution. UN Environment Programme.\n\nSundin, E., & Bras, B. (2005). Making functional sales environmentally and economically beneficial through product remanufacturing. Journal of Cleaner Production, 13(9), 913\u2013925.",
+  "caseStudyId": "106",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

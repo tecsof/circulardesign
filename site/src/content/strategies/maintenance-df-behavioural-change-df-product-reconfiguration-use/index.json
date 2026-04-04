@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Product Reconfiguration",
+  "type": "use",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Soufani, K. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability. Journal of Cleaner Production, 142, 378-389.\nden Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product Design in the Circular Economy: Development of a Typology of Key Concepts and Terms. Journal of Industrial Ecology, 21(3), 517-525.",
+  "caseStudyId": "74",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

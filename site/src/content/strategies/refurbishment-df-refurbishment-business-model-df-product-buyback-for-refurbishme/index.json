@@ -1,0 +1,22 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishment Business Model",
+  "x3": "Df Product Buyback for Refurbishment",
+  "type": "business",
+  "references": "Lacy, P., Rutqvist, J., & BuddPress, B. (2015). Waste to wealth: the circular economy advantage. Accenture.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nStahel, W. R. (2016). The circular economy. Nature, 531(7595), 435-438.",
+  "caseStudyId": "168",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

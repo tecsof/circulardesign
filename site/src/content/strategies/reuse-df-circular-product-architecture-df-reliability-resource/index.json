@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Circular Product Architecture",
+  "x3": "Df Reliability",
+  "type": "resource",
+  "references": "Andrew Taylor BSc MA FRSA - Art and Engineering in Product Design",
+  "caseStudyId": "118",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

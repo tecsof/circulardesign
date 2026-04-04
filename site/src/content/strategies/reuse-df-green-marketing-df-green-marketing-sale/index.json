@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Green marketing",
+  "x3": "Df Green marketing",
+  "type": "sale",
+  "references": "Geissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The circular economy\u2013a new sustainability paradigm? Journal of Cleaner Production, 143, 757-768. https://doi.org/10.1016/j.jclepro.2016.12.048\nSteg, L., & Vlek, C. (2009). Encouraging pro-environmental behaviour: An integrative review and research agenda. Journal of Environmental Psychology, 29(3), 309-317.",
+  "caseStudyId": "133",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

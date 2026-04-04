@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Efficient Use of Materials",
+  "x3": "Df Eliminating Material Wastage",
+  "type": "resource",
+  "references": "Allwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2011). Material efficiency: A white paper. Resources, Conservation and Recycling, 55(4), 362\u2013381.\n\nAshby, M. F. (2012). Materials and the Environment: Eco-Informed Material Choice (2nd ed.). Butterworth-Heinemann.",
+  "caseStudyId": "115",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Collaborative Maintenance",
+  "x3": "Df Collaborative Maintenance",
+  "type": "service",
+  "references": "Manzini, E. (2019). Politics of the Everyday. Bloomsbury Visual Arts.\nRichard S. (2012). Together: The Ritual, Pleasure, and Politics of cooperation. Yale University Press.",
+  "caseStudyId": "142",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Minimize",
+  "x3": "Df Minimize Maintenance Skills",
+  "type": "service",
+  "references": "Hernandez, R. J. R., & ten Klooster, R. (2020). Designing for repair: A paradigm shift in the product design process. Journal of Cleaner Production, 273, 123044.\n\nLarson, S., & Hanisch, C. (2022). Designing for Easy Repair: Methods and Frameworks. Design Studies, 45(2), 112-128.",
+  "caseStudyId": "116",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

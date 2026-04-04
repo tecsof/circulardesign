@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Collaborative Logistics",
+  "x3": "Df Open Logistics",
+  "type": "logistics",
+  "references": "Manzini, E. (2019). Politics of the Everyday. Bloomsbury Visual Arts.\nCarbone, V., Rouquet, A., & Roussat, C. (2018). A typology of logistics at work in collaborative consumption. International Journal of Physical Distribution & Logistics Management, 48(6), 570\u2013585. https://doi.org/10.1108/IJPDLM-11-2017-0353",
+  "caseStudyId": "78",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "Food",
+  "circularityIndex": null,
+  "dfxRelationship": "Df Product Sharing, Df Collaborative Consumption, Df Openness, Df Local Distribution, Df Change Behaviour, Df Interactions, Design for Quality",
+  "authorId": "1"
+}

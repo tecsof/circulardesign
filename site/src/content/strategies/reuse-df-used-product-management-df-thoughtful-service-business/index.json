@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Used Product Management",
+  "x3": "Df Thoughtful Service",
+  "type": "business",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy. Journal of Cleaner Production, 97, 76-91. https://doi.org/10.1016/j.jclepro.2013.11.049\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nManzini, E., & Vezzoli, C. (2008). Design for environmental sustainability (2nd ed.). Springer-Verlag.",
+  "caseStudyId": "136",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

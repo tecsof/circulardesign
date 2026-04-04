@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufacturability",
+  "x3": "Df Material Passport",
+  "type": "resource",
+  "references": "Allwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "176",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

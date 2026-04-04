@@ -1,0 +1,226 @@
+[
+  {
+    "term": "Arranging direct reuse",
+    "definition": "The collection, inspection and testing, cleaning and redistribution of a product back into the market under controlled conditions (e.g. a formal business undertaking)."
+  },
+  {
+    "term": "Avoided environmental impacts",
+    "definition": "Refers to a scenario-based demonstration of the environmental impacts that are avoided by an economy due to the use of value-retention processes (VRPs) within the production mix."
+  },
+  {
+    "term": "Component",
+    "definition": "Refers to a constituent part of a broader defined system; an element of a larger whole object that could be a part and/or a product."
+  },
+  {
+    "term": "Comprehensive refurbishment",
+    "definition": "Refers to the refurbishment of used equipment that takes place within industrial or factory settings, with a high standard and level of refurbishment."
+  },
+  {
+    "term": "Core",
+    "definition": "A previously sold, worn or non-functional product or module, intended for the remanufacturing process."
+  },
+  {
+    "term": "Economic impacts",
+    "definition": "Refers to the economic impact metrics addressed within this study, specifically: cost advantage ($ USD); and employment opportunity (Full-time equivalent worker, or FTE)."
+  },
+  {
+    "term": "Embodied material emissions",
+    "definition": "Refers to the carbon dioxide and greenhouse gas equivalent emissions emitted during the extraction and primary processing stages of materials."
+  },
+  {
+    "term": "Embodied material energy",
+    "definition": "Refers to the energy consumed during the extraction and primary processes stages of materials later used as inputs to OEM New and value-retention process production activities."
+  },
+  {
+    "term": "End-of-life (EOL)",
+    "definition": "Refers to the point in the product or object's service life at which the product or object is no longer able to function or perform as required."
+  },
+  {
+    "term": "End-of-use (EOU)",
+    "definition": "Refers to the point in the product or object's service life at which the product may not be needed by the current owner/user, or able to function or perform as required."
+  },
+  {
+    "term": "End-of-waste (EOW)",
+    "definition": "Refers to conditions under which certain specified waste shall cease to be waste (per Directive 2008/98/EC)."
+  },
+  {
+    "term": "Environmental impacts",
+    "definition": "Refers to the environmental impact metrics addressed within this study, specifically: new material offset (avoided) (kg); embodied material energy (MJ); embodied material emissions."
+  },
+  {
+    "term": "Environmental Racism",
+    "definition": "Refers to the way in which minority group neighbourhoods are burdened with a disproportionate number of hazards, including toxic waste facilities and garbage dumps."
+  },
+  {
+    "term": "Expected service life",
+    "definition": "Refers to the manufacturer's expectations about the time period for which a product can be used, usually specified as a median."
+  },
+  {
+    "term": "Failure rate",
+    "definition": "Refers to how often something fails, such as a component or system. It is usually expressed in failures per unit of time."
+  },
+  {
+    "term": "Forward-logistics",
+    "definition": "Refers to the traditional flow of products from the point of production through to the consumer and reflects a traditional supply chain management perspective."
+  },
+  {
+    "term": "Full-service life",
+    "definition": "Refers to value-retention processes (VRPs) that enable the fulfilment of a completely new life for every usage cycle of the product."
+  },
+  {
+    "term": "In-use product stock",
+    "definition": "Refers to products in 'active use', including those being repaired for return to the original user."
+  },
+  {
+    "term": "Leakage",
+    "definition": "Refers to products or their components/materials that flow from the circular economic system to the biosphere, and that cannot be recovered."
+  },
+  {
+    "term": "Life cycle assessment (LCA)",
+    "definition": "A technique for the assessment of environmental aspects and potential impacts associated with a product by compiling an inventory of relevant inputs and outputs."
+  },
+  {
+    "term": "Life Cycle Option",
+    "definition": "Refers to the choices of a resource circulation in terms of a products life cycle. Major strategies include reuse, refurbish, remanufactured and recycle."
+  },
+  {
+    "term": "Lifetime of the Product",
+    "definition": "Refers to the consumption usage phase of the product. The lifetime starts at the time of purchase and ends when disposed or replaced."
+  },
+  {
+    "term": "Module",
+    "definition": "Refers to a self-contained unit or item, such as an assembly or segment of a larger product, which itself performs a defined task."
+  },
+  {
+    "term": "New material",
+    "definition": "Refers to the total 'new' (not reused via value-retention processes (VRPs)) material that is required as inputs to complete each OEM New and Value-Retention Process."
+  },
+  {
+    "term": "Original equipment manufacturer (OEM)",
+    "definition": "Refers to the manufacturer of the original parts or equipment, including the items manufactured, assembled and installed during construction of a new product."
+  },
+  {
+    "term": "OEM new",
+    "definition": "Refers to traditional linear manufacturing production process activities that rely on 100 per cent new material inputs."
+  },
+  {
+    "term": "Part",
+    "definition": "Refers to a piece or segment of an object; may also be a component of a product."
+  },
+  {
+    "term": "Partial service life",
+    "definition": "Refers to value-retention processes (VRPs) that enable the completion of, and/or slight extension of, the expected product life."
+  },
+  {
+    "term": "Potential reusability",
+    "definition": "Refers to the extent to which a product complies with End-of-Waste conditions, and thus qualifies as an input to value-retention processes."
+  },
+  {
+    "term": "Predicted life",
+    "definition": "Refers to a hypothetical product life calculation estimated by the manufacturer for which it will honour warranty claims."
+  },
+  {
+    "term": "Presource",
+    "definition": "Refers to obsolete products awaiting recovery."
+  },
+  {
+    "term": "Primary material",
+    "definition": "Also referred to as virgin material, refers to a material that has not been previously used or consumed, or subjected to processing other than for its original production."
+  },
+  {
+    "term": "Process emissions",
+    "definition": "Refers to the carbon dioxide and greenhouse gas equivalent emissions emitted during the OEM New and/or value-retention process production activities."
+  },
+  {
+    "term": "Process energy",
+    "definition": "Refers to direct at-the-meter energy consumed during the OEM New and/or value-retention process production activities."
+  },
+  {
+    "term": "Product",
+    "definition": "Refers to an article, object or substance that is manufactured or refined for sale, that is the final output of a process."
+  },
+  {
+    "term": "Product Integrity",
+    "definition": "Refers to the ability of a product to meet or exceed its original state over time and eliminating the perceived reasons for obsolescence."
+  },
+  {
+    "term": "Product lifetime",
+    "definition": "Refers to the period that starts at the moment a product completes original manufacture and ends when beyond any reuse or recovery."
+  },
+  {
+    "term": "Product platform",
+    "definition": "Refers to a set of common elements, including underlying technical components, parts or technology that are shared across a range of the company's products."
+  },
+  {
+    "term": "Production mix",
+    "definition": "Refers to the equivalent production shares of OEM New and Value-Retention Processes that are adopted within a sample economy."
+  },
+  {
+    "term": "Recovery horizon",
+    "definition": "Refers to the limit beyond which products or their components cannot be recovered."
+  },
+  {
+    "term": "Recycling",
+    "definition": "Refers to the relevant operations specified in Annex IV B to the Basel Convention. Recycling operations usually involves the reprocessing of waste into products."
+  },
+  {
+    "term": "Refurbishment",
+    "definition": "Refers to the modification of an object that is a waste or a product to increase or restore performance and/or functionality."
+  },
+  {
+    "term": "Remanufacturing",
+    "definition": "Refers to a standardized industrial process that takes place within industrial or factory settings, in which cores are restored to original as-new condition."
+  },
+  {
+    "term": "Repair",
+    "definition": "Refers to the fixing of a specified fault in an object that is a waste or a product and/or replacing defective components."
+  },
+  {
+    "term": "Reuse",
+    "definition": "Refers to the using again of a product, object or substance that is not waste, for the same purpose for which it was conceived."
+  },
+  {
+    "term": "Reverse-logistics",
+    "definition": "Refers to activities engaged to recapture the value of products, parts, and materials once they have reached end-of-use or end-of-life."
+  },
+  {
+    "term": "Secondary market",
+    "definition": "Also referred to as the aftermarket, is a market for used goods or assets, or alternative use for an existing product or asset."
+  },
+  {
+    "term": "Secondary material",
+    "definition": "Also referred to as recycled material, refers to any material that has been used at least once before, is not the primary product of a manufacturing or commercial process."
+  },
+  {
+    "term": "Service life",
+    "definition": "Refers to a product's total lifetime during which it can be used economically or the time during which it is used by one owner."
+  },
+  {
+    "term": "Technical nutrients",
+    "definition": "Refers to non-toxic, highly stable materials that have no negative effects on the natural environment, that are designed to be recovered and reused within production activities."
+  },
+  {
+    "term": "Upgrade",
+    "definition": "Refers to the act of raising a product to a higher standard with the objective to improve performance, efficiency, and/or functionality by adding or replacing components."
+  },
+  {
+    "term": "Utilization value",
+    "definition": "Refers to the utility gained from a stock of products or service for the period of duration of their lifetime."
+  },
+  {
+    "term": "Value lifetime",
+    "definition": "Refers to the value of the product based on external factors, such as technology infrastructure changes and attractiveness compared with competing products."
+  },
+  {
+    "term": "Value-retention processes",
+    "definition": "Activities, typically production-type activities, that enable the completion of, and/or potentially extend a product's service life beyond traditional expected service life."
+  },
+  {
+    "term": "Waste",
+    "definition": "Refers to any substance or object which the holder discards or intends or is required to discard (Directive 2008/98/EC)."
+  },
+  {
+    "term": "Zero life product",
+    "definition": "Refers to products that go directly from production to disposal and never reach any consumer. Examples include fashion deadstock and imperfect agriculture products."
+  }
+]

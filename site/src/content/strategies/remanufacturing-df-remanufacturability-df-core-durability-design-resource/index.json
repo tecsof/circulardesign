@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufacturability",
+  "x3": "Df Core Durability Design",
+  "type": "resource",
+  "references": "Sundin, E., Lindahl, M., & Ijomah, W. (2009). Product design for successful remanufacturing. In Handbook of Research in Sustainable Manufacturing. IGI Global.\nIjomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable product design. Journal of Cleaner Production, 15(4), 404-416.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.",
+  "caseStudyId": "175",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

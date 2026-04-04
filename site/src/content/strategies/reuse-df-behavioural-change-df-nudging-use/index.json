@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Nudging",
+  "type": "use",
+  "references": "Richard H Thaler and Cass R Sunstein. 2009. Nudge: Improving decisions about health, wealth, and happiness. Penguin.\nLehner, Matthias, Oksana Mont, and Eva Heiskanen. 2016. \u201cNudging \u2013 A Promising Tool for Sustainable Consumption Behaviour?\u201d Journal of Cleaner Production, Special Volume: Transitions to Sustainable Consumption and Production in Cities, 134 (October): 166\u201377. https://doi.org/10.1016/j.jclepro.2015.11.086.",
+  "caseStudyId": "88",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Df Efficiency",
+  "authorId": "1"
+}

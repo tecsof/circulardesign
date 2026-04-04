@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-yellow: #f1ef2e;
+  --color-yellow-dark: #d4d229;
+  --color-yellow-light: #f7f67a;
+  --color-black: #111111;
+  --color-gray-900: #1a1a1a;
+  --color-gray-800: #2a2a2a;
+  --color-gray-700: #3a3a3a;
+  --color-gray-400: #999999;
+  --color-gray-200: #e0e0e0;
+  --color-white: #ffffff;
+
+  --color-phase-business: #E6883C;
+  --color-phase-resource: #AF7DEB;
+  --color-phase-logistics: #C94D8B;
+  --color-phase-sale: #5386D3;
+  --color-phase-use: #7BE3CD;
+  --color-phase-service: #64D069;
+  --color-phase-reverse: #C8D454;
+  --color-phase-recovery: #a65e2e;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+  }
+
+  ::selection {
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+  }
+}

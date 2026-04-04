@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Refill",
+  "x3": "Df Refill on the Go",
+  "type": "service",
+  "references": "Reuse, Rethinking Packaging. Ellen MacArthur Foundation.",
+  "caseStudyId": "119",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

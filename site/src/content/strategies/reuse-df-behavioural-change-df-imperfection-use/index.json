@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Imperfection",
+  "type": "use",
+  "references": "Chapman, J. (2015). Emotionally durable design: Objects, experiences and empathy (2nd ed.). Routledge.\nVezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: Exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.",
+  "caseStudyId": "79",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": ""
+}

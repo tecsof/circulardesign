@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Behavioural Change",
+  "type": "use",
+  "references": "Thaler, R. H., & Sunstein, C. R. (2008). Nudge: Improving decisions about health, wealth, and happiness. Yale University Press.\nSteg, L., & Vlek, C. (2009). Encouraging pro-environmental behaviour: An integrative review and research agenda. Journal of Environmental Psychology, 29(3), 309-317.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The circular economy\u2013a new sustainability paradigm? Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "113",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Closed-loop Reverse Supply Chain",
+  "type": "reverse",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: Exploring product life extension through design. Journal of Cleaner Production, 69, 10-16. https://doi.org/10.1016/j.jclepro.2014.01.028\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.",
+  "caseStudyId": "63",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

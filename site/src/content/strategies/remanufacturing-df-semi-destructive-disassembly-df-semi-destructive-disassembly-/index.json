@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Semi-Destructive Disassembly",
+  "x3": "Df Semi-Destructive Disassembly",
+  "type": "recovery",
+  "references": "Vongbunyong, S., & Chen, W. H. (2016). Disassembly Automation: Automated Systems with Cognitive Abilities (Softcover reprint of the original 1st ed. 2015 edition). Springer.",
+  "caseStudyId": "111",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

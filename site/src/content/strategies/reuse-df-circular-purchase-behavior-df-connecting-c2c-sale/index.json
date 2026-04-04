@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Circular Purchase Behavior",
+  "x3": "Df Connecting C2C",
+  "type": "sale",
+  "references": "van Weelden, E., Mugge, R., & Bakker, C. (2016). Paving the way towards circular consumption: Exploring consumer acceptance of refurbished mobile phones in the Dutch market. Journal of Cleaner Production, 113, 743\u2013754. https://doi.org/10.1016/j.jclepro.2015.11.065",
+  "caseStudyId": "155",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

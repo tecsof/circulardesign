@@ -1,0 +1,19 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Maintainability",
+  "x3": "Df Upgrading",
+  "type": "service",
+  "references": "Xing, Ke, and Martin Belusko. \"Design for upgradability algorithm: configuring durable products for competitive reutilization.\" (2008): 111102.\n\nInoue, Masato, et al. \"A design method for product upgradability with different customer demands.\" IFIP International Conference on Product Lifecycle Management. Springer, Berlin, Heidelberg, 2014.\n\nUmeda, Yasushi, et al. \"Development of design methodology for upgradable products based on function\u2013behavior\u2013state modeling.\" Ai Edam 19.3 (2005): 161-182.",
+  "caseStudyId": "124",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "5"
+}

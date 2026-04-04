@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Circular Business Model",
+  "x3": "Df Product Leasing",
+  "type": "business",
+  "references": "Tukker, A. (2004). Eight types of product\u2013service system: Eight ways to sustainability? Experiences from SusProNet. Business Strategy and the Environment, 13(4), 246\u2013260. https://doi.org/10.1002/bse.414\n\nVezzoli, C. A., & Manzini, E. (2008). Design for Environmental Sustainability (2008 edition). Berlin\u202f; London: Springer.\n\nStahel, W. (2010). The Performance Economy. Palgrave Macmillan UK.\n\nCeschin, F. (2014). Sustainable Product-Service Systems: Between Strategic Design and Transition Studies.",
+  "caseStudyId": "84",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,22 @@
+{
+  "id": 123,
+  "title": "PATAGONIA SUPPLY CHAIN TRANSPARENCY",
+  "videoLink": "",
+  "links": "https://www.patagonia.com/our-footprint/supply-chain-environmental-responsibility-program.html",
+  "x3": "Df Transparency",
+  "filterFocus": [
+    "MATERIALS"
+  ],
+  "filterCycle": [
+    "BIOLOGICAL"
+  ],
+  "filterX1": [
+    "REUSE"
+  ],
+  "filterBusinessModel": [
+    "PRODUCT ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

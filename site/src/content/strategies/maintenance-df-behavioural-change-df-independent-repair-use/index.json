@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Independent Repair",
+  "type": "use",
+  "references": "Right-to-Repair Movement (https://repair.eu/)\nJaeger-Erben, M., Nissen, N., Hielscher, S., & Park, M. (2020). \u201cFixing the world? Investigating repair and reparability pathways as an enabler towards sustainability\u201d Product Lifetimes (Call for Papers for a Special Volume of the Journal of Cleaner Production on Product Lifetimes). Journal of Cleaner Production. https://www.journals.elsevier.com/journal-of-cleaner-production/call-for-papers/fixing-the-world-investigating-repair\nifixit.com",
+  "caseStudyId": "160",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

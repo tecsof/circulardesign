@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Core Preservation",
+  "x3": "Df Condition Monitoring",
+  "type": "use",
+  "references": "Sundin, E., Lindahl, M., & Ijomah, W. (2009). Product design for successful remanufacturing. In Handbook of Research in Sustainable Manufacturing. IGI Global.\nBokrantz, J., Skoogh, A., Berlin, C., & Stahre, J. (2017). Maintenance in digitalised manufacturing systems: Dearth of practices, potential of data. Procedia CIRP, 63, 657-662.\nManzini, E., & Vezzoli, C. (2003). A strategic design approach to develop sustainable product service systems. Journal of Cleaner Production, 11(8), 851-857.",
+  "caseStudyId": "167",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Independent Disassembly",
+  "type": "use",
+  "references": "den Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product Design in the Circular Economy: Development of a Typology of Key Concepts and Terms. Journal of Industrial Ecology, 21(3), 517-525.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Soufani, K. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability. Journal of Cleaner Production, 142, 378-389.\nDesai, P., Taggart, D., & Sap, M. (2007). Consumer perceptions of product quality and module modularity. Journal of Product Innovation Management, 24(4), 322-335.\nPoore, J., & Nemecek, T. (2018). Reducing food's environmental impacts through producers and consumers. Science, 360(6392), 987-992.",
+  "caseStudyId": "140",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

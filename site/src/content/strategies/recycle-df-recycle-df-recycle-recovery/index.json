@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recycle",
+  "x3": "Df Recycle",
+  "type": "recovery",
+  "references": "Ernst Worrell and Markus Reuter 2014. Handbook of Recycling: State-of-the-art for Practitioners, Analysts, and Scientists. Amsterdam ; Boston: Elsevier.",
+  "caseStudyId": "114",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

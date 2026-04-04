@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
+
+export async function getStaticPaths() {
+  const caseDirs = fs.readdirSync(
+    path.join(process.cwd(), 'src/content/case-studies'),
+    { withFileTypes: true }
+  ).filter((d: any) => d.isDirectory());
+
+  return caseDirs.map(dir => ({
+    params: { slug: dir.name },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const baseDir = path.join(process.cwd(), 'src/content/case-studies', slug);
+const jsonPath = path.join(baseDir, 'index.json');
+const mdocPath = path.join(baseDir, 'body.mdoc');
+
+const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+
+let bodyHtml = '';
+if (fs.existsSync(mdocPath)) {
+  const mdocContent = fs.readFileSync(mdocPath, 'utf-8');
+  bodyHtml = await marked.parse(mdocContent);
+}
+
+// Parse YouTube embed URL
+function getYouTubeEmbedUrl(url: string): string | null {
+  if (!url) return null;
+  let videoId: string | null = null;
+
+  const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+  if (shortMatch) videoId = shortMatch[1];
+
+  const longMatch = url.match(/[?&]v=([a-zA-Z0-9_-]+)/);
+  if (longMatch) videoId = longMatch[1];
+
+  const embedMatch = url.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+  if (embedMatch) videoId = embedMatch[1];
+
+  return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+}
+
+const embedUrl = getYouTubeEmbedUrl(data.videoLink || '');
+
+// Parse x3 strategies
+const strategies = (data.x3 || '')
+  .split(';')
+  .map((s: string) => s.trim())
+  .filter(Boolean);
+
+// Parse links
+const links = (data.links || '')
+  .split('\n')
+  .map((line: string) => line.trim())
+  .filter(Boolean)
+  .map((line: string) => {
+    if (line.includes(';')) {
+      const [url, label] = line.split(';', 2);
+      return { url: url.trim(), label: label?.trim() || url.trim() };
+    }
+    return { url: line, label: line };
+  });
+
+// All filter tags for badge display
+const allTags: { label: string; category: string }[] = [];
+for (const v of data.filterFocus || []) allTags.push({ label: v, category: 'Focus' });
+for (const v of data.filterCycle || []) allTags.push({ label: v, category: 'Cycle' });
+for (const v of data.filterX1 || []) allTags.push({ label: v, category: 'X1' });
+for (const v of data.filterBusinessModel || []) allTags.push({ label: v, category: 'Business Model' });
+for (const v of data.filterMaterialFlow || []) allTags.push({ label: v, category: 'Material Flow' });
+
+// Strategy slug helper
+function strategySlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/^df\s+/i, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+---
+
+<Layout title={data.title}>
+  {/* Hero */}
+  <section class="relative w-full h-[50vh] min-h-[400px] bg-black">
+    {data.heroImage && (
+      <img
+        src={data.heroImage}
+        alt={data.title}
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+    )}
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+    <div class="absolute bottom-0 left-0 right-0">
+      <div class="max-w-4xl mx-auto px-6 pb-12">
+        <a
+          href="/case-studies"
+          class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-yellow transition-colors mb-6"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Case Studies
+        </a>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+          {data.title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  {/* Content card on yellow bg */}
+  <article class="max-w-4xl mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl shadow-sm border border-black/5 p-8 md:p-12">
+      {/* Tags */}
+      {allTags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-10">
+          {allTags.map(tag => (
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs uppercase tracking-wider rounded-full bg-black text-white">
+              <span class="text-yellow/80">{tag.category}</span>
+              <span class="text-white/30">|</span>
+              {tag.label}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Body text */}
+      {bodyHtml && (
+        <div class="prose max-w-none mb-12" set:html={bodyHtml} />
+      )}
+
+      {/* YouTube embed */}
+      {embedUrl && (
+        <div class="mb-12">
+          <div class="relative w-full rounded-xl overflow-hidden bg-black/5" style="padding-top: 56.25%;">
+            <iframe
+              src={embedUrl}
+              title={`${data.title} video`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Related strategies */}
+      {strategies.length > 0 && (
+        <div class="mb-12">
+          <h2 class="font-display text-xl font-semibold mb-4 text-black">Related Strategies</h2>
+          <div class="flex flex-wrap gap-3">
+            {strategies.map((s: string) => (
+              <a
+                href={`/tool?strategy=${strategySlug(s)}`}
+                class="group flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black/5 border border-black/10 hover:border-black/30 transition-all"
+              >
+                <span class="text-sm text-black group-hover:text-black/70 transition-colors">{s}</span>
+                <svg class="w-3.5 h-3.5 text-black/40 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Links */}
+      {links.length > 0 && (
+        <div class="mb-12">
+          <h2 class="font-display text-xl font-semibold mb-4 text-black">Links</h2>
+          <div class="flex flex-col gap-3">
+            {links.map((link: { url: string; label: string }) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center gap-2 text-black hover:text-black/60 transition-colors"
+              >
+                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span class="text-sm underline underline-offset-2">{link.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .prose {
+    color: #1a1a1a;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  .prose p {
+    margin-bottom: 1.25rem;
+  }
+  .prose a {
+    color: #111111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+  .prose a:hover {
+    color: #555;
+  }
+  .prose h2, .prose h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+    color: #111;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose ul, .prose ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+</style>

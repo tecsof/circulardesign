@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Circular Business Model",
+  "x3": "Df Collaborative Consumption",
+  "type": "business",
+  "references": "Tukker, A. (2004). Eight types of product\u2013service system: Eight ways to sustainability? Experiences from SusProNet. Business Strategy and the Environment, 13(4), 246\u2013260.\n\nCeschin, F. (2014). Sustainable Product-Service Systems: Between Strategic Design and Transition Studies.",
+  "caseStudyId": "4",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

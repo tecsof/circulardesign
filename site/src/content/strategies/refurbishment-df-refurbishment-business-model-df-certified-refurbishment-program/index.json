@@ -1,0 +1,22 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishment Business Model",
+  "x3": "Df Certified Refurbishment Programme",
+  "type": "business",
+  "references": "Hazen, B. T., Mollenkopf, D. A., & Wang, Y. (2017). Remanufacturing for the circular economy: an examination of consumer switching behavior. Business Strategy and the Environment, 26(4), 451-464.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nIjomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable product design. Journal of Cleaner Production, 15(4), 404-416.",
+  "caseStudyId": "168",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

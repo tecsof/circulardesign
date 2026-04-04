@@ -1,0 +1,21 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Upgradability",
+  "x3": "Df Upgradability",
+  "type": "service",
+  "references": "Khan, M. A., Mittal, S., West, S., & Wuest, T. (2018). Review on upgradability \u2013 A product lifetime extension strategy in the context of product service systems. Journal of Cleaner Production, 204, 1154\u20131168. \nhttps://doi.org/10.1016/j.jclepro.2018.08.329",
+  "caseStudyId": "77",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Design for Standardization; Design for Disassembly; Design for Re-assembly;",
+  "authorId": "1"
+}

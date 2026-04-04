@@ -1,0 +1,23 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Upcycling",
+  "x3": "Df Industrial Upcycling",
+  "type": "recovery",
+  "references": "Braungart, M., & McDonough, W. (2002). Cradle to cradle: Remaking the way we make things. North Point Press.\nLacy, P., & Rutqvist, J. (2015). Waste to wealth: The circular economy advantage. Palgrave Macmillan.\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.",
+  "caseStudyId": "83",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,22 @@
+{
+  "id": 99,
+  "title": "SodaStream",
+  "videoLink": "",
+  "links": "https://sodastream.co.uk/",
+  "x3": "Design for Refill at Home",
+  "filterFocus": [
+    "PRODUCT"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "REUSE"
+  ],
+  "filterBusinessModel": [
+    "USE ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

@@ -1,0 +1,404 @@
+[
+  {
+    "title": "System Design for Sustainability in Practice",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/06/logo-1.png",
+    "url": "https://www.theplan.it/politecnica-university-press/system-design-for-sustainability-in-practice-methods-tools-and-guidelines-to-design-sustainable-product-service-systems-applied-to-distributed-economies"
+  },
+  {
+    "title": "NPR Plastics Recycling Tool",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/10/NPR_logofeature.png",
+    "url": "https://apps.npr.org/plastics-recycling/"
+  },
+  {
+    "title": "Circular Metal",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/logo_cfcm.png",
+    "url": "https://www.circularmetal.co.uk/"
+  },
+  {
+    "title": "Circular Chemical",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/nic3e-logo.png",
+    "url": "https://www.circular-chemical.org/"
+  },
+  {
+    "title": "Met4Tech",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/Met4Tech-ICTME.png",
+    "url": "https://met4tech.org/"
+  },
+  {
+    "title": "Textiles Circularity - Regenerative Fashion Hub",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/TCC-UKRI_ITCC.png",
+    "url": "https://textilescircularity.rca.ac.uk/the-regenerative-fashion-hub/"
+  },
+  {
+    "title": "Circular Material Library",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/CML-site-logo.webp",
+    "url": "https://circularmateriallibrary.org/"
+  },
+  {
+    "title": "Plastsimulator",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/Logo-symbol_result.png",
+    "url": "https://handelensmiljofond.no/en/systemiq"
+  },
+  {
+    "title": "Plastics Recycling Library",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/06/ea441aa9-eb29-4e23-a372-ad1c27b98471.png",
+    "url": "https://plasticsrecycling.org/library"
+  },
+  {
+    "title": "Material Design Map",
+    "category": "Circular Materials",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/07/WeVux-logo-2021.png",
+    "url": "https://www.materialsdesignmap.com/"
+  },
+  {
+    "title": "CircularX",
+    "category": "Circular Business Models",
+    "image": "https://www.circularx.eu/front/images/circularx-logo-white.svg",
+    "url": "https://www.circularx.eu/en"
+  },
+  {
+    "title": "Ready2Loop",
+    "category": "Circular Business Models",
+    "image": "https://ready2loop.org/images/logo.svg",
+    "url": "https://ready2loop.org/en/group/13/Our+tools"
+  },
+  {
+    "title": "Circulator",
+    "category": "Circular Business Models",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/Circulator.png",
+    "url": "https://www.circulator.eu/"
+  },
+  {
+    "title": "Circular Economy Initiative",
+    "category": "Circular Business Models",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/04/CEID_Logo_final_4c.png",
+    "url": "https://www.circular-economy-initiative.de/about-the-initiative"
+  },
+  {
+    "title": "Business Model Navigator",
+    "category": "Circular Business Models",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/05/Capture.png",
+    "url": "https://businessmodelnavigator.com/explore"
+  },
+  {
+    "title": "AluCycle",
+    "category": "Circular Business Models",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/07/IAI-logo-tagline-L_IAI-logo-colour-FOR-IAI-WEBSITE-800-x-387.png",
+    "url": "https://alucycle.international-aluminium.org/public-access/"
+  },
+  {
+    "title": "Learning Loop - Business Model Patterns",
+    "category": "Circular Business Models",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/11/learning-loop-logo.png",
+    "url": "https://learningloop.io/playbook-collections/business-model-patterns/"
+  },
+  {
+    "title": "Circular Economy Toolkit",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/06/Logo2.png",
+    "url": "http://circulareconomytoolkit.org/index-2.html"
+  },
+  {
+    "title": "Sustainability Guide",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/06/LOGO_ENG_COLOR.png",
+    "url": "https://sustainabilityguide.eu/"
+  },
+  {
+    "title": "iFixit",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/06/IFixit_new_logo.png",
+    "url": "https://www.ifixit.com/"
+  },
+  {
+    "title": "Circular Design Guide",
+    "category": "Circular Design",
+    "image": "https://assets.website-files.com/57ecff59af9d15040c527311/5834595c3d0e95840eec4922_LOGO_FINAL_WHITE.png",
+    "url": "https://www.circulardesignguide.com/"
+  },
+  {
+    "title": "Sustainable Design Cards",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/08/logo-300x246-1.png",
+    "url": "https://sustainabledesigncards.dk/"
+  },
+  {
+    "title": "Circular Design Tools",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/10/Circular-Design-Toolkit-Logo-Square.png",
+    "url": "https://circulardesign.tools/"
+  },
+  {
+    "title": "Design Council",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/DC-Logo.jpg",
+    "url": "https://www.designcouncil.org.uk/"
+  },
+  {
+    "title": "EU Energy Label and Ecodesign",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/European_Commission.svg_.png",
+    "url": "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/energy-label-and-ecodesign/energy-efficient-products_en"
+  },
+  {
+    "title": "CIRC Innovation",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/footer-logo.png",
+    "url": "https://circinnovation.com/"
+  },
+  {
+    "title": "New European Bauhaus",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/NEB_logo_EU_emblem.png",
+    "url": "https://new-european-bauhaus.europa.eu/index_en"
+  },
+  {
+    "title": "What Design Can Do",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/WDCD.png",
+    "url": "https://www.whatdesigncando.com/"
+  },
+  {
+    "title": "SharePair Guidance",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/04/RG-1.png",
+    "url": "https://www.guidance.sharepair.org/en"
+  },
+  {
+    "title": "Circular Design Europe",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/04/Logo-Circular-Design-02-01-1170x650-1.png",
+    "url": "https://circulardesigneurope.eu/"
+  },
+  {
+    "title": "ESP Design",
+    "category": "Circular Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/06/Cattura-1.png",
+    "url": "https://www.espdesign.org/"
+  },
+  {
+    "title": "Zero Waste Showcase",
+    "category": "Circular Packaging",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/11/instagram-favicon.png",
+    "url": "https://zerowasteshowcase.enviu.org/"
+  },
+  {
+    "title": "APCO Sustainable Packaging Guidelines",
+    "category": "Circular Packaging",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/paco.png",
+    "url": "https://apco.org.au/sustainable-packaging-guidelines"
+  },
+  {
+    "title": "Systemic Design Toolkit",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/60dcb5623fb2408a12a20e8d_systemic-design-toolkit-logo.png",
+    "url": "https://www.systemicdesigntoolkit.org/"
+  },
+  {
+    "title": "Reframing Design Symposium",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/SDA-logo.webp",
+    "url": "https://rsdsymposium.org/"
+  },
+  {
+    "title": "Doughnut Economics",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/doughnuteconomics.png",
+    "url": "https://doughnuteconomics.org/"
+  },
+  {
+    "title": "Systems Innovation Network",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/channels4_profile.png",
+    "url": "https://www.systemsinnovation.network/feed"
+  },
+  {
+    "title": "Design Plus Strategies - Politecnico di Milano",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/1672910886361.png",
+    "url": "https://www.designplusstrategies.polimi.it/"
+  },
+  {
+    "title": "Norwegian Retailers Environment Fund",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/nref_logo_green_rgb-1568x533-1.png",
+    "url": "https://handelensmiljofond.no/en/"
+  },
+  {
+    "title": "Industrial Symbiosis Nord",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/04/Cattura.png",
+    "url": "https://industrielsymbiosenord.com/?lang=en"
+  },
+  {
+    "title": "CIRCUIT Project",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/07/csm_CIRCUIT_LOGOMARK_RGB_891f56da39.png",
+    "url": "https://www.circuit-project.eu/"
+  },
+  {
+    "title": "Falay Design Toolbox",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/09/Circular-3.png",
+    "url": "https://www.falaydesign.com/toolbox"
+  },
+  {
+    "title": "Project Drawdown Solutions",
+    "category": "Systemic Design",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/11/Project-Drawdown-.png",
+    "url": "https://drawdown.org/solutions"
+  },
+  {
+    "title": "Circular Economy Guide",
+    "category": "Sustainable Tools",
+    "image": "https://www.ceguide.org/bundles/wbcceg/images/wbcceg-logo.svg",
+    "url": "https://www.ceguide.org/"
+  },
+  {
+    "title": "CirculAb Academy",
+    "category": "Sustainable Tools",
+    "image": "https://circulab.academy/wp-content/uploads/2021/12/logo-circulab-academy-200x93.webp",
+    "url": "https://circulab.academy/circular-economy-tools/"
+  },
+  {
+    "title": "Kennis Kaarten - Green Brain",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/01/Untitled-1-2.png",
+    "url": "https://kenniskaarten.hetgroenebrein.nl/en/"
+  },
+  {
+    "title": "Design Declares",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/design-declares-creative-industry-itsnicethat.width-1440_I6UeO6sZznrKWjRs.png",
+    "url": "https://designdeclares.com/"
+  },
+  {
+    "title": "PACE Circular",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/20_LOGO_PACE_RGB-new.png",
+    "url": "https://pacecircular.org/"
+  },
+  {
+    "title": "Circular Economy Hub",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/sitelogo.png",
+    "url": "https://ce-hub.org/"
+  },
+  {
+    "title": "Story of Stuff",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/logo-color_3fc18254.png",
+    "url": "https://www.storyofstuff.org/"
+  },
+  {
+    "title": "Tarot Cards of Tech",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/05/cardsstacked6.png",
+    "url": "https://www.artefactgroup.com/wp-content/uploads/2018/10/Artefact-Tarot-Cards-of-Tech_downloadable.pdf"
+  },
+  {
+    "title": "The Climate Dictionary",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2026/01/Screenshot-2026-01-20-at-09.13.43.png",
+    "url": "https://theclimatedictionary.com/"
+  },
+  {
+    "title": "Close the Loop",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/06/CDT.png",
+    "url": "https://www.close-the-loop.be/en"
+  },
+  {
+    "title": "Institute of Positive Fashion",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/InstituteofPositiveFashion.png",
+    "url": "https://instituteofpositivefashion.com/"
+  },
+  {
+    "title": "International Energy Agency (IEA)",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2022/11/International-energy-agency-logo.png",
+    "url": "https://www.iea.org/"
+  },
+  {
+    "title": "E-nvironmentalist",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/01/Untitled-1-1.png",
+    "url": "https://e-nvironmentalist.com/"
+  },
+  {
+    "title": "Carbon Literacy Project",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/01/The_Carbon_Literacy_Project_logo.png",
+    "url": "https://carbonliteracy.com/"
+  },
+  {
+    "title": "Nature Inspired Design Handbook",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/NIDs-1.png",
+    "url": "http://www.natureinspireddesign.nl/handbook.html"
+  },
+  {
+    "title": "Cascadia Bioregional Institute",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/CBID-logo.png",
+    "url": "https://bioinspired.sinet.ca/"
+  },
+  {
+    "title": "Climate Change Committee",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/CCC_logo_std_P_type_RGB.png",
+    "url": "https://www.theccc.org.uk/about/"
+  },
+  {
+    "title": "Centre for Sustainability Institute",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/csi-colour-logo-1024x402-1.png",
+    "url": "https://www.csi.edu.au/"
+  },
+  {
+    "title": "LENS International",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/02/cropped-Final-Logo.png",
+    "url": "http://www.lens-international.org/"
+  },
+  {
+    "title": "Right to Repair",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/Right-to-repair-logo-STACKED-300x300-1.png",
+    "url": "https://repair.eu/"
+  },
+  {
+    "title": "Biomimicry Institute",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/TBI-STACKED-COLOR.png",
+    "url": "https://biomimicry.org/"
+  },
+  {
+    "title": "World Resources Institute (WRI)",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/WRI-logo-global-Color_High_R23.png",
+    "url": "https://www.wri.org/"
+  },
+  {
+    "title": "Ellen MacArthur Foundation",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/03/Ellen_MacArthur_Foundation_logo.svg_.png",
+    "url": "https://ellenmacarthurfoundation.org/"
+  },
+  {
+    "title": "Resources for the Future",
+    "category": "Sustainable Tools",
+    "image": "https://www.circulardesign.it/wp-content/uploads/2023/07/resources-for-the-future-rff-logo-6302A03BE1-seeklogo.com_.png",
+    "url": "https://www.rff.org/"
+  }
+]

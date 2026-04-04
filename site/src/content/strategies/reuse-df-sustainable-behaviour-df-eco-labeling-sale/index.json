@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Eco-labeling",
+  "type": "sale",
+  "references": "Teisl, M. F., Roe, B., & Hicks, R. L. (2002). Can Eco-Labels Tune a Market? Evidence from Dolphin-Safe Labeling. Journal of Environmental Economics and Management, 43(3), 339\u2013359. https://doi.org/10.1006/jeem.2000.1186",
+  "caseStudyId": "88",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

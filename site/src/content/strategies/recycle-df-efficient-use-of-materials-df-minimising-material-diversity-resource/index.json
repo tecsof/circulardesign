@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Efficient Use of Materials",
+  "x3": "Df Minimising Material Diversity",
+  "type": "resource",
+  "references": "Ashby, M. F. (2012). Materials and the Environment: Eco-Informed Material Choice (2nd ed.). Butterworth-Heinemann.\n\nVezzoli, C. A., & Manzini, E. (2008). Design for Environmental Sustainability. Springer.",
+  "caseStudyId": "96",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

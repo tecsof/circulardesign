@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Buy-back",
+  "type": "reverse",
+  "references": "Walls, M. (2011). Deposit-Refund Systems in Practice and Theory. Resources for the Future Discussion Paper, 11-47.\n\nAtasu, A., & Subramanian, R. (2012). Extended Producer Responsibility for E-Waste: Individual or Collective Producer Responsibility? Production and Operations Management, 21(6), 1042\u20131059.",
+  "caseStudyId": "110",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

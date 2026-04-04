@@ -1,0 +1,22 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Durability Communication",
+  "x3": "Df Maintenance Service Bundling",
+  "type": "sale",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy\u2013a review. Journal of Cleaner Production, 97, 76-91.\nManzini, E., & Vezzoli, C. (2003). A strategic design approach to develop sustainable product service systems. Journal of Cleaner Production, 11(8), 851-857.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "163",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

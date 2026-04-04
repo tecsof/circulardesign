@@ -1,0 +1,379 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const xLevels = [
+  {
+    id: 'X1',
+    title: 'Main Circular Objectives',
+    description: 'The primary circular economy goals that a product or system can be designed for. These represent the fundamental end-of-use pathways.',
+    strategies: [
+      { name: 'Maintenance', desc: 'Keeping products in working condition through regular care and minor fixes.' },
+      { name: 'Reuse', desc: 'Using a product again for the same or a different purpose without significant modification.' },
+      { name: 'Refurbishment', desc: 'Restoring a product to a satisfactory working condition, often with cosmetic improvements.' },
+      { name: 'Remanufacturing', desc: 'Rebuilding a product to original or better specifications using a combination of new and recovered parts.' },
+      { name: 'Recycling', desc: 'Recovering materials from end-of-life products for use in new manufacturing processes.' },
+    ],
+  },
+  {
+    id: 'X2',
+    title: 'Primary Enabling Strategies',
+    description: 'Design strategies that directly enable the X1 objectives. These are the actionable approaches designers apply to make circular outcomes possible.',
+    strategies: [
+      { name: 'Design for Disassembly', desc: 'Making products easy to take apart for repair, upgrade, or material recovery.' },
+      { name: 'Design for Modularity', desc: 'Creating interchangeable components that can be independently replaced or upgraded.' },
+      { name: 'Design for Longevity', desc: 'Extending product lifespan through durable materials, timeless aesthetics, and emotional attachment.' },
+      { name: 'Design for Standardisation', desc: 'Using common parts and interfaces to simplify repair and remanufacturing.' },
+    ],
+  },
+  {
+    id: 'X3',
+    title: 'Supporting Strategies',
+    description: 'Broader systemic and contextual strategies that create the conditions for circularity to thrive. These address business models, user behaviour, and information flows.',
+    strategies: [
+      { name: 'Design for Attachment', desc: 'Fostering emotional bonds between users and products to discourage premature disposal.' },
+      { name: 'Design for Trust', desc: 'Building confidence in refurbished or remanufactured products through transparency.' },
+      { name: 'Design for Information', desc: 'Embedding data about materials, assembly, and disassembly to support future circular processes.' },
+      { name: 'Design for Product-Service Systems', desc: 'Shifting from product ownership to service-based models that incentivise longevity.' },
+    ],
+  },
+];
+
+const phases = [
+  { name: 'Business & Network', color: '#E6883C', desc: 'Strategic partnerships, circular business models, and value network design.' },
+  { name: 'Resources & Production', color: '#AF7DEB', desc: 'Material selection, manufacturing processes, and resource efficiency.' },
+  { name: 'Forward Logistics', color: '#C94D8B', desc: 'Packaging, distribution, and delivery optimised for circularity.' },
+  { name: 'Sale', color: '#5386D3', desc: 'Point of sale, product-service offerings, and ownership models.' },
+  { name: 'Use & Operation', color: '#7BE3CD', desc: 'User experience, energy efficiency, and product care during active use.' },
+  { name: 'Service & Maintenance', color: '#64D069', desc: 'Repair services, spare parts availability, and maintenance protocols.' },
+  { name: 'Reverse Logistics', color: '#C8D454', desc: 'Collection, sorting, and transportation of end-of-use products.' },
+  { name: 'Recovery', color: '#a65e2e', desc: 'Material recovery, component harvesting, and end-of-life processing.' },
+];
+---
+
+<Layout title="Theory">
+  <!-- Hero -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-6">Framework</p>
+        <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-6 text-black">
+          The Multi-hierarchical <span class="text-black/70">DfX</span> Framework
+        </h1>
+        <p class="text-black/60 text-lg md:text-xl leading-relaxed">
+          Design for X (DfX) applied to circular economy organises 230+ design strategies
+          across three dimensions: what circular objective you are designing for, at which
+          lifecycle phase, and for which product lifecycle loop. Together, these dimensions
+          form a navigable map of circular design possibilities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three dimensions overview -->
+  <section class="py-16 bg-black rounded-xl mx-4 md:mx-8 mb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center mb-12 text-white">
+        Three <span class="text-yellow">Dimensions</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="#x-levels" class="group bg-white/5 border border-white/10 rounded-xl p-8 hover:border-yellow/50 transition-all">
+          <div class="text-yellow font-mono text-sm mb-2">Dimension 1</div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">X-Levels</h3>
+          <p class="text-white/60 leading-relaxed">
+            A three-tier hierarchy of circular objectives and the design strategies that enable them.
+          </p>
+        </a>
+        <a href="#p-phases" class="group bg-white/5 border border-white/10 rounded-xl p-8 hover:border-yellow/50 transition-all">
+          <div class="text-yellow font-mono text-sm mb-2">Dimension 2</div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">P-Phases</h3>
+          <p class="text-white/60 leading-relaxed">
+            Eight lifecycle stages from business planning through recovery, each with its own strategies.
+          </p>
+        </a>
+        <a href="#l-loops" class="group bg-white/5 border border-white/10 rounded-xl p-8 hover:border-yellow/50 transition-all">
+          <div class="text-yellow font-mono text-sm mb-2">Dimension 3</div>
+          <h3 class="font-display text-2xl font-bold text-white mb-3">L-Loops</h3>
+          <p class="text-white/60 leading-relaxed">
+            Distinguishes between first-lifecycle and subsequent-lifecycle strategies for circular products.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- X-Levels -->
+  <section id="x-levels" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-4">Dimension 1</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-black">
+          X-Levels: <span class="text-black/60">The Strategy Hierarchy</span>
+        </h2>
+        <p class="text-black/60 text-lg leading-relaxed">
+          The X dimension organises circular design strategies into three hierarchical levels.
+          X1 defines the high-level circular objectives. X2 contains the primary enabling strategies
+          that make those objectives achievable. X3 captures the supporting strategies that create
+          the broader conditions for success.
+        </p>
+      </div>
+
+      <!-- Hierarchy visual -->
+      <div class="relative mb-16">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-black/10"></div>
+        {xLevels.map((level, i) => (
+          <div class={`relative mb-12 ${i % 2 === 0 ? 'md:pr-[52%]' : 'md:pl-[52%]'}`}>
+            <div class="hidden md:block absolute left-1/2 top-8 w-6 h-px bg-black/30" style={i % 2 === 0 ? 'transform: translateX(-100%)' : ''}></div>
+            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-black items-center justify-center">
+              <span class="text-yellow text-xs font-bold">{i + 1}</span>
+            </div>
+            <div class="bg-black border border-black/10 rounded-xl p-8">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="bg-yellow text-black font-mono font-bold text-sm px-3 py-1 rounded">{level.id}</span>
+                <h3 class="font-display text-xl font-bold text-white">{level.title}</h3>
+              </div>
+              <p class="text-white/60 mb-6">{level.description}</p>
+              <div class="grid sm:grid-cols-2 gap-3">
+                {level.strategies.map(s => (
+                  <div class="bg-white/5 border border-white/10 rounded-lg p-4">
+                    <div class="font-medium text-sm mb-1 text-white">{s.name}</div>
+                    <div class="text-white/50 text-xs leading-relaxed">{s.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- P-Phases -->
+  <section id="p-phases" class="py-24 bg-black rounded-xl mx-4 md:mx-8 mb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-yellow font-mono text-sm tracking-widest uppercase mb-4">Dimension 2</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-white">
+          P-Phases: <span class="text-yellow">The Product Lifecycle</span>
+        </h2>
+        <p class="text-white/60 text-lg leading-relaxed">
+          Every product moves through a series of lifecycle stages. The P dimension maps
+          circular strategies to eight distinct phases, from initial business planning through
+          end-of-life recovery. Each phase presents unique opportunities for circular intervention.
+        </p>
+      </div>
+
+      <!-- Circular diagram -->
+      <div class="relative max-w-3xl mx-auto mb-16">
+        <svg viewBox="0 0 600 600" class="w-full" xmlns="http://www.w3.org/2000/svg">
+          <!-- Circular arrow path -->
+          <circle cx="300" cy="300" r="160" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="4 4" />
+          {phases.map((phase, i) => {
+            const angle = (i * 360) / 8 - 90;
+            const rad = (angle * Math.PI) / 180;
+            const dotX = 300 + 160 * Math.cos(rad);
+            const dotY = 300 + 160 * Math.sin(rad);
+            const labelR = 230;
+            const labelX = 300 + labelR * Math.cos(rad);
+            const labelY = 300 + labelR * Math.sin(rad);
+            const anchor = Math.abs(Math.cos(rad)) < 0.3 ? 'middle' : Math.cos(rad) > 0 ? 'start' : 'end';
+            return (
+              <g>
+                <circle cx={dotX} cy={dotY} r="18" fill={phase.color} opacity="0.9" />
+                <text x={dotX} y={dotY + 1} text-anchor="middle" dominant-baseline="middle" fill="white" font-size="10" font-weight="bold">{`P${i + 1}`}</text>
+                <line x1={dotX + 22 * Math.cos(rad)} y1={dotY + 22 * Math.sin(rad)} x2={labelX - 6 * Math.cos(rad)} y2={labelY - 6 * Math.sin(rad)} stroke={phase.color} stroke-width="1" opacity="0.4" />
+                <text x={labelX} y={labelY} text-anchor={anchor} dominant-baseline="middle" fill={phase.color} font-size="11" font-weight="600" font-family="Space Grotesk, sans-serif">{phase.name}</text>
+              </g>
+            );
+          })}
+          <!-- Centre label -->
+          <text x="300" y="295" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Space Grotesk, sans-serif">Product</text>
+          <text x="300" y="315" text-anchor="middle" fill="#999" font-size="12" font-family="Inter, sans-serif">Lifecycle</text>
+        </svg>
+      </div>
+
+      <!-- Phase cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {phases.map((phase, i) => (
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:scale-[1.02] transition-transform" style={`border-top: 3px solid ${phase.color}`}>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-mono text-xs font-bold px-2 py-0.5 rounded" style={`background-color: ${phase.color}; color: white`}>P{i + 1}</span>
+              <h3 class="font-display font-semibold text-sm" style={`color: ${phase.color}`}>{phase.name}</h3>
+            </div>
+            <p class="text-white/50 text-xs leading-relaxed">{phase.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- L-Loops -->
+  <section id="l-loops" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-4">Dimension 3</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-black">
+          L-Loops: <span class="text-black/60">Lifecycle Iterations</span>
+        </h2>
+        <p class="text-black/60 text-lg leading-relaxed">
+          In a circular economy, products do not follow a linear path from creation to disposal.
+          Instead, they loop through multiple lifecycles. The L dimension distinguishes between
+          strategies relevant to a product's first life and those that apply in subsequent lifecycles.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
+        <!-- L1 -->
+        <div class="bg-black border border-black/10 rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="bg-yellow text-black font-mono font-bold text-lg px-4 py-2 rounded">L1</span>
+            <h3 class="font-display text-2xl font-bold text-white">First Lifecycle</h3>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-6">
+            Strategies applied during a product's original lifecycle, from its first manufacture
+            through to the point where it leaves the hands of its original user. L1 strategies
+            focus on extending this initial life as long as possible.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Original manufacture and assembly</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">First-owner use and maintenance</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Design for durability and longevity</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Preventive maintenance strategies</span>
+            </div>
+          </div>
+
+          <!-- Loop visual -->
+          <div class="mt-8 flex justify-center">
+            <svg viewBox="0 0 200 80" class="w-48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 30 40 C 30 15, 170 15, 170 40" fill="none" stroke="#f1ef2e" stroke-width="2" />
+              <path d="M 170 40 C 170 65, 30 65, 30 40" fill="none" stroke="#f1ef2e" stroke-width="2" stroke-dasharray="4 4" opacity="0.3" />
+              <polygon points="170,36 170,44 178,40" fill="#f1ef2e" />
+              <text x="100" y="42" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L1</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- L2+ -->
+        <div class="bg-black border border-black/10 rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="bg-yellow text-black font-mono font-bold text-lg px-4 py-2 rounded">L2+</span>
+            <h3 class="font-display text-2xl font-bold text-white">Subsequent Lifecycles</h3>
+          </div>
+          <p class="text-white/60 leading-relaxed mb-6">
+            Strategies that come into play when a product enters its second or subsequent
+            lifecycles through reuse, refurbishment, remanufacturing, or recycling. L2+
+            strategies address the unique challenges of giving products and materials new life.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Collection and reverse logistics</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Assessment, sorting, and grading</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Reprocessing and remanufacturing</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-2 h-2 rounded-full bg-yellow"></div>
+              <span class="text-white/60">Remarketing and redistribution</span>
+            </div>
+          </div>
+
+          <!-- Loop visual -->
+          <div class="mt-8 flex justify-center">
+            <svg viewBox="0 0 200 80" class="w-48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 30 40 C 30 10, 170 10, 170 40" fill="none" stroke="#f1ef2e" stroke-width="2" />
+              <path d="M 170 40 C 170 70, 30 70, 30 40" fill="none" stroke="#f1ef2e" stroke-width="2" />
+              <polygon points="30,36 30,44 22,40" fill="#f1ef2e" />
+              <path d="M 50 40 C 50 20, 150 20, 150 40" fill="none" stroke="#f1ef2e" stroke-width="1.5" opacity="0.5" />
+              <path d="M 150 40 C 150 60, 50 60, 50 40" fill="none" stroke="#f1ef2e" stroke-width="1.5" opacity="0.5" />
+              <text x="100" y="42" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L2+</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Putting it together -->
+  <section class="py-24 bg-black rounded-xl mx-4 md:mx-8 mb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-white">
+          Putting It <span class="text-yellow">Together</span>
+        </h2>
+        <p class="text-white/60 text-lg leading-relaxed">
+          Every circular design strategy lives at the intersection of these three dimensions.
+          For example, "Design for Disassembly" (an X2 strategy) can be applied at the
+          "Resources & Production" phase (P2) and is relevant to both the first lifecycle (L1)
+          and subsequent ones (L2+). This three-dimensional mapping helps designers navigate
+          the full landscape of circular possibilities.
+        </p>
+      </div>
+
+      <!-- 3D concept visual -->
+      <div class="max-w-lg mx-auto bg-white/5 border border-white/10 rounded-xl p-8">
+        <div class="grid grid-cols-3 gap-4 text-center mb-8">
+          <div>
+            <div class="text-yellow font-mono text-sm mb-1">X</div>
+            <div class="font-display font-bold text-white">Levels</div>
+            <div class="text-white/50 text-xs mt-1">What to design for</div>
+          </div>
+          <div>
+            <div class="text-yellow font-mono text-sm mb-1">P</div>
+            <div class="font-display font-bold text-white">Phases</div>
+            <div class="text-white/50 text-xs mt-1">When in the lifecycle</div>
+          </div>
+          <div>
+            <div class="text-yellow font-mono text-sm mb-1">L</div>
+            <div class="font-display font-bold text-white">Loops</div>
+            <div class="text-white/50 text-xs mt-1">Which lifecycle iteration</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="inline-flex items-center gap-2 text-sm text-white/60">
+            <span class="bg-yellow/20 text-yellow px-2 py-1 rounded font-mono text-xs">X2</span>
+            <span>+</span>
+            <span class="bg-yellow/20 text-yellow px-2 py-1 rounded font-mono text-xs">P2</span>
+            <span>+</span>
+            <span class="bg-yellow/20 text-yellow px-2 py-1 rounded font-mono text-xs">L1</span>
+            <span>=</span>
+            <span class="text-white font-medium">Design for Disassembly at Production, 1st Life</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-black">
+        Ready to <span class="text-black/60">explore</span>?
+      </h2>
+      <p class="text-black/60 text-lg max-w-xl mx-auto mb-10">
+        Use the interactive tool to discover which strategies apply to your project,
+        filtered by lifecycle phase, circular objective, and loop.
+      </p>
+      <a href="/tool"
+        class="inline-flex items-center gap-2 bg-black text-yellow font-semibold px-8 py-4 rounded-lg hover:bg-black/80 transition-all hover:scale-105 active:scale-95">
+        Try the Tool
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+      </a>
+    </div>
+  </section>
+</Layout>

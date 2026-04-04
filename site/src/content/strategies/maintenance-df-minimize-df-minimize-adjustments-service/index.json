@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Minimize",
+  "x3": "Df Minimize Adjustments",
+  "type": "service",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nTukker, A., & Tischner, U. (2006). Product-services as a research field: past, present and future. Reflections from a decade of research. Journal of Cleaner Production, 14(17), 1552-1556.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Soufani, K. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability. Journal of Cleaner Production, 142, 378-389.",
+  "caseStudyId": "100",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

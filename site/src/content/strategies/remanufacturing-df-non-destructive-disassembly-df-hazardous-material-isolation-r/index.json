@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Non-Destructive Disassembly",
+  "x3": "Df Hazardous Material Isolation",
+  "type": "recovery",
+  "references": "Seliger, G., Kernbaum, S., & Zettl, M. (2006). Remanufacturing approaches contributing to sustainable engineering. Gest\u00e3o & Produ\u00e7\u00e3o, 13(3), 367\u2013384.\n\nCui, J., & Forssberg, E. (2003). Mechanical recycling of waste electric and electronic equipment: A review. Journal of Hazardous Materials, 99(3), 243\u2013263.\n\nWidmer, R., Oswald-Krapf, H., Sinha-Khetriwal, D., Schnellmann, M., & B\u00f6ni, H. (2005). Global perspectives on e-waste. Environmental Impact Assessment Review, 25(5), 436\u2013458.",
+  "caseStudyId": "110",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbished Product Distribution",
+  "x3": "Df Confidence Packaging",
+  "type": "logistics",
+  "references": "Hazen, B. T., Mollenkopf, D. A., & Wang, Y. (2017). Remanufacturing for the circular economy: an examination of consumer switching behavior. Business Strategy and the Environment, 26(4), 451-464.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "187",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

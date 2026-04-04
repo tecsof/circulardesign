@@ -1,0 +1,19 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Persuasion",
+  "type": "use",
+  "references": "Lockton, D., Harrison, D., & Stanton, N. (2008). Making the user more efficient: design for sustainable behaviour. International Journal of Sustainable Engineering, 1(1), 3\u20138.",
+  "caseStudyId": "141",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

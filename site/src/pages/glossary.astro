@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const termModules = import.meta.glob('../content/glossary-terms/*/index.json', { eager: true });
+const terms = Object.values(termModules).map((mod: any) => mod.default ?? mod) as { term: string; definition: string }[];
+terms.sort((a, b) => a.term.localeCompare(b.term));
+
+// Group terms by first letter
+const grouped: Record<string, typeof terms> = {};
+for (const t of terms) {
+  const letter = t.term[0].toUpperCase();
+  if (!grouped[letter]) grouped[letter] = [];
+  grouped[letter].push(t);
+}
+const letters = Object.keys(grouped).sort();
+const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+---
+
+<Layout title="Glossary">
+  <section class="min-h-screen bg-[#f1ef2e] py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-12">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-6 opacity-60">Reference</p>
+        <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-6 text-black">
+          Glossary
+        </h1>
+        <p class="text-black/70 text-lg leading-relaxed">
+          Key terms and definitions from the circular economy and Design for X literature.
+        </p>
+      </div>
+
+      <!-- Search -->
+      <div class="mb-12">
+        <div class="relative max-w-md">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-black/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            id="glossary-search"
+            placeholder="Search terms..."
+            class="w-full bg-black/10 border border-black/20 rounded-lg pl-12 pr-4 py-3 text-black placeholder-black/40 focus:outline-none focus:border-black/50 transition-colors"
+          />
+        </div>
+      </div>
+
+      <div class="flex gap-8 lg:gap-12">
+        <!-- Alphabet sidebar -->
+        <nav class="hidden md:flex flex-col gap-1 sticky top-24 self-start">
+          {allLetters.map(l => (
+            <a
+              href={letters.includes(l) ? `#letter-${l}` : undefined}
+              class={`w-8 h-8 flex items-center justify-center rounded text-sm font-mono transition-colors ${
+                letters.includes(l)
+                  ? 'text-black hover:bg-black hover:text-[#f1ef2e]'
+                  : 'text-black/20 cursor-default'
+              }`}
+            >
+              {l}
+            </a>
+          ))}
+        </nav>
+
+        <!-- Terms -->
+        <div class="flex-1" id="glossary-list">
+          {letters.map(letter => (
+            <div id={`letter-${letter}`} class="mb-12 glossary-group" data-letter={letter}>
+              <h2 class="font-display text-2xl font-bold text-black mb-6 border-b border-black/20 pb-2">{letter}</h2>
+              <div class="space-y-4">
+                {grouped[letter].map(item => (
+                  <div class="glossary-item bg-black rounded-xl p-6" data-term={item.term.toLowerCase()}>
+                    <h3 class="font-display text-lg font-semibold mb-2 text-white">{item.term}</h3>
+                    <p class="text-white/70 leading-relaxed text-sm">{item.definition}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div id="no-results" class="hidden text-center py-12">
+            <p class="text-black/60 text-lg">No matching terms found.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const input = document.getElementById('glossary-search') as HTMLInputElement;
+  const items = document.querySelectorAll('.glossary-item');
+  const groups = document.querySelectorAll('.glossary-group');
+  const noResults = document.getElementById('no-results');
+
+  input?.addEventListener('input', () => {
+    const query = input.value.toLowerCase().trim();
+    let visible = 0;
+
+    items.forEach(item => {
+      const el = item as HTMLElement;
+      const term = el.dataset.term || '';
+      const text = el.textContent?.toLowerCase() || '';
+      const match = !query || term.includes(query) || text.includes(query);
+      el.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    // Hide letter groups with no visible items
+    groups.forEach(group => {
+      const g = group as HTMLElement;
+      const visibleItems = g.querySelectorAll('.glossary-item:not([style*="display: none"])');
+      g.style.display = visibleItems.length > 0 ? '' : 'none';
+    });
+
+    if (noResults) {
+      noResults.style.display = visible === 0 ? '' : 'none';
+    }
+  });
+</script>

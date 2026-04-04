@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <g stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(64,64)">
+      <g transform="rotate(0)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="1.2"/></g>
+      <g transform="rotate(30)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="1.8"/></g>
+      <g transform="rotate(60)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="2.8"/></g>
+      <g transform="rotate(90)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="4"/></g>
+      <g transform="rotate(120)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="5.5"/></g>
+      <g transform="rotate(150)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="7"/></g>
+      <g transform="rotate(180)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="8.5"/></g>
+      <g transform="rotate(210)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="7"/></g>
+      <g transform="rotate(240)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="5.5"/></g>
+      <g transform="rotate(270)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="4"/></g>
+      <g transform="rotate(300)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="2.8"/></g>
+      <g transform="rotate(330)"><polyline points="-5,-6 0,0 -5,6" transform="translate(44,0)" stroke-width="1.8"/></g>
+    </g>
+  </g>
+</svg>

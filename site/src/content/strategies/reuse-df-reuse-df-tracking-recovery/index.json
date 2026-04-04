@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Reuse",
+  "x3": "Df Tracking",
+  "type": "recovery",
+  "references": "Nasr, N., Russell, J., Bringezu, S., Hellweg, S., Hilton, B., Kreiss, C., & con Gries, N. (2018). Re-defining Value \u2013 The Manufacturing Revolution (UN Environment). ",
+  "caseStudyId": "98",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

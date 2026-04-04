@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Circular Product Architecture",
+  "x3": "Df Circular Product Architecture",
+  "type": "resource",
+  "references": "Ulrich, K. (1995). The role of product architecture in the manufacturing firm. Research Policy, 24(3), 419\u2013440.",
+  "caseStudyId": "24",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

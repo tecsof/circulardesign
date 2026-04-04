@@ -1,0 +1,20 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recyclability Communication",
+  "x3": "Df Environmental Impact Quantification",
+  "type": "sale",
+  "references": "Allwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nMcDonough, W., & Braungart, M. (2002). Cradle to cradle: Remaking the way we make things. North Point Press.\nStahel, W. R. (2016). The circular economy. Nature, 531(7595), 435-438.",
+  "caseStudyId": "182",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

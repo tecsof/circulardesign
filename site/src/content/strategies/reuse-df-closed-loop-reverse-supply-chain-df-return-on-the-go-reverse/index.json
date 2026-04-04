@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Return on the Go",
+  "type": "reverse",
+  "references": "Reuse, Rethinking Packaging. Ellen MacArthur Foundation.",
+  "caseStudyId": "121",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

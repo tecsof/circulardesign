@@ -1,0 +1,23 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df User Access-based Products Acceptance",
+  "type": "sale",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy. Journal of Cleaner Production, 97, 76-91. https://doi.org/10.1016/j.jclepro.2013.11.049\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nMoeller, S., & Wittkowski, K. (2010). The burdens of ownership: Reasons for preferring renting. Managing Service Quality, 20(2), 176-191.",
+  "caseStudyId": "122",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

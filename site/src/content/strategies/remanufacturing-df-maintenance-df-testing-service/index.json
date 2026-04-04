@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Maintenance",
+  "x3": "Df Testing",
+  "type": "service",
+  "references": "Tant, K. M., Mulholland, A. J., Curtis, A., & Ijomah, W. L. (2019). Design-for-testing for improved remanufacturability. Journal of Remanufacturing, 9(1), 61-72.",
+  "caseStudyId": "108",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

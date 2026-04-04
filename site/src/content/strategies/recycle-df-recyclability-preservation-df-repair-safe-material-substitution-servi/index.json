@@ -1,0 +1,21 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recyclability Preservation",
+  "x3": "Df Repair-Safe Material Substitution",
+  "type": "service",
+  "references": "Sundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nAllwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.",
+  "caseStudyId": "182",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

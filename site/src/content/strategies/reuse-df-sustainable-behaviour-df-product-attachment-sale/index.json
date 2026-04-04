@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Product Attachment",
+  "type": "sale",
+  "references": "Lobos, A., & Babbitt, C. W. (2013). Integrating Emotional Attachment and Sustainability in Electronic Product Design. Challenges, 4(1), 19\u201333.\n\nJimenez, S., Pohlmeyer, A. E., Desmet, P., Delft University of Technology, & Faculty of Industrial Design Engineering. (2015). Positive design: Reference guide.\n",
+  "caseStudyId": "95",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

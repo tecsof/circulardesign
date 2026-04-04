@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Local Network",
+  "x3": "Df Opening Processes and Organizations",
+  "type": "business",
+  "references": "Benkler, Y. (2006). The wealth of networks: How social production transforms markets and freedom. Yale University Press.\nden Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product design in a circular economy: Development of a typology of key concepts and terms. Journal of Industrial Ecology, 21(3), 517-525. https://doi.org/10.1111/jiec.12610\nVezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.",
+  "caseStudyId": "78",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

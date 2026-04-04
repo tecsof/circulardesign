@@ -1,0 +1,22 @@
+{
+  "id": 104,
+  "title": "Batch.Works",
+  "videoLink": "",
+  "links": "https://www.batch.works/",
+  "x3": "",
+  "filterFocus": [
+    "MATERIALS"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "RECYCLE"
+  ],
+  "filterBusinessModel": [
+    "PRODUCT ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Circular Product Architecture",
+  "x3": "Df Failure",
+  "type": "resource",
+  "references": "B.S. Dhillon. (1999). Engineering Maintainability: How to Design for Reliability and Easy Maintenance. Houston, Tex: Gulf Professional Publishing.\n\nden Hollander, M. C. (2018). Design for Managing Obsolescence: A Design Methodology for Preserving Product Integrity in a Circular Economy.\n\n  \n",
+  "caseStudyId": "90",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

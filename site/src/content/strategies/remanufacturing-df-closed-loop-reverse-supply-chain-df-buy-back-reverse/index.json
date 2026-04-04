@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Buy-back",
+  "type": "reverse",
+  "references": "Guide, V. D. R., & Van Wassenhove, L. N. (2009). The evolution of closed-loop supply chain research. Operations Research, 57(1), 10\u201318.\n\n\u00d6stlin, J., Sundin, E., & Bj\u00f6rkman, M. (2008). Importance of closed-loop supply chain relationships for product remanufacturing. International Journal of Production Economics, 115(2), 336\u2013348.\n\nKlausner, M., & Hendrickson, C. T. (2000). Reverse-logistics strategy for product take-back. Interfaces, 30(3), 156\u2013165.",
+  "caseStudyId": "106",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

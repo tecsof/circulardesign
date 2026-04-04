@@ -1,0 +1,22 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Durability Communication",
+  "x3": "Df Service Network Visibility",
+  "type": "sale",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nHazen, B. T., Mollenkopf, D. A., & Wang, Y. (2017). Remanufacturing for the circular economy: an examination of consumer switching behavior. Business Strategy and the Environment, 26(4), 451-464.\nAllwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.",
+  "caseStudyId": "165",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

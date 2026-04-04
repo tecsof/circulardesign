@@ -1,0 +1,18 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df  Lifespan Labelling",
+  "type": "use",
+  "references": "The Influence of Lifespan Labelling on Consumers -  European Economic and Social Committee , SIRCOME , Universit\u00e9 de Boh\u00e8me du Sud , Universit\u00e9 de Bretagne Sud",
+  "caseStudyId": "118",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

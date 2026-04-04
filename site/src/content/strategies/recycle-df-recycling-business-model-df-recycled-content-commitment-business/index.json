@@ -1,0 +1,21 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recycling Business Model",
+  "x3": "Df Recycled Content Commitment",
+  "type": "business",
+  "references": "Allwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nManzini, E., & Vezzoli, C. (2003). A strategic design approach to develop sustainable product service systems. Journal of Cleaner Production, 11(8), 851-857.",
+  "caseStudyId": "181",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

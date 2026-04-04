@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Open-loop Reverse Supply Chain",
+  "x3": "Df Open-loop Reverse Supply Chain",
+  "type": "reverse",
+  "references": "Ellen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.\nTukker, A. (2015). Product services for a resource-efficient and circular economy. Journal of Cleaner Production, 97, 76-91.",
+  "caseStudyId": "66",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

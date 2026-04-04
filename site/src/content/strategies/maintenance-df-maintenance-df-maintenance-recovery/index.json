@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Maintenance",
+  "x3": "Df Maintenance",
+  "type": "recovery",
+  "references": "British Standards Institution. (2019). BS 8887-1:2019 Design for manufacture, assembly, disassembly and end-of-life processing (MADE) - Part 1: General concepts, principles and requirements.\n\nNorberg-Bohm, V., Rossi, M., & Mayfield, M. (1994). Cleaner production in the chemical industry in the US. Technical Report.\n\nVezzoli, C., & Manzini, E. (2008). Design for Environmental Sustainability. Springer.",
+  "caseStudyId": "146",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufactured Product Positioning",
+  "x3": "Df Sustainability Quantification",
+  "type": "sale",
+  "references": "Allwood, J. M., Ashby, M. F., Gutowski, T. G., & Worrell, E. (2013). Material efficiency: providing material for society. Annual Review of Environment and Resources, 38, 575-600.\nMcDonough, W., & Braungart, M. (2002). Cradle to cradle: Remaking the way we make things. North Point Press.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The Circular Economy\u2013A new sustainability paradigm. Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "180",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Non-Destructive Disassembly",
+  "x3": "Df Non-Destructive Disassembly",
+  "type": "recovery",
+  "references": "Rohaty\u0144ski, R. (2016). Design for Disassembly. Introduction to a New Design Issue.\nTorres, Fernando, and Santiago Puente. \"Intelligent Disassembly in the Demanufacturing Process.\" The International Journal of Advanced Manufacturing Technology 30.5 (2006): 479-80\nInformation System Resources. Demanufacturing whitepaper (2011).",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Df Modularization; Df Standardization; Df Recycling",
+  "authorId": "1"
+}

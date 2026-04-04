@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Open-loop Reverse Supply Chain",
+  "x3": "Df Centralized Returns Centers",
+  "type": "reverse",
+  "references": "Gou, Q., Liang, L., Huang, Z., & Xu, C. (2008). A joint inventory model for an open-loop reverse supply chain. International Journal of Production Economics, 116(1), 28\u201342. https://doi.org/10.1016/j.ijpe.2008.07.009",
+  "caseStudyId": "94",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

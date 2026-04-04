@@ -1,0 +1,21 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishability",
+  "x3": "Df Cosmetic Restorability",
+  "type": "resource",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Kohtala, C. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability.",
+  "caseStudyId": "170",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

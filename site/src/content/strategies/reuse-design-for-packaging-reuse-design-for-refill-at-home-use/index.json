@@ -1,0 +1,19 @@
+{
+  "x1": "Reuse",
+  "x2": "Design for Packaging Reuse",
+  "x3": "Design for Refill at Home",
+  "type": "use",
+  "references": "Long, Y., Ceschin, F., Harrison, D., & Terzio\u011flu, N. (2022). Exploring and addressing the user acceptance issues embedded in the adoption of reusable packaging systems. Sustainability, 14(10), 6146.",
+  "caseStudyId": "99",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "2"
+}

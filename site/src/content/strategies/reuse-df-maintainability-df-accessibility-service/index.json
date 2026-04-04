@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Maintainability",
+  "x3": "Df Accessibility",
+  "type": "service",
+  "references": "AMCP 706-133. (1976). Engineering Design Handbook: Maintainability\nEngineering Theory and Practice. Department of Defense, Washington,\nD.C.\n\nB.S, Dhilon. (1999). Engineering Maintainability: How to Design for Reliability and Easy Maintenance. Elsevier.\n",
+  "caseStudyId": "115",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": ""
+}

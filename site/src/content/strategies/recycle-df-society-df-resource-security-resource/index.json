@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Society",
+  "x3": "Df Resource Security",
+  "type": "resource",
+  "references": "European Commission. (2023). Study on the Critical Raw Materials for the EU. EU Publications.\n\nGraedel, T. E., Harper, E. M., Nassar, N. T., Nuss, P., & Reck, B. K. (2015). Criticality of metals and metalloids. Proceedings of the National Academy of Sciences, 112(14), 4257\u20134262.",
+  "caseStudyId": "109",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

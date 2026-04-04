@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Circular Product Architecture",
+  "x3": "Df Standardization",
+  "type": "resource",
+  "references": "Bengtsson, M. (2003). Standardization issues in condition based maintenance. Department of Innovation, Design and Product Development, M\u00e4lardalen University, Sweden.",
+  "caseStudyId": "148",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Df Repairability",
+  "authorId": "1"
+}

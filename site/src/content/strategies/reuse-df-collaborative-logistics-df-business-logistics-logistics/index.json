@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Collaborative Logistics",
+  "x3": "Df Business Logistics",
+  "type": "logistics",
+  "references": "Carbone, V., Rouquet, A., & Roussat, C. (2018). A typology of logistics at work in collaborative consumption. International Journal of Physical Distribution & Logistics Management, 48(6), 570\u2013585. https://doi.org/10.1108/IJPDLM-11-2017-0354",
+  "caseStudyId": "66",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

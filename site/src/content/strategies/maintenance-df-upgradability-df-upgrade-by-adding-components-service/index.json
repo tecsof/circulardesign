@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Upgradability",
+  "x3": "Df Upgrade by Adding Components",
+  "type": "service",
+  "references": "Valckenaers, P., Van Brussel, H., Hadeli, Bochmann, O., Saint Germain, B., & Zamfirescu, C. (2003). On the design of emergent systems: An investigation of integration and interoperability issues. Engineering Applications of Artificial Intelligence, 16(4), 377\u2013393. https://doi.org/10.1016/S0952-1976(03)00080-0",
+  "caseStudyId": "77",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

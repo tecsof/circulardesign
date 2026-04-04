@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Production",
+  "x3": "Df Use of Renewable Energy",
+  "type": "business",
+  "references": "Stahel, W. R. (2010). The performance economy. Palgrave Macmillan.\nVezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.",
+  "caseStudyId": "80",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

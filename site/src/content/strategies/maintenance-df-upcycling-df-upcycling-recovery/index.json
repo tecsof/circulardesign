@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Upcycling",
+  "x3": "Df Upcycling",
+  "type": "recovery",
+  "references": "Sung, K., & Sung, K. (2015). A review on upcycling: Current body of literature, knowledge gaps and a way forward.\nTerzioglu, N. (2017). Do-fix: Creating deeper relationships between users and products through visible repair [Ph.D., Royal College of Art]. http://researchonline.rca.ac.uk/2818/\nMackie, E. (2017). Technological Disobedience: Ernesto Oroza. Assemble Papers #7. https://assemblepapers.com.au/2017/04/28/technological-disobedience-ernesto-oroza/",
+  "caseStudyId": "78",
+  "loop": [
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Materials"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

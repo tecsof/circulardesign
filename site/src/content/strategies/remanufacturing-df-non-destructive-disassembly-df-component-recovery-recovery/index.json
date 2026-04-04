@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Non-Destructive Disassembly",
+  "x3": "Df Component Recovery",
+  "type": "recovery",
+  "references": "Sundin, E., & Bras, B. (2005). Making functional sales environmentally and economically beneficial through product remanufacturing. Journal of Cleaner Production, 13(9), 913\u2013925.\n\nDuflou, J. R., Seliger, G., Kara, S., Umeda, Y., Ometto, A., & Willems, B. (2008). Efficiency and feasibility of product disassembly: A case-based study. CIRP Annals, 57(2), 583\u2013600.\n\nKuo, T. C. (2006). Enhancing product disassembly and component recovery using design for disassembly. Robotics and Computer-Integrated Manufacturing, 22(5), 579\u2013588.",
+  "caseStudyId": "108",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Refill",
+  "x3": "Df Refill on Street",
+  "type": "service",
+  "references": "Standage, T. (2018). The reign of recycling. The Economist.\nEllen MacArthur Foundation. (2017). The circular economy in detail. Retrieved from https://www.ellenmacarthurfoundation.org/\nStahel, W. R. (2016). The circular economy. Nature, 531(7595), 435-438.",
+  "caseStudyId": "92",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

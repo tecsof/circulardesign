@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Reverse Logistic",
+  "type": "reverse",
+  "references": "Ellen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.\nLacy, P., & Rutqvist, J. (2015). Waste to wealth: The circular economy advantage. Palgrave Macmillan.",
+  "caseStudyId": "94",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

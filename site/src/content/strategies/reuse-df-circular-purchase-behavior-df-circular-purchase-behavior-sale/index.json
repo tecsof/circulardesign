@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Circular Purchase Behavior",
+  "x3": "Df Circular Purchase Behavior",
+  "type": "sale",
+  "references": "Liu, Q., Li, H., Zuo, X., Zhang, F., & Wang, L. (2009). A survey and analysis on public awareness and performance for promoting circular economy in China: A case study from Tianjin. Journal of Cleaner Production, 17(2), 265\u2013270.\n\nRahbar, E., & Wahid, N. A. (2011). Investigation of green marketing tools\u2019 effect on consumers\u2019 purchase behavior. Business Strategy Series.",
+  "caseStudyId": "125",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

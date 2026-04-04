@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Maintainability",
+  "x3": "Df Maintainability",
+  "type": "service",
+  "references": "AMCP 706-133. (1976). Engineering Design Handbook: Maintainability\nEngineering Theory and Practice. Department of Defense, Washington,\nD.C.",
+  "caseStudyId": "116",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

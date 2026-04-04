@@ -1,0 +1,23 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Business Model",
+  "x3": "Df Long Lasting Product",
+  "type": "business",
+  "references": "Cooper, T. (A c. Di). (2010). Longer Lasting Products: Alternatives To The Throwaway Society (1 edition). Farnham, Surrey England : Burlington, VT: Routledge.\n\nBocken, N. M. P., Pauw, I. de, Bakker, C., & Grinten, B. van der. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308\u2013320.\n\nMontalvo, C., Peck, D., & Rietveld, E. (2016). A Longer Lifetime for Products: Benefits for Consumers and Companies.",
+  "caseStudyId": "5",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

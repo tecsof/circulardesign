@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Cleaning",
+  "x3": "Df Inspection",
+  "type": "recovery",
+  "references": "Matt Schultz, & Rod Soat . Design for Inspection: The Key to Lower Cost and Higher Profit Margins.  https://www.medicaldesignbriefs.com/component/content/article/mdb/features/articles/27723",
+  "caseStudyId": "137",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "Df Circular Business Model,Df Closed-loop Reverse Supply Chain",
+  "authorId": "1"
+}

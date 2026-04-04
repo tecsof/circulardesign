@@ -1,0 +1,20 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishability",
+  "x3": "Df Rapid Testability",
+  "type": "resource",
+  "references": "Sundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nIjomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable product design. Journal of Cleaner Production, 15(4), 404-416.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.",
+  "caseStudyId": "170",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

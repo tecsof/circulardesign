@@ -1,0 +1,21 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbishment",
+  "x3": "Df Refurbishment",
+  "type": "recovery",
+  "references": "Nasr, N., Russell, J., Bringezu, S., Hellweg, S., Hilton, B., Kreiss, C., & con Gries, N. (2018). Re-defining Value \u2013 The Manufacturing Revolution (UN Environment). UN Environment. http://www.resourcepanel.org/reports/re-defining-value-manufacturing-revolution",
+  "caseStudyId": "146",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Modular Components",
+  "x3": "Df Modular Components",
+  "type": "service",
+  "references": "Newcomb, P. J., Bras, B., & Rosen, D. W. (1998). Implications of modularity on product design for the life cycle. Journal of Mechanical Design, 120(3), 483\u2013490.\n\nKimura, F., Kato, S., Hata, T., & Masuda, T. (2001). Product modularization for parts reuse in inverse manufacturing. CIRP Annals, 50(1), 89\u201392.\n\nGu, P., & Sosale, S. (1999). Product modularization for life cycle engineering. Robotics and Computer-Integrated Manufacturing, 15(5), 387\u2013401.",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

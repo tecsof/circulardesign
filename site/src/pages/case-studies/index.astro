@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseStudyGrid from '../../components/CaseStudyGrid.tsx';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const caseDirs = fs.readdirSync(
+  path.join(process.cwd(), 'src/content/case-studies'),
+  { withFileTypes: true }
+).filter(d => d.isDirectory());
+
+const caseStudies = caseDirs
+  .map(dir => {
+    const jsonPath = path.join(
+      process.cwd(),
+      'src/content/case-studies',
+      dir.name,
+      'index.json'
+    );
+    try {
+      const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+      return {
+        slug: dir.name,
+        title: data.title || dir.name,
+        heroImage: data.heroImage || '',
+        filterFocus: data.filterFocus || [],
+        filterCycle: data.filterCycle || [],
+        filterX1: data.filterX1 || [],
+        filterBusinessModel: data.filterBusinessModel || [],
+        filterMaterialFlow: data.filterMaterialFlow || [],
+      };
+    } catch {
+      return null;
+    }
+  })
+  .filter(Boolean)
+  .sort((a, b) => a!.title.localeCompare(b!.title));
+---
+
+<Layout title="Case Studies">
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="mb-12">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-black">
+        Case Studies
+      </h1>
+      <p class="text-black/60 text-lg max-w-2xl">
+        Real-world examples of circular design strategies in action. Filter by focus area, cycle type, and more.
+      </p>
+    </div>
+
+    <CaseStudyGrid client:load caseStudies={caseStudies} />
+  </section>
+</Layout>

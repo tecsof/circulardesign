@@ -1,0 +1,20 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Customization",
+  "type": "use",
+  "references": "Vezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.\nChapman, J. (2015). Emotionally durable design: Objects, experiences and empathy (2nd ed.). Routledge.",
+  "caseStudyId": "97",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

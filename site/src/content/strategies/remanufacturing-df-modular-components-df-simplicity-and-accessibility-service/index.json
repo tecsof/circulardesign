@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Modular Components",
+  "x3": "Df Simplicity and Accessibility",
+  "type": "service",
+  "references": "Sundin, E. (2004). Product and Process Design for Successful Remanufacturing. PhD thesis, Link\u00f6ping University.\n\nHatcher, G. D., Ijomah, W. L., & Windmill, J. F. C. (2014). A framework for the design of remanufactured products. Procedia CIRP, 15, 433\u2013438.",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

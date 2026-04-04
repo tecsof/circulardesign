@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Green marketing",
+  "x3": "Df Transparency",
+  "type": "sale",
+  "references": "Stern, P. C. (2000). Toward a coherent theory of environmentally significant behavior. Journal of Social Issues, 56(3), 407-424.\nden Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product design in a circular economy: Development of a typology of key concepts and terms. Journal of Industrial Ecology, 21(3), 517-525.\nEllen MacArthur Foundation. (2015). Growth within: A circular economy vision for a competitive Europe.",
+  "caseStudyId": "133",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "id": 142,
+  "title": "THE RESTART PROJECT",
+  "videoLink": "",
+  "links": "https://therestartproject.org",
+  "x3": "Behavioural change in maintenance / collaborative maintenance",
+  "filterFocus": [
+    "SYSTEM"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "MAINTENANCE"
+  ],
+  "filterBusinessModel": [],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

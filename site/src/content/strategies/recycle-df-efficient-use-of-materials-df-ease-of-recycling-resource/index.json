@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Efficient Use of Materials",
+  "x3": "Df Ease of Recycling",
+  "type": "resource",
+  "references": "Worrell, E., & Reuter, M. A. (Eds.). (2014). Handbook of Recycling: State-of-the-art for Practitioners, Analysts, and Scientists. Elsevier.\n\nGraedel, T. E., & Allenby, B. R. (2010). Industrial Ecology and Sustainable Engineering. Prentice Hall.\n\nBahramian, M., & Yetilmezsoy, K. (2020). Design for recyclability in the textile and fashion industry: A review. Journal of Cleaner Production, 276, 123320.",
+  "caseStudyId": "114",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Semi-Destructive Disassembly",
+  "x3": "Df Embedded Disassembly Process",
+  "type": "recovery",
+  "references": "Masui K, Mizuhara K, Ishii K, Rose C (1999) Development of products embedded disassembly process based on end-of-life strategies. In: Proceedings of the 1st international symposium on environmentally conscious design and inverse manufacturing, Tokyo, pp 570\u2013575\nTakeuchi, S., & Saitou, K. (2008). Design for Product Embedded Disassembly. In T. Yu, L. Davis, C. Baydar, & R. Roy (Eds.), Evolutionary Computation in Practice (pp. 9\u201339). Springer. https://doi.org/10.1007/978-3-540-75771-9_2",
+  "caseStudyId": "72",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Design for Disassembly; Design for Destructive Disassembly; Design for Semi-Destructive Disassembly; Design for Non-Destructive Disassembly; Design for Ease of Disassembly; Design for Reassembly;",
+  "authorId": "1"
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Semi-Destructive Disassembly",
+  "x3": "Df Active Disassembly",
+  "type": "recovery",
+  "references": "Willems, B., Dewulf, W., & Duflou, J. (2005). Design for active disassembly (DfAD): An outline for future research. Proceedings of the 2005 IEEE International Symposium on Electronics and the Environment, 2005., 129\u2013134. https://doi.org/10.1109/ISEE.2005.1437007",
+  "caseStudyId": "76",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

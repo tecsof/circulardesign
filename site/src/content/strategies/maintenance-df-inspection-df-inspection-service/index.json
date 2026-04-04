@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Inspection",
+  "x3": "Df Inspection",
+  "type": "service",
+  "references": "Boks, C., & McAloone, T. C. (2009). Transitions to sustainable product service-systems: guidelines for organizations and designers. International Journal of Product Development, 8(2), 161-181.\nCrul, M. R. M., & Diehl, J. C. (2006). Design for sustainability: a step-by-step approach. United Nations Environment Programme.\nTischner, U. (2000). Sustainable entrepreneurship: building your own green business. Greenleaf Publishing.",
+  "caseStudyId": "88",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

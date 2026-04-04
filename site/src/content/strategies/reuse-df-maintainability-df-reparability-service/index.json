@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Maintainability",
+  "x3": "Df Reparability",
+  "type": "service",
+  "references": "Nazl\u0131, Terzio\u011flu. \u00abRepair Motivation and Barriers Model: Investigating User Perspectives Related to Product Repair towards a Circular Economy\u00bb. Journal of Cleaner Production 289 (20 marzo 2021): 125644.\n\nSimpson. \u00abPatagonia Mobile Worn Wear Tour: If It\u2019s Broke, Fix It\u00bb Patagonia website, https://www.patagoniaworks.com/press/2015/3/31/patagonia-mobile-worn-wear-tour-if-its-broke-fix-it",
+  "caseStudyId": "124",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "2"
+}

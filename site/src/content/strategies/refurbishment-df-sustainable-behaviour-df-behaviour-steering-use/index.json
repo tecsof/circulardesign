@@ -1,0 +1,22 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Behaviour Steering",
+  "type": "use",
+  "references": "Lilley, D. (2007). Designing for behavioural change: Reducing the social impacts of product use through design (Thesis, \u00a9 Debra Lilley).\nLilley, D. 2009. \u201cDesign for Sustainable Behaviour: Strategies and Perceptions.\u201d Design Studies 30 (6): 704\u201320.",
+  "caseStudyId": "157",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

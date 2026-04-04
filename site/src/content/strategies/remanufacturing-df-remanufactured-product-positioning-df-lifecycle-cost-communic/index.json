@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufactured Product Positioning",
+  "x3": "Df Lifecycle Cost Communication",
+  "type": "sale",
+  "references": "Tukker, A. (2015). Product services for a resource-efficient and circular economy\u2013a review. Journal of Cleaner Production, 97, 76-91.\nManzini, E., & Vezzoli, C. (2003). A strategic design approach to develop sustainable product service systems. Journal of Cleaner Production, 11(8), 851-857.\nStahel, W. R. (2016). The circular economy. Nature, 531(7595), 435-438.",
+  "caseStudyId": "179",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

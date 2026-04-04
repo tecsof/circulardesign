@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Resources Monitors",
+  "type": "use",
+  "references": "Lilley, D. (2007). Designing for behavioural change: Reducing the social impacts of product use through design (Thesis, \u00a9 Debra Lilley).\n\nFlattau, P. (s.d.). Design and diffusion of smart energy monitors for sustainable household consumption.",
+  "caseStudyId": "45",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "electronics, household applicance, appliance, electrical appliance, device, machine, white goods, houseweares, phones, computers",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

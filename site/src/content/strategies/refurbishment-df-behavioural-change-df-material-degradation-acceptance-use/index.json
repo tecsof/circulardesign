@@ -1,0 +1,21 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Material Degradation Acceptance",
+  "type": "use",
+  "references": "Chapman, J. (2005). Emotionally Durable Design: Objects, Experiences and Empathy. Earthscan.\n\nFlether, K. (2012). Durability, Fashion, Sustainability: The Processes and Practices of Use. Fashion Practice, 4(2), 221\u2013238.\n\nvan Nes, N., & Cramer, J. (2005). Influencing product lifetime through product design. Business Strategy and the Environment, 14(5), 286\u2013299.",
+  "caseStudyId": "144",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

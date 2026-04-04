@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Efficient Use of Materials",
+  "x3": "Df Efficient Use of Materials",
+  "type": "resource",
+  "references": "Hodgson, S. N. B., and J. F. Harper. \u2018effective Use Of Materials In The Design Process: More Than A Selection Problem\u2019. DS 33: Proceedings of E&PDE 2004, the 7th International Conference on Engineering and Product Design Education, Delft, the Netherlands, 02.-03.09.2004, 2004, 593\u2013601.",
+  "caseStudyId": "115",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

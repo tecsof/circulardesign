@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Local Network",
+  "x3": "Df Local Material Extraction",
+  "type": "business",
+  "references": "Manzini, E., & Vezzoli, C. (2008). Design for environmental sustainability (2nd ed.). Springer-Verlag.\nBraungart, M., McDonough, W., & Bollinger, A. (2007). Cradle-to-cradle design: Creating healthy emissions. Nature Materials, 6(9), 671-672.\nVezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.",
+  "caseStudyId": "9",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

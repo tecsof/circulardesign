@@ -1,0 +1,20 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Recycling Behaviour",
+  "x3": "Df Separation Guidance",
+  "type": "use",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Kohtala, C. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.",
+  "caseStudyId": "185",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

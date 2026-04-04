@@ -1,0 +1,22 @@
+{
+  "id": 189,
+  "title": "DYSON DIRECT SERVICE REVERSE LOGISTICS",
+  "videoLink": "",
+  "links": "https://www.dyson.com/support/repairs-and-servicing-information",
+  "x3": "Service",
+  "filterFocus": [
+    "PRODUCT"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "MAINTENANCE"
+  ],
+  "filterBusinessModel": [
+    "USE ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Service Return Logistics",
+  "x3": "Df Service Pick-up Systems",
+  "type": "reverse",
+  "references": "Sundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nLacy, P., Rutqvist, J., & BuddPress, B. (2015). Waste to wealth: the circular economy advantage. Accenture.\nIjomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable product design. Journal of Cleaner Production, 15(4), 404-416.",
+  "caseStudyId": "165",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

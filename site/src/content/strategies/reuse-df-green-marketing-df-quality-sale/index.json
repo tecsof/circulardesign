@@ -1,0 +1,23 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Green marketing",
+  "x3": "Df Quality",
+  "type": "sale",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: Exploring product life extension through design. Journal of Cleaner Production, 69, 10-16. https://doi.org/10.1016/j.jclepro.2014.01.028\nStahel, W. R. (2010). The performance economy. Palgrave Macmillan.\nden Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product design in a circular economy: Development of a typology of key concepts and terms. Journal of Industrial Ecology, 21(3), 517-525.",
+  "caseStudyId": "153",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

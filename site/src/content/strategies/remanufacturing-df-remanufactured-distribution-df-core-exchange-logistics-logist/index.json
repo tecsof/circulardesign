@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufactured Distribution",
+  "x3": "Df Core Exchange Logistics",
+  "type": "logistics",
+  "references": "Rogers, D. S., & Tibben-Lembke, R. S. (2001). An examination of reverse logistics practices. Journal of Business Logistics, 22(2), 129-148.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.",
+  "caseStudyId": "178",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

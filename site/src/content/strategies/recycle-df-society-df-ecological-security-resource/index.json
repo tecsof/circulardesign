@@ -1,0 +1,22 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Society",
+  "x3": "Df Ecological Security",
+  "type": "resource",
+  "references": "Graedel, T. E., & Allenby, B. R. (2010). Industrial Ecology and Sustainable Engineering. Prentice Hall.\n\nWhiteley, N. (1994). Design for Society (Revised ed.). Reaktion Books.",
+  "caseStudyId": "114",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

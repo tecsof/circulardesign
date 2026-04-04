@@ -1,0 +1,23 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Society",
+  "x3": "Df Society",
+  "type": "resource",
+  "references": "Whiteley, Nigel. Design for Society. Revised ed. edition. London: Reaktion Books, 1994.",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

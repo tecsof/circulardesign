@@ -1,0 +1,23 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Green marketing",
+  "x3": "Df Peer testimonials",
+  "type": "sale",
+  "references": "Chevalier, J. A., & Mayzlin, D. (2006). The effect of word of mouth on sales: Online book reviews. Journal of Marketing Research, 43(3), 345-354.\nTrudel, R., & Argo, J. J. (2013). The unintended consequences of lexicographic choices. Journal of Consumer Research, 39(4), 823-835.\nGeissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The circular economy\u2013a new sustainability paradigm? Journal of Cleaner Production, 143, 757-768.",
+  "caseStudyId": "130",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

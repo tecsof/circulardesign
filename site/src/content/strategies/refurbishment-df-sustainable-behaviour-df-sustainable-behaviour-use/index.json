@@ -1,0 +1,21 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Sustainable Behaviour",
+  "x3": "Df Sustainable Behaviour",
+  "type": "use",
+  "references": "Daae, Johannes, Lucy Chamberlin, and Casper Boks. 2018. \u201cDimensions of Behaviour Change in the Context of Designing for a Circular Economy.\u201d The Design Journal 21 (4): 521\u201341.",
+  "caseStudyId": "147",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

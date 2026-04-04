@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Sustainable Production",
+  "x3": "Df Sustainable Production",
+  "type": "business",
+  "references": "Geissdoerfer, M., Savaget, P., Bocken, N. M., & Hultink, E. J. (2017). The circular economy\u2013a new sustainability paradigm? Journal of Cleaner Production, 143, 757-768. https://doi.org/10.1016/j.jclepro.2016.12.048\nTukker, A. (2015). Product services for a resource-efficient and circular economy. Journal of Cleaner Production, 97, 76-91.\nStahel, W. R. (2010). The performance economy. Palgrave Macmillan.",
+  "caseStudyId": "97",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

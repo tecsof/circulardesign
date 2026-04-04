@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Service Return Logistics",
+  "x3": "Df Logistics-Friendly Design",
+  "type": "reverse",
+  "references": "Rogers, D. S., & Tibben-Lembke, R. S. (2001). An examination of reverse logistics practices. Journal of Business Logistics, 22(2), 129-148.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.",
+  "caseStudyId": "189",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

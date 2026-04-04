@@ -1,0 +1,19 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Inspection",
+  "x3": "Df Visual Inspection",
+  "type": "service",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nden Hollander, M. C., Bakker, C. A., & Hultink, E. J. (2017). Product Design in the Circular Economy: Development of a Typology of Key Concepts and Terms. Journal of Industrial Ecology, 21(3), 517-525.\nBoks, C., & McAloone, T. C. (2009). Transitions to sustainable product service-systems: guidelines for organizations and designers. International Journal of Product Development, 8(2), 161-181.",
+  "caseStudyId": "91",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

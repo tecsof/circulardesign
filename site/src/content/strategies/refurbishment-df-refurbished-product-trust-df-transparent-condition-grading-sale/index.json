@@ -1,0 +1,21 @@
+{
+  "x1": "Refurbishment",
+  "x2": "Df Refurbished Product Trust",
+  "x3": "Df Transparent Condition Grading",
+  "type": "sale",
+  "references": "Hazen, B. T., Mollenkopf, D. A., & Wang, Y. (2017). Remanufacturing for the circular economy: an examination of consumer switching behavior. Business Strategy and the Environment, 26(4), 451-464.\nSundin, E., & Bras, B. (2005). Making functional products sustainable through service modularity design. Journal of Cleaner Production, 13(10-11), 993-1006.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.",
+  "caseStudyId": "171",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Independent Reassembly",
+  "type": "use",
+  "references": "Jaeger-Erben, M., B\u00f6schen, S., & Hofmann, F. (2021). Product lifespans as a contested sustainability issue: stakeholder perspectives on right to repair. Journal of Cleaner Production, 312, 127618.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nToth, B., Sorrell, S., & Ziemann, S. (2019). Measuring energy efficiency in the manufacturing sector: a review and meta-analysis. Energy Efficiency, 12(4), 953-1000.",
+  "caseStudyId": "97",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

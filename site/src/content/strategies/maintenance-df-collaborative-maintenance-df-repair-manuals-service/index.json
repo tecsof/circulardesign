@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Collaborative Maintenance",
+  "x3": "Df Repair Manuals",
+  "type": "service",
+  "references": "Getto, G., & Labriola, J. T. (2016). iFixit Myself: User-Generated Content Strategy in \u201cThe Free Repair Guide for Everything.\u201d IEEE Transactions on Professional Communication, 59(1), 37\u201355. https://doi.org/10.1109/TPC.2016.2527259",
+  "caseStudyId": "159",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

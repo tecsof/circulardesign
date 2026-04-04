@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const strategies = [
+  'Circularity', 'Repair', 'Durability', 'Sharing', 'Reuse',
+  'Refurbishment', 'Remanufacturing', 'Recycling', 'Maintenance',
+  'Longevity', 'Modularity', 'Disassembly'
+];
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="min-h-[85vh] flex items-center relative">
+    <div class="max-w-7xl mx-auto px-6 py-24 w-full">
+      <div class="max-w-3xl">
+        <p class="font-mono text-sm tracking-widest uppercase mb-6 text-black/50 animate-fade-in">
+          Design for X Framework
+        </p>
+        <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-4 text-black">
+          Design for<br>
+          <span class="inline-block h-[1.2em] overflow-hidden align-bottom">
+            <span id="rotating-word" class="inline-block text-black/80">Circularity</span>
+          </span>
+        </h1>
+        <p class="text-black/60 text-lg md:text-xl max-w-xl mt-6 leading-relaxed">
+          An open-source research tool helping designers navigate 230+ circular economy
+          strategies through a multi-hierarchical framework.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-10">
+          <a href="/tool"
+            class="inline-flex items-center gap-2 bg-black text-yellow font-semibold px-8 py-4 rounded-lg hover:bg-gray-900 transition-all hover:scale-105 active:scale-95">
+            Explore Strategies
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          </a>
+          <a href="/case-studies"
+            class="inline-flex items-center gap-2 border-2 border-black/20 text-black px-8 py-4 rounded-lg hover:border-black transition-all">
+            Read Case Studies
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section class="bg-black text-yellow">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="font-display text-4xl font-bold">230+</div>
+        <div class="text-sm mt-1 text-white/50">Strategies</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl font-bold">129</div>
+        <div class="text-sm mt-1 text-white/50">Case Studies</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl font-bold">231</div>
+        <div class="text-sm mt-1 text-white/50">Recommended Publications</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display text-4xl font-bold">67</div>
+        <div class="text-sm mt-1 text-white/50">Online Tools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+        How it works
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group bg-black rounded-xl p-8 hover:scale-[1.02] transition-all">
+          <div class="w-12 h-12 bg-yellow/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-yellow font-display font-bold text-xl">1</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3 text-white">Describe your project</h3>
+          <p class="text-white/60 leading-relaxed">
+            Tell the AI what you're designing — a product, service, or system — and what
+            circular goals matter to you.
+          </p>
+        </div>
+        <div class="group bg-black rounded-xl p-8 hover:scale-[1.02] transition-all">
+          <div class="w-12 h-12 bg-yellow/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-yellow font-display font-bold text-xl">2</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3 text-white">Get recommendations</h3>
+          <p class="text-white/60 leading-relaxed">
+            Receive curated strategies from our database of 230+ circular design approaches,
+            organized by lifecycle phase.
+          </p>
+        </div>
+        <div class="group bg-black rounded-xl p-8 hover:scale-[1.02] transition-all">
+          <div class="w-12 h-12 bg-yellow/20 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-yellow font-display font-bold text-xl">3</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3 text-white">Build your toolkit</h3>
+          <p class="text-white/60 leading-relaxed">
+            Save strategies to your project, explore real case studies, and export your
+            circular design plan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 text-white">
+          Born from <span class="text-yellow">research</span>
+        </h2>
+        <p class="text-white/60 text-lg leading-relaxed mb-8">
+          Circular Design is the output of 3 years of PhD research on Design for X (DfX)
+          applied to circular economy. The framework categorises circular economy strategies
+          across three dimensions — X-Levels, Lifecycle Phases, and Loops — making it easier
+          for designers to discover and apply the right strategies for their specific context.
+        </p>
+        <a href="/theory"
+          class="inline-flex items-center gap-2 text-yellow hover:text-yellow-light font-medium transition-colors">
+          Read the theory
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifecycle phases preview -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+        8 Lifecycle Phases
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { name: 'Business & Network', color: '#E6883C' },
+          { name: 'Resources & Production', color: '#AF7DEB' },
+          { name: 'Forward Logistics', color: '#C94D8B' },
+          { name: 'Sale', color: '#5386D3' },
+          { name: 'Use & Operation', color: '#7BE3CD' },
+          { name: 'Service & Maintenance', color: '#64D069' },
+          { name: 'Reverse Logistics', color: '#C8D454' },
+          { name: 'Recovery', color: '#a65e2e' },
+        ].map(phase => (
+          <div class="group cursor-pointer">
+            <div class="bg-black rounded-xl p-6 hover:scale-105 transition-all border-2 border-transparent hover:border-current"
+                 style={`color: ${phase.color}`}>
+              <div class="w-3 h-3 rounded-full mb-4" style={`background-color: ${phase.color}`}></div>
+              <h3 class="font-display font-semibold text-sm md:text-base text-white">
+                {phase.name}
+              </h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+</style>
+
+<script define:vars={{ strategies }}>
+  const el = document.getElementById('rotating-word');
+  if (el) {
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % strategies.length;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(-20px)';
+      setTimeout(() => {
+        el.textContent = strategies[i];
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 250);
+    }, 2000);
+    el.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+  }
+</script>

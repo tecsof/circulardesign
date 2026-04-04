@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufacturability",
+  "x3": "Df Remanufacturing Process Integration",
+  "type": "resource",
+  "references": "Ijomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable product design. Journal of Cleaner Production, 15(4), 404-416.\nSundin, E., Lindahl, M., & Ijomah, W. (2009). Product design for successful remanufacturing. In Handbook of Research in Sustainable Manufacturing. IGI Global.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.",
+  "caseStudyId": "175",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

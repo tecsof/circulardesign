@@ -1,0 +1,18 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Product Attachment",
+  "type": "use",
+  "references": "Chapman, J. (2015). Meaningful stuff: toward more sustainable product design. MIT Press.\nMugge, R., Schoormans, J. P., & Schifferstein, H. N. (2009). Product attachment and satisfaction: understanding consumers' post-purchase behavior. Journal of Consumer Satisfaction, Dissatisfaction and Complaining Behavior, 22, 1-14.\nMont, O. (2002). Clarifying the concept of product\u2013service system. Journal of Cleaner Production, 10(3), 237-245.",
+  "caseStudyId": "145",
+  "loop": [
+    "LOOP 1"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

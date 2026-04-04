@@ -1,0 +1,19 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Material Degradation Acceptance",
+  "type": "use",
+  "references": "Chapman, J. (2015). Emotionally durable design: Objects, experiences and empathy (2nd ed.). Routledge.\nBraungart, M., & McDonough, W. (2002). Cradle to cradle: Remaking the way we make things. North Point Press.\nVezzoli, C., Kohtala, C., & Srinivasan, A. (2014). Product-service system design for sustainability. Greenleaf Publishing.",
+  "caseStudyId": "139",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

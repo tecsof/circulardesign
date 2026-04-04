@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Appropriate Logistics Infrastructure",
+  "type": "reverse",
+  "references": "Fleischmann, M., Beullens, P., Bloemhof\u2010Ruwaard, J. M., & Wassenhove, L. N. V. (2001). The Impact of Product Recovery on Logistics Network Design. Production and Operations Management, 10(2), 156\u2013173.",
+  "caseStudyId": "121",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "Df Circular Business Model,Df Closed-loop Reverse Supply Chain",
+  "authorId": "1"
+}

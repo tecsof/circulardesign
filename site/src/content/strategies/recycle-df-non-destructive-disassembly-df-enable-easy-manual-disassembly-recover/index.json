@@ -1,0 +1,21 @@
+{
+  "x1": "Recycle",
+  "x2": "Df Non-Destructive Disassembly",
+  "x3": "Df Enable Easy Manual Disassembly",
+  "type": "recovery",
+  "references": "Soh, S. L., Ong, S. K., & Nee, A. Y. C. (2014). Design for disassembly for remanufacturing: Methodology and technology. Procedia CIRP, 15, 407\u2013412.\n\nDuflou, J. R., Seliger, G., Kara, S., Umeda, Y., Ometto, A., & Willems, B. (2008). Efficiency and feasibility of product disassembly. CIRP Annals, 57(2), 583\u2013600.",
+  "caseStudyId": "107",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": ""
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Remanufacturing",
+  "x3": "Df Remanufacturing",
+  "type": "business",
+  "references": "Ijomah, W. L., McMahon, C. A., Hammond, G. P., & Newman, S. T. (2007). Development of design for remanufacturing guidelines to support sustainable manufacturing. Robotics and Computer-Integrated Manufacturing, 23(6), 712\u2013719.\n\nHatcher, G. D., Ijomah, W. L., & Windmill, J. F. C. (2011). Design for remanufacture: A literature review and future research needs. Journal of Cleaner Production, 19(17\u201318), 2004\u20132014.\n\nSundin, E. (2004). Product and Process Design for Successful Remanufacturing. PhD thesis, Link\u00f6ping University.\n\nKing, A. M., Burgess, S. C., Ijomah, W., & McMahon, C. A. (2006). Reducing waste: Repair, recondition, remanufacture or recycle? Sustainable Development, 14(4), 257\u2013267.",
+  "caseStudyId": "86",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

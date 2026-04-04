@@ -1,0 +1,21 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Circular Business Model",
+  "x3": "Df Circular Business Model",
+  "type": "business",
+  "references": "Ellen MacArthur Foundation. (2013). Towards the Circular Economy Vol. 1. Ellen MacArthur Foundation.\n\nVezzoli, C. (2018). System Design for Sustainability. Politecnico di Milano.\n\nCeschin, F., & Gaziulusoy, I. (2016). Evolution of design for sustainability: From product design to design for system innovations and transitions. Design Studies, 47, 118-146.",
+  "caseStudyId": "115",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems",
+    "Processes"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Independent Upgradability",
+  "type": "use",
+  "references": "Tukker, A., de Koning, A., Wood, R., Hawkins, T., Lutter, S., Acosta, J., ... & Kuik, O. (2018). Environmental and resource footprints in a global context: Europe's structural deficit in raw materials and implications for sustainable supply chains. Journal of Industrial Ecology, 22(4), 846-856.\nBakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nJaeger-Erben, M., B\u00f6schen, S., & Hofmann, F. (2021). Product lifespans as a contested sustainability issue: stakeholder perspectives on right to repair. Journal of Cleaner Production, 312, 127618.",
+  "caseStudyId": "140",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

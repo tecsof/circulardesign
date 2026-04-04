@@ -1,0 +1,20 @@
+{
+  "x1": "Remanufacturing",
+  "x2": "Df Semi-Destructive Disassembly",
+  "x3": "Df Untying",
+  "type": "recovery",
+  "references": "Vongbunyong, S., & Chen, W. H. (2016). Disassembly Automation: Automated Systems with Cognitive Abilities. Springer International Publishing.\n\nBras, B., & Hammond, R. (1996). Towards Design for Remanufacturing\u2014Metrics for Assessing Remanufacturability. Proceedings of the 1st International Workshop on Reuse, 5\u201322.",
+  "caseStudyId": "73",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

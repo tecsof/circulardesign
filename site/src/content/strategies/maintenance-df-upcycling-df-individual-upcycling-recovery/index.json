@@ -1,0 +1,18 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Upcycling",
+  "x3": "Df Individual Upcycling",
+  "type": "recovery",
+  "references": "\u2022 McDonough, W., & Braungart, M. (2013). The upcycle (First edition). North Point Press, a division of Farrar, Straus and Giroux.\n\u2022 Szaky, T., 2014. Outsmart waste. San Francisco, CA: Berrett-Koehler Publisher, Inc.\n\u2022 Sung, K., Cooper, T., & Kettley, S. (2014). Individual upcycling practice: Exploring the possible determinants of upcycling based on a literature review. Sustainable Innovation 2014, 19th International Conference, Copenhagen, Denmark, 3-4 November 2014., Copenhagen, Denmark. http://irep.ntu.ac.uk/id/eprint/2559/",
+  "caseStudyId": "83",
+  "loop": [
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

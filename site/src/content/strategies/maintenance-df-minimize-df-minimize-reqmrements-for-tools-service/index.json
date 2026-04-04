@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Minimize",
+  "x3": "Df Minimize reqmrements for tools",
+  "type": "service",
+  "references": "Repair Association. (2021). The Case for a Right to Repair. iFixit.\n\nWiens, K. (2021). The Right to Repair and the Environment. Environmental Protection Network.",
+  "caseStudyId": "116",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

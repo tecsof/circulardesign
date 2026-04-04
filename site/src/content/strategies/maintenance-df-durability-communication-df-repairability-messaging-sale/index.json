@@ -1,0 +1,22 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Durability Communication",
+  "x3": "Df Repairability Messaging",
+  "type": "sale",
+  "references": "Bocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.\nLund, R. T. (1983). Remanufacturing: the experience of the United States and implications for developing countries. World Bank Technical Paper, 30.\nVezzoli, C., Ceschin, F., Diehl, J. C., & Kohtala, C. (2015). Why have 'Sustainable Product-Service Systems' not been widely implemented? Meeting new design challenges to achieve societal sustainability.",
+  "caseStudyId": "118",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

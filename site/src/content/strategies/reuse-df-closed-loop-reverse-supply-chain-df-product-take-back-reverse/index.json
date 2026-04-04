@@ -1,0 +1,21 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Closed-loop Reverse Supply Chain",
+  "x3": "Df Product Take-back",
+  "type": "reverse",
+  "references": "Klausner, M., & Hendrickson, C. T. (2000). Reverse-Logistics Strategy for Product Take-Back. INFORMS Journal on Applied Analytics, 30(3), 156\u2013165.\n\nToktay, L. B., van der Laan, E., & de Brito, M. P. (2003). Managing Product Returns: The Role of Forecasting (SSRN Scholarly Paper N. ID 411657). Recuperato da Social Science Research Network \n\nKumar, S., & Putnam, V. (2008). Cradle to cradle: Reverse logistics strategies and opportunities across three industry sectors. International Journal of Production Economics, 115(2), 305\u2013315.\n  \n",
+  "caseStudyId": "137",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

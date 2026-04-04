@@ -1,0 +1,22 @@
+{
+  "id": 128,
+  "title": "IFIXIT RIGHT TO REPAIR MOVEMENT",
+  "videoLink": "",
+  "links": "https://www.ifixit.com/Right-to-Repair",
+  "x3": "Df Reparability",
+  "filterFocus": [
+    "SYSTEM"
+  ],
+  "filterCycle": [
+    "TECHNICAL"
+  ],
+  "filterX1": [
+    "REUSE"
+  ],
+  "filterBusinessModel": [
+    "RESULT ORIENTED"
+  ],
+  "filterMaterialFlow": [
+    "CIRCULAR"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Behavioural Change",
+  "x3": "Df Product Interoperability",
+  "type": "use",
+  "references": "Batya Friedman and Helen Nissenbaum. (1997). Software\nagents and user autonomy. Proceedings of the first\ninternational conference on Autonomous agents, ACM,\n466\u2013469",
+  "caseStudyId": "74",
+  "loop": [
+    "LOOP 1",
+    "LOOP N"
+  ],
+  "appliesTo": [
+    "Products",
+    "Components",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

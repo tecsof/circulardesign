@@ -1,0 +1,24 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Local Network",
+  "x3": "Df Local Network",
+  "type": "business",
+  "references": "Manzini, E. (2009). New design knowledge. Design Studies, 30(1), 4-12. https://doi.org/10.1016/j.destud.2008.10.001\nSeyfang, G., & Smith, A. (2007). Grassroots innovations for sustainable development. Environmental Values, 16(2), 181-203.\nBocken, N. M., de Pauw, I., Bakker, C., & van der Grinten, B. (2016). Product design and business model strategies for a circular economy. Journal of Industrial and Production Engineering, 33(5), 308-320.",
+  "caseStudyId": "71",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "cars",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

@@ -1,0 +1,22 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Durability Communication",
+  "x3": "Df Longevity Labelling",
+  "type": "sale",
+  "references": "Bakker, C., Wang, F., Huisman, J., & den Hollander, M. (2014). Products that go round: exploring product life extension through design. Journal of Cleaner Production, 69, 10-16.\nMcDonough, W., & Braungart, M. (2002). Cradle to cradle: Remaking the way we make things. North Point Press.\nStahel, W. R. (2016). The circular economy. Nature, 531(7595), 435-438.",
+  "caseStudyId": "162",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Processes",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "3"
+}

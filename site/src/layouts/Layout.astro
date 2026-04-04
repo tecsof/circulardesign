@@ -1,0 +1,109 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'A multi-hierarchical Design for X framework for circular economy strategies' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <title>{title} — Circular Design</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-yellow/90 backdrop-blur-md border-b border-black/10">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2 font-display font-bold text-xl text-black hover:opacity-70 transition-opacity">
+          <img src="/logo.png" alt="" class="w-7 h-7" />
+          Circular Design
+        </a>
+        <button id="menu-toggle" class="md:hidden text-black" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div id="nav-links" class="hidden md:flex items-center gap-8">
+          <a href="/theory" class="text-sm text-black/60 hover:text-black transition-colors">Theory</a>
+          <a href="/tool" class="text-sm text-black/60 hover:text-black transition-colors">Tool</a>
+          <a href="/case-studies" class="text-sm text-black/60 hover:text-black transition-colors">Case Studies</a>
+          <a href="/glossary" class="text-sm text-black/60 hover:text-black transition-colors">Glossary</a>
+          <a href="/resources" class="text-sm text-black/60 hover:text-black transition-colors">Resources</a>
+          <a href="/contributors" class="text-sm text-black/60 hover:text-black transition-colors">Contributors</a>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-yellow/95 border-b border-black/10">
+        <div class="px-6 py-4 flex flex-col gap-4">
+          <a href="/theory" class="text-sm text-black/60 hover:text-black transition-colors">Theory</a>
+          <a href="/tool" class="text-sm text-black/60 hover:text-black transition-colors">Tool</a>
+          <a href="/case-studies" class="text-sm text-black/60 hover:text-black transition-colors">Case Studies</a>
+          <a href="/glossary" class="text-sm text-black/60 hover:text-black transition-colors">Glossary</a>
+          <a href="/resources" class="text-sm text-black/60 hover:text-black transition-colors">Resources</a>
+          <a href="/contributors" class="text-sm text-black/60 hover:text-black transition-colors">Contributors</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1 pt-16">
+      <slot />
+    </main>
+
+    <footer class="border-t border-black/10 bg-black text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+          <div>
+            <span class="font-display font-bold text-xl text-yellow">Circular Design</span>
+            <p class="text-white/60 text-sm mt-2 max-w-md">
+              An open-source research tool exploring circular economy design strategies
+              through the Multi-hierarchical Design for X framework.
+            </p>
+          </div>
+          <div class="flex gap-12 text-sm">
+            <div class="flex flex-col gap-2">
+              <span class="text-white font-medium mb-1">Explore</span>
+              <a href="/theory" class="text-white/60 hover:text-yellow transition-colors">Theory</a>
+              <a href="/tool" class="text-white/60 hover:text-yellow transition-colors">Tool</a>
+              <a href="/case-studies" class="text-white/60 hover:text-yellow transition-colors">Case Studies</a>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="text-white font-medium mb-1">Learn</span>
+              <a href="/glossary" class="text-white/60 hover:text-yellow transition-colors">Glossary</a>
+              <a href="/resources" class="text-white/60 hover:text-yellow transition-colors">Resources</a>
+              <a href="/contributors" class="text-white/60 hover:text-yellow transition-colors">Contributors</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-white/10 text-white/40 text-xs">
+          &copy; {new Date().getFullYear()} Circular Design. Open source research by Alessio Franconi.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+
+      // Highlight active nav link
+      const path = window.location.pathname;
+      document.querySelectorAll('#nav-links a, #mobile-menu a').forEach(link => {
+        if (link instanceof HTMLAnchorElement && path.startsWith(link.getAttribute('href') || '---')) {
+          link.classList.remove('text-black/60');
+          link.classList.add('text-black', 'font-semibold');
+        }
+      });
+    </script>
+  </body>
+</html>

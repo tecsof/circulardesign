@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Collaborative Logistics",
+  "x3": "Df Crowd Logistics",
+  "type": "logistics",
+  "references": "Behrend, K., Hegner, S., & N\u00e4slund, D. (2021). Autonomous vehicle technology in logistics: A systematic review. Journal of Transport and Supply Chain Management, 15(1), 1-13.\n\nMagyar, B. (2020). The impact of sharing economy on logistics. Logistics and Supply Chain Management, 18(3), 45-62.",
+  "caseStudyId": "3",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": null,
+  "dfxRelationship": "",
+  "authorId": "1"
+}

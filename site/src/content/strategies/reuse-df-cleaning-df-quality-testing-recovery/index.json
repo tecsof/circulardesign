@@ -1,0 +1,22 @@
+{
+  "x1": "Reuse",
+  "x2": "Df Cleaning",
+  "x3": "Df Quality-testing",
+  "type": "recovery",
+  "references": "Guide, V. D. R., Jayaraman, V., & Linton, J. D. (2003). Building contingency planning for closed-loop supply chains with product recovery. Journal of Operations Management, 21(3), 259\u2013279. https://doi.org/10.1016/S0272-6963(02)00110-9",
+  "caseStudyId": "127",
+  "loop": [
+    "LOOP 1",
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Materials",
+    "Components",
+    "Products"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "Df Circular Business Model,Df Closed-loop Reverse Supply Chain",
+  "authorId": "1"
+}

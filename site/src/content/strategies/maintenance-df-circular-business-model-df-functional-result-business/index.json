@@ -1,0 +1,20 @@
+{
+  "x1": "Maintenance",
+  "x2": "Df Circular Business Model",
+  "x3": "Df Functional Result",
+  "type": "business",
+  "references": "Tukker, A. (2004). Eight types of product\u2013service system: Eight ways to sustainability? Experiences from SusProNet. Business Strategy and the Environment, 13(4), 246\u2013260. https://doi.org/10.1002/bse.414\nTakata, S., Kimura, F., Houten, F. J. A. M. V., Westk\u00e4mper, E., Shpitalni, M., Ceglarek, D., & Lee, J. (2004). Maintenance: Changing role in life cycle management. CIRP Annals - Manufacturing Technology, 53(2), 643\u2013655.",
+  "caseStudyId": "80",
+  "loop": [
+    "LOOP N",
+    "LAST LOOP"
+  ],
+  "appliesTo": [
+    "Products",
+    "Systems"
+  ],
+  "productTags": "",
+  "circularityIndex": 1,
+  "dfxRelationship": "",
+  "authorId": "1"
+}
