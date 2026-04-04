@@ -702,7 +702,10 @@ export default function ToolApp({ strategies }: ToolAppProps) {
                 >
                   <div className="mt-3 pt-3 border-t border-black/10">
                     <div className="flex items-start justify-between gap-2">
-                      <div className="text-sm text-black/70 leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto flex-1">
+                      <div
+                        className="text-[13px] text-black/60 leading-[1.7] whitespace-pre-wrap max-h-64 overflow-y-auto flex-1 pr-2 overscroll-contain [&_strong]:text-black/80 [&_button]:my-0.5"
+                        style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(0,0,0,0.15) transparent' }}
+                      >
                         {formatText(latestAssistant.text)}
                       </div>
                       <button
@@ -716,29 +719,36 @@ export default function ToolApp({ strategies }: ToolAppProps) {
                       </button>
                     </div>
 
-                    {/* Show recommended strategy names inline */}
+                    {/* Recommended strategies */}
                     {latestAssistant.strategySlugs && latestAssistant.strategySlugs.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mt-2">
-                        {latestAssistant.strategySlugs.map((slug) => {
-                          const s = strategies.find((st) => st.slug === slug);
-                          if (!s) return null;
-                          return (
-                            <button
-                              key={slug}
-                              onClick={() => setSelected(s)}
-                              className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-black/5 hover:bg-black/10 text-xs text-black/70 cursor-pointer transition-colors"
-                            >
-                              {phaseDot(s.type, 6)}
-                              {formatStrategyName(s.x3)}
-                            </button>
-                          );
-                        })}
-                      </div>
+                      <>
+                        <div className="mt-4 mb-2 flex items-center gap-2">
+                          <div className="h-px flex-1 bg-black/5" />
+                          <span className="text-[10px] font-medium uppercase tracking-widest text-black/30">Recommended strategies</span>
+                          <div className="h-px flex-1 bg-black/5" />
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {latestAssistant.strategySlugs.map((slug) => {
+                            const s = strategies.find((st) => st.slug === slug);
+                            if (!s) return null;
+                            return (
+                              <button
+                                key={slug}
+                                onClick={() => setSelected(s)}
+                                className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/[0.04] hover:bg-black/[0.08] text-xs text-black/60 hover:text-black/80 cursor-pointer transition-colors"
+                              >
+                                {phaseDot(s.type, 6)}
+                                {formatStrategyName(s.x3)}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </>
                     )}
 
                     {/* Simple history: show message count */}
                     {messages.filter((m) => m.role === 'user').length > 1 && (
-                      <div className="mt-2 text-[10px] text-black/30">
+                      <div className="mt-3 text-[10px] text-black/25">
                         {messages.filter((m) => m.role === 'user').length} messages in conversation
                       </div>
                     )}
