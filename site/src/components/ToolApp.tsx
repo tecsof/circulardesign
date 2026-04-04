@@ -754,12 +754,15 @@ export default function ToolApp({ strategies }: ToolAppProps) {
                       </>
                     )}
 
-                    {/* Simple history: show message count */}
-                    {messages.filter((m) => m.role === 'user').length > 1 && (
-                      <div className="mt-3 text-[10px] text-black/25">
-                        {messages.filter((m) => m.role === 'user').length} messages in conversation
-                      </div>
-                    )}
+                    {/* Disclaimer + history */}
+                    <div className="mt-3 flex items-center gap-2 text-[10px] text-black/25">
+                      <span>AI-generated response — may not be fully accurate</span>
+                      {messages.filter((m) => m.role === 'user').length > 1 && (
+                        <span className="before:content-['·'] before:mr-2">
+                          {messages.filter((m) => m.role === 'user').length} messages
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               )}
