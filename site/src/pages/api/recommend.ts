@@ -1,8 +1,5 @@
 import type { APIRoute } from 'astro';
 import Anthropic from '@anthropic-ai/sdk';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 export const prerender = false;
 
@@ -19,19 +16,18 @@ interface Strategy {
   dfxRelationship: string;
 }
 
+// Load strategies at build time via Vite's import.meta.glob (works on Netlify)
+const strategyModules = import.meta.glob<{ default: Record<string, unknown> }>(
+  '../../content/strategies/*/index.json',
+  { eager: true }
+);
+
 function loadStrategies(): Strategy[] {
-  const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  const strategiesDir = path.resolve(__dirname, '../../content/strategies');
-  const dirs = fs.readdirSync(strategiesDir);
-  const strategies: Strategy[] = [];
-  for (const dir of dirs) {
-    const jsonPath = path.join(strategiesDir, dir, 'index.json');
-    if (fs.existsSync(jsonPath)) {
-      const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-      strategies.push({ slug: dir, ...data });
-    }
-  }
-  return strategies;
+  return Object.entries(strategyModules).map(([filepath, mod]) => {
+    const slug = filepath.split('/').slice(-2, -1)[0];
+    const data = mod.default ?? mod;
+    return { slug, ...data } as Strategy;
+  });
 }
 
 function buildStrategyContext(strategies: Strategy[]): string {
