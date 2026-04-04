@@ -577,7 +577,7 @@ export default function ToolApp({ strategies }: ToolAppProps) {
     return null;
   }, [messages]);
 
-  // Parse bold markdown in AI text
+  // Parse bold markdown in AI text — bold strategy names become clickable buttons
   const formatText = (text: string) => {
     const clean = text
       .replace(/<!--strategies:\[.*?\]-->/g, '')
@@ -585,7 +585,27 @@ export default function ToolApp({ strategies }: ToolAppProps) {
     const parts = clean.split(/(\*\*[^*]+\*\*)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i} className="font-semibold">{part.slice(2, -2)}</strong>;
+        const name = part.slice(2, -2);
+        // Try to match this bold name to a strategy
+        const nameLower = name.toLowerCase().replace(/^design\s+for\s+/i, 'df ');
+        const match = strategies.find((s) => {
+          const x3Lower = s.x3.toLowerCase();
+          return x3Lower === nameLower || x3Lower === name.toLowerCase()
+            || formatStrategyName(s.x3).toLowerCase() === name.toLowerCase();
+        });
+        if (match) {
+          return (
+            <button
+              key={i}
+              onClick={() => setSelected(match)}
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-black/5 hover:bg-black/10 font-semibold cursor-pointer transition-colors"
+            >
+              {phaseDot(match.type, 6)}
+              {name}
+            </button>
+          );
+        }
+        return <strong key={i} className="font-semibold">{name}</strong>;
       }
       return <span key={i}>{part}</span>;
     });
