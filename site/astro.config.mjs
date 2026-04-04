@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [react(), keystatic()],
-  output: 'static',
+  output: 'hybrid',
   adapter: netlify(),
   vite: {
     plugins: [tailwindcss()],
