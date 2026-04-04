@@ -525,16 +525,19 @@ export default function ToolApp({ strategies }: ToolAppProps) {
         if (done) break;
         fullText += decoder.decode(value, { stream: true });
 
-        // Extract strategy slugs from meta comment
+        // Extract strategy slugs from meta comment (handle multiline + incomplete during streaming)
         let strategySlugs: string[] | undefined;
-        const metaMatch = fullText.match(/<!--strategies:(\[.*?\])-->/);
+        const metaMatch = fullText.match(/<!--strategies:(\[[\s\S]*?\])-->/);
         if (metaMatch) {
           try {
             strategySlugs = JSON.parse(metaMatch[1]);
           } catch {}
         }
 
-        const displayText = fullText.replace(/<!--strategies:\[.*?\]-->/g, '');
+        // Strip both complete and incomplete/streaming meta comments
+        const displayText = fullText
+          .replace(/<!--strategies:[\s\S]*?-->/g, '')
+          .replace(/<!--strategies:[\s\S]*$/g, '');
 
         setMessages((prev) => {
           const next = [...prev];
@@ -580,7 +583,8 @@ export default function ToolApp({ strategies }: ToolAppProps) {
   // Parse bold markdown in AI text — bold strategy names become clickable buttons
   const formatText = (text: string) => {
     const clean = text
-      .replace(/<!--strategies:\[.*?\]-->/g, '')
+      .replace(/<!--strategies:[\s\S]*?-->/g, '')
+      .replace(/<!--strategies:[\s\S]*$/g, '')
       .replace(/\s*\[slug:[^\]]+\]/g, '');
     const parts = clean.split(/(\*\*[^*]+\*\*)/g);
     return parts.map((part, i) => {
