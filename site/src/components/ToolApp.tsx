@@ -225,7 +225,7 @@ function DetailPanel({
       animate={{ x: 0 }}
       exit={{ x: '100%' }}
       transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-      className="fixed inset-y-0 right-0 w-full max-w-lg bg-white border-l border-black/10 z-50 overflow-y-auto"
+      className="fixed inset-y-0 right-0 w-full max-w-lg bg-white border-l border-black/10 z-50 overflow-y-auto overscroll-contain"
     >
       {/* Header */}
       <div className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-black/10 p-6 flex items-start justify-between gap-4">
@@ -612,6 +612,14 @@ export default function ToolApp({ strategies }: ToolAppProps) {
   };
 
   const activeFilterCount = filtersX1.size + filtersLoop.size + filtersApplies.size + filtersType.size;
+
+  // Lock body scroll when detail panel is open
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = 'hidden';
+      return () => { document.body.style.overflow = ''; };
+    }
+  }, [selected]);
 
   // On first load only, expand all X1 sections
   const hasInitialized = useRef(false);
