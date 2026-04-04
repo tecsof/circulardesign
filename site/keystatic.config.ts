@@ -10,6 +10,7 @@ export default config({
         repo: 'tecsof/circulardesign',
         branchPrefix: 'keystatic/',
         pathPrefix: 'site',
+        branch: 'main',
       },
   ui: {
     brand: { name: 'Circular Design' },
