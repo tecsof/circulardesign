@@ -1,9 +1,8 @@
 {
   "id": 109,
   "title": "APPLE DAISY",
-  "videoLink": "",
+  "heroImage": "/images/case-studies/apple-daisy/heroImage.jpg",
   "links": "https://www.apple.com/environment/",
-  "x3": "",
   "filterFocus": [
     "SYSTEM"
   ],
@@ -18,6 +17,5 @@
   ],
   "filterMaterialFlow": [
     "CIRCULAR"
-  ],
-  "heroImage": "apple-daisy.webp"
+  ]
 }
