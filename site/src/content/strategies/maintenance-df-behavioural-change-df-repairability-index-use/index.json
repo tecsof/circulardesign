@@ -1,18 +1,16 @@
 {
+  "name": "",
   "x1": "Maintenance",
   "x2": "Df Behavioural Change",
   "x3": "Df Repairability Index",
   "type": "use",
-  "references": "EU, Parliament wants to grant EU consumers a \u201cright to repair\u201d. 2020. Link https://www.europarl.europa.eu/news/en/press-room/20201120IPR92118/parliament-wants-to-grant-eu-consumers-a-right-to-repair",
+  "references": "EU, Parliament wants to grant EU consumers a “right to repair”. 2020. Link https://www.europarl.europa.eu/news/en/press-room/20201120IPR92118/parliament-wants-to-grant-eu-consumers-a-right-to-repair",
   "caseStudyId": "151",
   "loop": [
-    "LOOP 0"
+    "LOOP 1"
   ],
   "appliesTo": [
     "Products"
   ],
-  "productTags": "",
-  "circularityIndex": null,
-  "dfxRelationship": "",
   "authorId": "1"
 }
