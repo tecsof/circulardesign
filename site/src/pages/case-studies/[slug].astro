@@ -90,7 +90,7 @@ function strategySlug(name: string): string {
   <section class="relative w-full h-[50vh] min-h-[400px] bg-black">
     {data.heroImage && (
       <img
-        src={`/images/case-studies/${data.heroImage}`}
+        src={data.heroImage.startsWith('/') ? data.heroImage : `/images/case-studies/${data.heroImage}`}
         alt={data.title}
         class="absolute inset-0 w-full h-full object-cover"
       />
