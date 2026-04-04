@@ -973,7 +973,7 @@ export default function ToolApp({ strategies }: ToolAppProps) {
                                   >
                                     <path d="M9 5l7 7-7 7" />
                                   </motion.svg>
-                                  <span className="text-sm font-semibold text-black/70">
+                                  <span className="text-sm font-semibold text-black/70 text-left">
                                     {formatStrategyName(x2)}
                                   </span>
                                   <span className="text-xs text-black/30">({items.length})</span>
