@@ -1,6 +1,6 @@
 import { config, collection, fields, singleton } from '@keystatic/core';
 
-const isLocal = process.env.NODE_ENV === 'development' || !process.env.NETLIFY;
+const isLocal = !(import.meta.env?.PROD ?? false);
 
 export default config({
   storage: isLocal
