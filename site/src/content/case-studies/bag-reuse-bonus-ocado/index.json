@@ -1,9 +1,7 @@
 {
   "id": 93,
   "title": "Bag Reuse Bonus - Ocado",
-  "videoLink": "",
-  "links": "",
-  "x3": "",
+  "heroImage": "/images/case-studies/bag-reuse-bonus-ocado/heroImage.png",
   "filterFocus": [
     "PRODUCT"
   ],
@@ -18,6 +16,5 @@
   ],
   "filterMaterialFlow": [
     "CIRCULAR"
-  ],
-  "heroImage": "bag-reuse-bonus-ocado.png"
+  ]
 }
