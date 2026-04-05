@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const tools = [
+  { name: 'search_strategies', desc: 'Search and filter 229 circular design strategies by circular objective, lifecycle phase, loop, applicability, or free text.' },
+  { name: 'get_strategy_details', desc: 'Get full details for a specific strategy including why it matters, how to implement it, usage context, characteristics, and guiding questions.' },
+  { name: 'search_case_studies', desc: 'Search and filter 129 real-world case studies by focus level, cycle type, business model, or free text.' },
+  { name: 'get_case_study', desc: 'Get full case study details including the complete markdown description.' },
+  { name: 'search_glossary', desc: 'Look up circular economy and circular design terminology from 56 curated definitions.' },
+];
+
+const clients = [
+  {
+    name: 'Claude Desktop',
+    icon: 'claude',
+    steps: [
+      'Open Claude Desktop and go to Settings',
+      'Navigate to the Developer section',
+      'Click "Edit Config" to open claude_desktop_config.json',
+      'Add the configuration shown below and save',
+      'Restart Claude Desktop',
+    ],
+  },
+  {
+    name: 'Claude Code',
+    icon: 'terminal',
+    steps: [
+      'Create a .mcp.json file in your project root',
+      'Add the configuration shown below',
+      'Claude Code will auto-discover the server on next start',
+    ],
+  },
+];
+
+const configJson = JSON.stringify({
+  mcpServers: {
+    "circular-design": {
+      type: "url",
+      url: "https://circulardesign.netlify.app/api/mcp"
+    }
+  }
+}, null, 2);
+
+const examples = [
+  { question: 'What circular design strategies help make a laptop more repairable?', tool: 'search_strategies' },
+  { question: 'Show me all reuse strategies for the service & maintenance phase', tool: 'search_strategies' },
+  { question: 'Tell me everything about Design for Modular Architecture', tool: 'get_strategy_details' },
+  { question: 'Find case studies about product-as-a-service business models', tool: 'search_case_studies' },
+  { question: 'What does remanufacturing mean exactly?', tool: 'search_glossary' },
+];
+---
+
+<Layout title="MCP for AI" description="Connect your AI assistant to the Circular Design research dataset via the Model Context Protocol (MCP).">
+  <!-- Hero -->
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-6">AI Integration</p>
+        <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-6 text-black">
+          Connect your AI to <span class="text-black/70">circular design</span> research
+        </h1>
+        <p class="text-lg text-black/60 leading-relaxed">
+          Our research dataset — 229 strategies, 129 case studies, and 56 glossary terms curated over 3 years of PhD research — is available as an <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener" class="underline hover:text-black transition-colors">MCP server</a>. Connect it to your AI assistant and query the complete Multi-hierarchical DfX framework directly from your conversations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is MCP -->
+  <section class="py-16 bg-black/[0.02]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 text-black">What is MCP?</h2>
+        <p class="text-black/60 leading-relaxed mb-4">
+          The <strong class="text-black">Model Context Protocol (MCP)</strong> is an open standard that lets AI assistants connect to external data sources and tools. Think of it as a USB port for AI — a universal way to plug in specialized knowledge.
+        </p>
+        <p class="text-black/60 leading-relaxed">
+          By connecting our MCP server, your AI assistant gains direct access to the entire Circular Design research database. Instead of relying on its general training data, it can query specific strategies, filter by lifecycle phase, look up case studies, and provide recommendations grounded in peer-reviewed research.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Tools -->
+  <section class="py-16" id="tools">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3 text-black">Available tools</h2>
+      <p class="text-black/60 mb-8 max-w-2xl">Your AI assistant gets access to these 5 tools, which it will call automatically based on your questions.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tools.map(tool => (
+          <div class="border border-black/10 rounded-xl p-6 hover:border-black/20 transition-colors">
+            <code class="text-sm font-mono bg-black/5 px-2 py-1 rounded text-black/80">{tool.name}</code>
+            <p class="text-black/60 text-sm mt-3 leading-relaxed">{tool.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup -->
+  <section class="py-16 bg-black/[0.02]" id="setup">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3 text-black">Setup</h2>
+      <p class="text-black/60 mb-8 max-w-2xl">Add the following configuration to your AI client. No installation or downloads required — the server is hosted on our website.</p>
+
+      <!-- Config block -->
+      <div class="max-w-2xl mb-12">
+        <div class="bg-black rounded-xl overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+            <span class="text-white/40 text-xs font-mono">MCP Configuration</span>
+            <button id="copy-config" class="text-white/40 hover:text-white text-xs font-mono transition-colors cursor-pointer" data-config={configJson}>
+              Copy
+            </button>
+          </div>
+          <pre class="p-4 text-sm font-mono text-white/80 overflow-x-auto"><code>{configJson}</code></pre>
+        </div>
+      </div>
+
+      <!-- Client-specific instructions -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
+        {clients.map(client => (
+          <div class="border border-black/10 rounded-xl p-6">
+            <h3 class="font-display font-bold text-lg mb-4 text-black">{client.name}</h3>
+            <ol class="space-y-2">
+              {client.steps.map((step, i) => (
+                <li class="flex gap-3 text-sm text-black/60">
+                  <span class="flex-shrink-0 w-5 h-5 rounded-full bg-black/5 flex items-center justify-center text-xs font-medium text-black/40">{i + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+
+      <!-- Other clients -->
+      <div class="mt-6 max-w-4xl">
+        <div class="border border-black/10 rounded-xl p-6">
+          <h3 class="font-display font-bold text-lg mb-2 text-black">Other MCP clients</h3>
+          <p class="text-sm text-black/60">
+            Any MCP-compatible client can connect using Streamable HTTP transport. Point it at:
+          </p>
+          <code class="inline-block mt-2 text-sm font-mono bg-black/5 px-3 py-1.5 rounded text-black/80">
+            https://circulardesign.netlify.app/api/mcp
+          </code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples -->
+  <section class="py-16" id="examples">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3 text-black">Example questions</h2>
+      <p class="text-black/60 mb-8 max-w-2xl">Once connected, just ask your AI naturally. It will automatically use the right tools to query the research dataset.</p>
+      <div class="space-y-3 max-w-3xl">
+        {examples.map(ex => (
+          <div class="flex items-start gap-4 border border-black/10 rounded-xl px-5 py-4">
+            <div class="flex-1">
+              <p class="text-black/80 text-sm leading-relaxed">&ldquo;{ex.question}&rdquo;</p>
+            </div>
+            <code class="flex-shrink-0 text-xs font-mono bg-black/5 px-2 py-1 rounded text-black/40">{ex.tool}</code>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What data is included -->
+  <section class="py-16 bg-black/[0.02]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-8 text-black">What data is available</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl">
+        <div class="border border-black/10 rounded-xl p-6 bg-white">
+          <p class="font-display text-3xl font-bold text-black">229</p>
+          <p class="text-black/80 font-medium mt-1">Strategies</p>
+          <p class="text-black/50 text-sm mt-2">Organized across 5 circular objectives, 8 lifecycle phases, and 3 product loops. Each with detailed implementation guidance.</p>
+        </div>
+        <div class="border border-black/10 rounded-xl p-6 bg-white">
+          <p class="font-display text-3xl font-bold text-black">129</p>
+          <p class="text-black/80 font-medium mt-1">Case Studies</p>
+          <p class="text-black/50 text-sm mt-2">Real-world examples from companies implementing circular design, filterable by focus, cycle, and business model.</p>
+        </div>
+        <div class="border border-black/10 rounded-xl p-6 bg-white">
+          <p class="font-display text-3xl font-bold text-black">56</p>
+          <p class="text-black/80 font-medium mt-1">Glossary Terms</p>
+          <p class="text-black/50 text-sm mt-2">Curated definitions for circular economy terminology to help your AI use precise language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-4 text-black">Ready to get started?</h2>
+      <p class="text-black/60 mb-8 max-w-lg mx-auto">Add the configuration above to your AI client and start asking questions about circular design strategies.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#setup" class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-lg font-medium text-sm hover:bg-black/80 transition-colors">
+          View setup instructions
+        </a>
+        <a href="/tool" class="inline-flex items-center justify-center px-6 py-3 border border-black/20 text-black rounded-lg font-medium text-sm hover:bg-black/5 transition-colors">
+          Try the web tool instead
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const btn = document.getElementById('copy-config');
+  btn?.addEventListener('click', async () => {
+    const config = btn.getAttribute('data-config') || '';
+    await navigator.clipboard.writeText(config);
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = original; }, 2000);
+  });
+</script>
