@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "circular-design": {
+      "command": "npx",
+      "args": ["tsx", "src/index.ts"],
+      "cwd": "mcp-server"
+    }
+  }
+}
