@@ -20,20 +20,48 @@ An [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that e
 
 ## Setup
 
-### Prerequisites
+### Remote (Recommended)
 
-- Node.js >= 18
+The MCP server is hosted alongside the website — no installation needed. Just point your AI client at the URL.
 
-### Install
+**Claude Desktop** — add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "circular-design": {
+      "type": "url",
+      "url": "https://circulardesign.netlify.app/api/mcp"
+    }
+  }
+}
+```
+
+**Claude Code** — add to your project's `.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "circular-design": {
+      "type": "url",
+      "url": "https://circulardesign.netlify.app/api/mcp"
+    }
+  }
+}
+```
+
+**Any MCP client** — connect to `https://circulardesign.netlify.app/api/mcp` using Streamable HTTP transport.
+
+### Local (Alternative)
+
+For offline use or development, run the stdio-based server locally:
 
 ```bash
 cd mcp-server
 npm install
 ```
 
-### Use with Claude Desktop
-
-Add to your `claude_desktop_config.json`:
+Add to `claude_desktop_config.json`:
 
 ```json
 {
@@ -42,24 +70,6 @@ Add to your `claude_desktop_config.json`:
       "command": "npx",
       "args": ["tsx", "src/index.ts"],
       "cwd": "/absolute/path/to/circulardesign/mcp-server"
-    }
-  }
-}
-```
-
-### Use with Claude Code
-
-A `.mcp.json` file is included at the project root for auto-discovery. Just open the project in Claude Code and the tools will be available.
-
-Or add manually to your project's `.mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "circular-design": {
-      "command": "npx",
-      "args": ["tsx", "src/index.ts"],
-      "cwd": "mcp-server"
     }
   }
 }
