@@ -1,0 +1,22 @@
+{
+  "name": "circular-design-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server exposing the Circular Design Research Dataset — 229 strategies, 129 case studies, and glossary from PhD research on circular economy design.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "dev": "tsx --watch src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

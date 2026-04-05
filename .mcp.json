@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "circular-design": {
+      "type": "url",
+      "url": "https://circulardesign.netlify.app/api/mcp"
+    },
+    "circular-design-local": {
+      "command": "npx",
+      "args": ["tsx", "src/index.ts"],
+      "cwd": "mcp-server"
+    }
+  }
+}
