@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const reasons = [
+  'General inquiry',
+  'Research collaboration',
+  'Bug report or feedback',
+  'MCP / AI integration',
+  'Dataset or content question',
+  'Other',
+];
+---
+
+<Layout title="Contact" description="Get in touch with the Circular Design research team.">
+  <section class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <p class="text-black font-mono text-sm tracking-widest uppercase mb-6">Get in touch</p>
+        <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
+          Contact us
+        </h1>
+        <p class="text-lg text-black/60 leading-relaxed mb-12">
+          Have a question about the research, want to collaborate, or found something to improve? We'd love to hear from you.
+        </p>
+
+        <!-- Netlify Forms: detected at deploy time via data-netlify="true" -->
+        <form
+          id="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <!-- Honeypot field for spam prevention -->
+          <p class="hidden">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <!-- Reason -->
+          <div>
+            <label for="reason" class="block text-sm font-medium text-black mb-2">Reason for contact</label>
+            <select
+              id="reason"
+              name="reason"
+              required
+              class="w-full px-4 py-3 border border-black/20 rounded-lg bg-white text-black text-sm focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/40 transition-colors appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Select a reason...</option>
+              {reasons.map(r => (
+                <option value={r}>{r}</option>
+              ))}
+            </select>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-black mb-2">Your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+              class="w-full px-4 py-3 border border-black/20 rounded-lg bg-white text-black text-sm placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/40 transition-colors"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-black mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="6"
+              placeholder="Tell us what's on your mind..."
+              class="w-full px-4 py-3 border border-black/20 rounded-lg bg-white text-black text-sm placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/40 transition-colors resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-lg font-medium text-sm hover:bg-black/80 transition-colors cursor-pointer"
+          >
+            Send message
+          </button>
+        </form>
+
+        <!-- Success message (hidden by default) -->
+        <div id="success-message" class="hidden">
+          <div class="border border-black/10 rounded-xl p-8 text-center">
+            <div class="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-black/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h2 class="font-display text-xl font-bold text-black mb-2">Message sent</h2>
+            <p class="text-black/60 text-sm">Thank you for reaching out. We'll get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const successMessage = document.getElementById('success-message');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      });
+      form.classList.add('hidden');
+      successMessage?.classList.remove('hidden');
+    } catch {
+      alert('Something went wrong. Please try again.');
+    }
+  });
+</script>
