@@ -31,7 +31,7 @@ The MCP server is hosted alongside the website — no installation needed. Just 
   "mcpServers": {
     "circular-design": {
       "type": "url",
-      "url": "https://circulardesign.netlify.app/api/mcp"
+      "url": "https://www.circulardesign.it/api/mcp"
     }
   }
 }
@@ -44,13 +44,13 @@ The MCP server is hosted alongside the website — no installation needed. Just 
   "mcpServers": {
     "circular-design": {
       "type": "url",
-      "url": "https://circulardesign.netlify.app/api/mcp"
+      "url": "https://www.circulardesign.it/api/mcp"
     }
   }
 }
 ```
 
-**Any MCP client** — connect to `https://circulardesign.netlify.app/api/mcp` using Streamable HTTP transport.
+**Any MCP client** — connect to `https://www.circulardesign.it/api/mcp` using Streamable HTTP transport.
 
 ### Local (Alternative)
 
