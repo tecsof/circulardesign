@@ -2,7 +2,7 @@
   "mcpServers": {
     "circular-design": {
       "type": "url",
-      "url": "https://circulardesign.netlify.app/api/mcp"
+      "url": "https://www.circulardesign.it/api/mcp"
     },
     "circular-design-local": {
       "command": "npx",
