@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import StrategyMiniMap from './StrategyMiniMap';
 
 // -------------------------------------------------------------------
 // Types
@@ -104,20 +105,30 @@ function Chip({
   active,
   dotColor,
   onClick,
+  highlighted,
+  onHoverStart,
+  onHoverEnd,
 }: {
   label: string;
   active: boolean;
   dotColor?: string;
   onClick: () => void;
+  highlighted?: boolean;
+  onHoverStart?: () => void;
+  onHoverEnd?: () => void;
 }) {
   return (
     <button
       onClick={onClick}
+      onMouseEnter={onHoverStart}
+      onMouseLeave={onHoverEnd}
       className={`
         px-3 py-1 rounded-full text-xs font-medium transition-all duration-150 cursor-pointer
         border whitespace-nowrap flex items-center gap-1.5
         ${active
           ? 'bg-black text-white border-black'
+          : highlighted
+          ? 'bg-black/[0.06] text-black border-black/60 ring-2 ring-black/20'
           : 'bg-white text-black border-black/20 hover:border-black/40'
         }
       `}
@@ -405,6 +416,10 @@ export default function ToolApp({ strategies }: ToolAppProps) {
   const [selected, setSelected] = useState<Strategy | null>(null);
   const [expandedX1, setExpandedX1] = useState<Set<string>>(new Set());
   const [expandedX2, setExpandedX2] = useState<Set<string>>(new Set());
+
+  // Mini-map ↔ filter chip cross-highlight
+  const [hoveredPhase, setHoveredPhase] = useState<string | null>(null);
+  const [hoveredX1, setHoveredX1] = useState<string | null>(null);
 
   // Toggle filter helper
   const toggleFilter = useCallback(
@@ -788,72 +803,91 @@ export default function ToolApp({ strategies }: ToolAppProps) {
         </div>
       </div>
 
-      {/* 2. Filter Bar */}
+      {/* 2. Filter Bar + Framework mini-map */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          {/* X1 */}
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40 mr-1">Category</span>
-            {X1_OPTIONS.map((v) => (
-              <Chip key={v} label={v} active={filtersX1.has(v)} onClick={() => toggleFilter(filtersX1, setFiltersX1, v)} />
-            ))}
+        <div className="flex items-start gap-6">
+          {/* Filters — left, proper grid: label column + chips column */}
+          <div className="flex-1 min-w-0 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 items-center">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40">Category</span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {X1_OPTIONS.map((v) => (
+                <Chip
+                  key={v}
+                  label={v}
+                  active={filtersX1.has(v)}
+                  highlighted={hoveredX1 === v}
+                  onClick={() => toggleFilter(filtersX1, setFiltersX1, v)}
+                  onHoverStart={() => setHoveredX1(v)}
+                  onHoverEnd={() => setHoveredX1(null)}
+                />
+              ))}
+            </div>
+
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40">Loop</span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {LOOP_OPTIONS.map((v) => (
+                <Chip key={v} label={v} active={filtersLoop.has(v)} onClick={() => toggleFilter(filtersLoop, setFiltersLoop, v)} />
+              ))}
+            </div>
+
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40">Applies To</span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {APPLIES_TO_OPTIONS.map((v) => (
+                <Chip key={v} label={v} active={filtersApplies.has(v)} onClick={() => toggleFilter(filtersApplies, setFiltersApplies, v)} />
+              ))}
+            </div>
+
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40">Phase</span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {PHASE_KEYS.map((v) => (
+                <Chip
+                  key={v}
+                  label={PHASE_LABELS[v]}
+                  active={filtersType.has(v)}
+                  dotColor={PHASE_COLORS[v]}
+                  highlighted={hoveredPhase === v}
+                  onClick={() => toggleFilter(filtersType, setFiltersType, v)}
+                  onHoverStart={() => setHoveredPhase(v)}
+                  onHoverEnd={() => setHoveredPhase(null)}
+                />
+              ))}
+            </div>
+
           </div>
 
-          <span className="hidden sm:block w-px h-5 bg-black/10" />
-
-          {/* Loop */}
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40 mr-1">Loop</span>
-            {LOOP_OPTIONS.map((v) => (
-              <Chip key={v} label={v} active={filtersLoop.has(v)} onClick={() => toggleFilter(filtersLoop, setFiltersLoop, v)} />
-            ))}
+          {/* Mini-map — right */}
+          <div className="shrink-0 hidden sm:flex self-start flex-col items-center gap-1.5 relative">
+            <StrategyMiniMap
+              strategies={strategies}
+              phaseColors={PHASE_COLORS}
+              phaseKeys={PHASE_KEYS}
+              x1Order={X1_ORDER}
+              filtersX1={filtersX1}
+              filtersType={filtersType}
+              onToggleX1={(v) => toggleFilter(filtersX1, setFiltersX1, v)}
+              onToggleType={(v) => toggleFilter(filtersType, setFiltersType, v)}
+              onHoverPhase={setHoveredPhase}
+              onHoverX1={setHoveredX1}
+              hoveredPhase={hoveredPhase}
+              hoveredX1={hoveredX1}
+              totalCount={strategies.length}
+              filteredCount={filtered.length}
+              size={180}
+            />
+            {activeFilterCount > 0 && (
+              <button
+                onClick={() => {
+                  setFiltersX1(new Set());
+                  setFiltersLoop(new Set());
+                  setFiltersApplies(new Set());
+                  setFiltersType(new Set());
+                }}
+                className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[11px] text-black/50 hover:text-black underline underline-offset-2 cursor-pointer whitespace-nowrap"
+              >
+                Clear filters ({activeFilterCount})
+              </button>
+            )}
           </div>
-
-          <span className="hidden sm:block w-px h-5 bg-black/10" />
-
-          {/* Applies To */}
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40 mr-1">Applies To</span>
-            {APPLIES_TO_OPTIONS.map((v) => (
-              <Chip key={v} label={v} active={filtersApplies.has(v)} onClick={() => toggleFilter(filtersApplies, setFiltersApplies, v)} />
-            ))}
-          </div>
-
-          <span className="hidden sm:block w-px h-5 bg-black/10" />
-
-          {/* Lifecycle Phase */}
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-black/40 mr-1">Phase</span>
-            {PHASE_KEYS.map((v) => (
-              <Chip
-                key={v}
-                label={PHASE_LABELS[v]}
-                active={filtersType.has(v)}
-                dotColor={PHASE_COLORS[v]}
-                onClick={() => toggleFilter(filtersType, setFiltersType, v)}
-              />
-            ))}
-          </div>
-
-          {/* Clear filters */}
-          {activeFilterCount > 0 && (
-            <button
-              onClick={() => {
-                setFiltersX1(new Set());
-                setFiltersLoop(new Set());
-                setFiltersApplies(new Set());
-                setFiltersType(new Set());
-              }}
-              className="text-xs text-black/40 hover:text-black underline underline-offset-2 cursor-pointer"
-            >
-              Clear ({activeFilterCount})
-            </button>
-          )}
-
-          {/* Strategy count */}
-          <span className="ml-auto text-xs text-black/40">
-            {filtered.length} strategies
-          </span>
         </div>
       </div>
 
@@ -877,7 +911,7 @@ export default function ToolApp({ strategies }: ToolAppProps) {
         )}
 
         {/* Show all / Collapse all toggle */}
-        <div className="flex justify-end mb-2">
+        <div className="flex justify-start mb-2">
           <button
             onClick={() => {
               const allX2Keys = hierarchy.flatMap(({ x1, x2Groups }) =>
