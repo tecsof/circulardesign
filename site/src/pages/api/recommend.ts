@@ -128,7 +128,71 @@ IMPORTANT FORMATTING RULES:
 
 If the user asks general questions about circular design, answer using your knowledge of the framework.`;
 
-export const POST: APIRoute = async ({ request }) => {
+// ---------------------------------------------------------------------------
+// Abuse protection: origin check + simple in-memory rate limit
+// ---------------------------------------------------------------------------
+
+const ALLOWED_ORIGINS = [
+  'https://circulardesign.it',
+  'https://www.circulardesign.it',
+  'https://kaleidoscopic-kitsune-08fd07.netlify.app',
+  'http://localhost:4321',
+  'http://localhost:3000',
+];
+
+function isAllowedOrigin(request: Request): boolean {
+  const origin = request.headers.get('origin');
+  if (origin && ALLOWED_ORIGINS.includes(origin)) return true;
+  const referer = request.headers.get('referer');
+  if (referer && ALLOWED_ORIGINS.some((o) => referer.startsWith(o))) return true;
+  return false;
+}
+
+// Per-IP token bucket kept on the warm serverless instance. Best-effort only —
+// Netlify may spin up multiple instances, so a determined abuser could get
+// past this. For stricter limits, switch to Netlify Blobs / Upstash.
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 10;            // max requests per IP per window
+const rateLimitBuckets = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const bucket = rateLimitBuckets.get(ip);
+  if (!bucket || bucket.resetAt < now) {
+    rateLimitBuckets.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return true;
+  }
+  if (bucket.count >= RATE_LIMIT_MAX) return false;
+  bucket.count += 1;
+  return true;
+}
+
+function cleanupRateLimits() {
+  const now = Date.now();
+  for (const [ip, bucket] of rateLimitBuckets) {
+    if (bucket.resetAt < now) rateLimitBuckets.delete(ip);
+  }
+}
+
+export const POST: APIRoute = async ({ request, clientAddress }) => {
+  // 1. Origin check — reject requests not coming from our own frontends.
+  if (!isAllowedOrigin(request)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
+  // 2. Rate limit per IP.
+  const ip =
+    clientAddress ||
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    'unknown';
+  if (!checkRateLimit(ip)) {
+    return new Response('Rate limit exceeded. Please wait a moment.', {
+      status: 429,
+      headers: { 'Retry-After': '60' },
+    });
+  }
+  if (Math.random() < 0.02) cleanupRateLimits();
+
   const { message, history } = await request.json();
   const strategies = loadStrategies();
   const strategyContext = buildStrategyContext(strategies);
@@ -154,10 +218,19 @@ export const POST: APIRoute = async ({ request }) => {
     messages.push({ role: 'user', content: message });
   }
 
+  // Prompt caching: the system prompt + strategy context is ~6.5k static
+  // tokens repeated on every call. Marking it with cache_control ephemeral
+  // gives ~90% savings on repeated input tokens within the 5-min TTL.
   const stream = await client.messages.stream({
-    model: 'claude-opus-4-20250514',
+    model: 'claude-sonnet-4-6',
     max_tokens: 2048,
-    system: SYSTEM_PROMPT + '\n\n' + strategyContext,
+    system: [
+      {
+        type: 'text',
+        text: SYSTEM_PROMPT + '\n\n' + strategyContext,
+        cache_control: { type: 'ephemeral' },
+      },
+    ],
     messages,
   });
 
